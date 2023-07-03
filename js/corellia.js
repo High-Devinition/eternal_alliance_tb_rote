@@ -434,8 +434,8 @@ Vue.component('mission', {
              },
              {
                 id:76,
-                name: "Qi'ra Scoundrals",
-                toons: ['qi\'ra','dash_rendar','ig-11','kuiil','young_han_solo'],
+                name: "Qi'ra Scoundrels & Rey (variants available)",
+                toons: ['qi\'ra','young_han_solo','gl_rey','dash_rendar','l3-37'],
                 video: "https://youtu.be/g-5NNZKiEMM?t=447"
              },
              {
@@ -446,7 +446,12 @@ Vue.component('mission', {
 			{
                 id:78,
                 name: "Doctor Aphra & Droids",
-                toons: ['doctoraphra','bt1','triplezero','ig-88','darth_vader']
+                toons: ['doctoraphra','bt1','triplezero','b2_super_battle_droid','ig-88']
+             },
+			{
+                id:79,
+                name: "Admiral Trench (variants available)",
+                toons: ['admiral_trench','nute_gunrey','count_dooku','jango_fett','wat_tambor']
              },
 
              
@@ -557,7 +562,7 @@ Vue.component('mission', {
 				'Wave 1: 100,000',
                 'Wave 2: 200,000'
 				],
-            preferredSquads: [74],//jabba
+            preferredSquads: [74],//jabba NCor-3
 			dangerousEnemies: [36,37],
 			modifiers: [1],
             reqs: [8],
@@ -570,7 +575,7 @@ Vue.component('mission', {
 				'Wave 1: 100,000',
                 'Wave 2: 200,000'
 				],
-			preferredSquads: [78],//aphra
+			preferredSquads: [78],//aphra NCor-2
 			dangerousEnemies: [31,38],
 			modifiers: [1],
             reqs: [7],
@@ -584,7 +589,7 @@ Vue.component('mission', {
 				'Wave 1: 100,000',
                 'Wave 2: 200,000'
 				],
-            preferredSquads: [44,77],//generic
+            preferredSquads: [44,79],//generic NCor-1
 			dangerousEnemies: [31,32],
             reqs: [6],
             modifiers: [1],
@@ -592,7 +597,7 @@ Vue.component('mission', {
 			{
 			id: 4,
 			name: 'c5',
-			type: 'special',
+			type: 'special', //Qira SM-1
 			position: 'right',
 			rewards: [
 				'15 GET3',
@@ -610,7 +615,7 @@ Vue.component('mission', {
 			rewards: [
 				'Wave 1: 400,000',
 				],
-				preferredSquads: [75],
+				preferredSquads: [75], //NCor-4
 				dangerousEnemies: [33],
 				modifiers: [0],
             reqs: [10],
