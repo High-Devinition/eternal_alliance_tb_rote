@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/.vs/ProjectSettings.json
+/.vs/eternal_alliance_tb_rote/v17
+/.vs/eternal_alliance_tb_rote/FileContentIndex
+/.vs/eternal_alliance_tb_rote/config/applicationhost.config
