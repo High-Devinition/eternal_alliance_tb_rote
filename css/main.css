@@ -5,6 +5,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	overflow-x: hidden;
+	overflow-y: hidden;
 	background-color: #6d7487;
 }
 p {
@@ -123,6 +124,7 @@ text:hover {
 	font-size: 2.0vw;
 	color: white;
 }
+
 
 
 
