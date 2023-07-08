@@ -269,6 +269,7 @@ td {
 		line-height: 0.6rem;
 	}
 }
+/*Formatting/Styling for map when mobile screen is being viewed vertically*/
 @media screen and (orientation:portrait) {
 	.description {
 		position: absolute;
@@ -289,5 +290,45 @@ td {
 		border-radius: 50%;
 		border: 2px solid #ffffff;
 		margin-right: 0.5%;
+	}
+}
+/*Formatting/Styling for map when mobile screen is being viewed horizontally*/
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+	.description {
+		position: absolute;
+		top: 100%;
+		min-width: 100%;
+		min-height: 300px;
+		transform: none;
+	}
+
+	.desc_left {
+		left: 0;
+	}
+
+	.desc_right {
+		right: 0;
+	}
+
+	.img_block img {
+		/* max-width: 5%;*/
+		/* max-height: 5%;*/
+		border-radius: 50%;
+		border: 2px solid #ffffff;
+		margin-right: 0.5%;
+	}
+
+	.map {
+		width: auto;
+		height: auto;
+	}
+
+	top-left {
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		font-size: 8.0vw;
+		color: white;
 	}
 }
