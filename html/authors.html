@@ -62,33 +62,49 @@
         }
 
         .bgimg {
-            background-image: url('../media/map_rote.jpeg');
+            background-image: url('../media/map_rote.png');
+            /* Set rules to fill background */
             min-height: 100%;
-            min-width: 100%;
-            background-position:  inherit;
+            min-width: 1024px%;
+            /*background-position: inherit;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: auto;
             opacity: 1.0;
-        }
-
-        p {
+                P{
             margin-top: 0.5em;
             margin-bottom: 0.5em;
-            line-height: 1em;
-        }
-
-        .top-left {
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            line-height: 1em;}
+            */
+            /* Set up proportionate scaling */
+            width: 100%;
+            height: auto;
+            /* Set up positioning */
             position: fixed;
-            top: 0px;
-            left: 0px;
-            font-size: 4px;
-            font-weight: normal;
-            color: white;
+            top: 0;
+            left: 0;
         }
+    
 
+    .top-left {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        font-size: 12px;
+        font-weight: normal;
+        color: white;
     }
+
+        }
+    
+    @media screen and (max-width: 1024px) { /* Specific to this particular image */
+        .bgimg {
+            left: 50%;
+            margin-left: -512px; /* 50% */
+        }
+    }
+
 </style>
 <body>
     <div class="bgimg w3-display-container w3-text-white w3-text-bold">
