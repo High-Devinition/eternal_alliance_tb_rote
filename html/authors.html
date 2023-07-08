@@ -48,6 +48,47 @@
         font-weight: normal;
         color: white;
     }
+    /*Author page when user views mobile screen horizontally (landscape orientation)*/
+    @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+
+        body, h1 {
+            font-family: "Oswald", Open Sans;
+            font-weight: 300;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+        }
+
+        .bgimg {
+            background-image: url('../media/map_rote.jpeg');
+            min-height: 100%;
+            min-width: 100%;
+            background-position:  inherit;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: auto;
+            opacity: 1.0;
+        }
+
+        p {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            line-height: 1em;
+        }
+
+        .top-left {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            font-size: 4px;
+            font-weight: normal;
+            color: white;
+        }
+
+    }
 </style>
 <body>
     <div class="bgimg w3-display-container w3-text-white w3-text-bold">
