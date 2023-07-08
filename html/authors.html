@@ -48,25 +48,29 @@
         font-weight: normal;
         color: white;
     }
-    /*Author page when user views mobile screen horizontally (landscape orientation)*/
+    /*Author page when user views mobile screen vertically (portrait orientation)*/
     @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
-        body, h1 {
-            font-family: "Oswald", Open Sans;
-            font-weight: 300;
-        }
+    }
+        /*Author page when user views mobile screen horizontally (landscape orientation)*/
+        @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
-        body, html {
-            height: 100%;
-            width: 100%;
-        }
+            body, h1 {
+                font-family: "Oswald", Open Sans;
+                font-weight: 300;
+            }
 
-        .bgimg {
-            background-image: url('../media/map_rote.png');
-            /* Set rules to fill background */
-            min-height: 100%;
-            min-width: 1024px%;
-            /*background-position: inherit;
+            body, html {
+                height: 100%;
+                width: 100%;
+            }
+
+            .bgimg {
+                background: url('../media/map_rote.png') no-repeat center center fixed;
+                /* Set rules to fill background */
+                min-height: 100%;
+                min-width: 1024px%;
+                /*background-position: inherit;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: auto;
@@ -76,34 +80,35 @@
             margin-bottom: 0.5em;
             line-height: 1em;}
             */
-            /* Set up proportionate scaling */
-            width: 100%;
-            height: auto;
-            /* Set up positioning */
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-    
+                /* Set up proportionate scaling */
+                width: 100%;
+                height: auto;
+                /* Set up positioning */
+                position: inherit;
+                top: 0;
+                left: 0;
+                background-size:cover;
+             
+            }
 
-    .top-left {
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        font-size: 12px;
-        font-weight: normal;
-        color: white;
-    }
 
+            .top-left {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                font-size: 12px;
+                font-weight: normal;
+                color: white;
+            }
         }
-    
-    @media screen and (max-width: 1024px) { /* Specific to this particular image */
-        .bgimg {
-            left: 50%;
-            margin-left: -512px; /* 50% */
+
+        @media screen and (max-width: 1024px) { /* Specific to this particular image */
+            .bgimg {
+                left: 50%;
+                margin-left: -512px; /* 50% */
+            }
         }
-    }
 
 </style>
 <body>
