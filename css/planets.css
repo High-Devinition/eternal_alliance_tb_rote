@@ -1,0 +1,10 @@
+/*Home button text styling for each planet*/
+.top-left {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    font-size: 2.0vw;
+    font-weight: normal;
+    color: white;
+}
