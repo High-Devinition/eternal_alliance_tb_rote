@@ -45,6 +45,9 @@
         background-attachment: fixed;
         background-size: cover;
         opacity: 1.0;
+        max-width: 100%;
+        max-height: 100vh;
+        margin: auto;
     }
 
     p {
@@ -79,6 +82,8 @@
             max-width: 100%;
             max-height: 100vh;
             margin: auto;
+            height: 100%;
+            width: 100%;
         }
 
         p {
@@ -101,6 +106,7 @@
         @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
             body {
+                display: grid;
                 height: 100%;
                 width: 100%;
                 overscroll-behavior: contain;
