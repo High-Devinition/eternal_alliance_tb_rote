@@ -134,7 +134,6 @@
             }
 
             .bgimg {
-                overscroll-behavior: contain;
                 background: url('../media/map_rote.png') no-repeat center center fixed;
                 /* Set rules to fill background */
                 /*min-height: 100%;
@@ -147,10 +146,9 @@
                 /* Set up proportionate scaling */
                 width: 100%;
                 height: 100%;
-
                 background-size: auto;
-                position: absolute;
-                overflow-y: auto;
+                position: center;
+
                 overflow-x: hidden;
             }
 
@@ -161,10 +159,10 @@
             }
 
             #center_box {
-                width: 55%;
+                width: 100%;
                 height: 100%;
                 position: center;
-                overflow-y: auto;
+
                 overflow-x: hidden;
                 padding-top: 50px;
             }
