@@ -21,7 +21,7 @@
     }
 
     body, html {
-        height: 100%
+        height: 100%;
     }
 
     .sub_title {
@@ -98,6 +98,8 @@
             width: 50%;
             height: auto;
             position: center;
+            overflow-y: auto;
+            overflow-x: hidden;
         }
 
     }
@@ -128,6 +130,7 @@
             }*/
 
             .bgimg {
+                overscroll-behavior: contain;
                 background: url('../media/map_rote.png') no-repeat center center fixed;
                 /* Set rules to fill background */
                 min-height: 100%;
@@ -146,6 +149,7 @@
                 width: 100%;
                 height: auto;
                 background-size: auto;
+                position: absolute;
             }
 
             p {
@@ -165,18 +169,18 @@
             }
 
             div #center_box {
-                width:55%;
-                height:auto;
-                margin-left: -12em;
+                width: 55%;
+                height: auto;
+                overflow-y: auto;
+                overflow-x: hidden;
             }
         }
-
-        @media screen and (max-width: 1024px) { /* Specific to this particular image */
-            .bgimg {
-                left: 50%;
-                margin-left: -512px; /* 50% */
-            }
+    /*@media screen and (max-width: 1024px) { 
+    .bgimg {
+        left: 50%;
+        margin-left: -512px; 
         }
+    }*/
 
 </style>
 <body>
