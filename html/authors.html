@@ -105,7 +105,7 @@
             width: 95%;
             height: 100%;
             position: center;
-            overflow-y: scroll;
+            overflow-y: auto;
             overflow-x: hidden;
         }
 
@@ -114,6 +114,7 @@
         @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
             body {
+                height: 100%;
                 overscroll-behavior: contain;
                 font-family: "Oswald", Open Sans;
                 font-weight: 300;
@@ -132,10 +133,6 @@
             p .eastatement{
                 font-size:14px;
             }
-            /*body, html {
-                height: 100%;
-                width: 100%;
-            }*/
 
             .bgimg {
                 overscroll-behavior: contain;
@@ -143,16 +140,11 @@
                 /* Set rules to fill background */
                 min-height: 100%;
                 min-width: 1024px;
-                /*background-position: inherit;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: auto;
-            opacity: 1.0;
-                P{
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            line-height: 1em;}
-            */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                opacity: 1.0;
                 /* Set up proportionate scaling */
                 width: 100%;
                 height: auto;
@@ -185,12 +177,6 @@
                 overflow-x: hidden;
             }
         }
-    /*@media screen and (max-width: 1024px) { 
-    .bgimg {
-        left: 50%;
-        margin-left: -512px; 
-        }
-    }*/
 
 </style>
 <body>
