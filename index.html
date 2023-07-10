@@ -105,49 +105,51 @@
             padding-top: 200px;
         }
 
-    /*Page when user views mobile screen horizontally (landscape orientation)*/
-    @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+        /*Page when user views mobile screen horizontally (landscape orientation)*/
+        @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
-        body {
-            display: grid;
-            height: 100%;
-            width: 100%;
-            background-color: black;
-            overflow-x: hidden;
-            position: center;
-        }
+            body {
+                display: grid;
+                height: 100%;
+                width: 100%;
+                background-color: black;
+                overflow-x: hidden;
+                position: center;
+            }
 
-        .bgimg {
-            background: url('../media/map_rote.png') no-repeat center center fixed;
-            /* Set rules to fill background */
-            min-width: 100%;
-            min-height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: scroll;
-            background-size: cover;
-            opacity: 1.0;
-            /* Set up proportionate scaling */
-            width: 100%;
-            height: 100%;
-            position: center;
-            margin: auto;
-            overflow-x: hidden;
-        }
+            .bgimg {
+                background: url('../media/map_rote.png') no-repeat center center fixed;
+                /* Set rules to fill background */
+                min-width: 100%;
+                min-height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-size: cover;
+                opacity: 1.0;
+                /* Set up proportionate scaling */
+                width: 100%;
+                height: 100%;
+                position: center;
+                margin: auto;
+                overflow-x: hidden;
+            }
 
-        .mapbutton {
-            font-size: 35px;
-            color: white;
-            background: black 30px;
-            border: 5px solid white;
-            padding: 3px;
-            padding-bottom: 7px;
-            text-decoration: none
-        }
+            .mapbutton {
+                font-size: 35px;
+                color: white;
+                background: black 30px;
+                border: 5px solid white;
+                padding: 3px;
+                padding-bottom: 7px;
+                text-decoration: none
+            }
 
-        p .authorship {
-            padding-bottom: 50px;
-            padding-top: 200px;
+            .authorship {
+                padding-bottom: 50px;
+                padding-top: 200px;
+                font-size:large;
+            }
         }
     }
 </style>
@@ -160,10 +162,11 @@
             <div class="w3-xlarge w3-center w3-animate-bottom">
                 <p><a href="html/main.html" class="mapbutton"><img src="media/get3.png" alt="KAM" style="width:42px;height:42px;">Rise of the Empire TB Map</a></p>
             </div>
-            <p class="authorship w3-large w3-center" style="padding-top:400px" ;>
-                <a href="html/authors.html">Authorship and Credits</a>
-            </p>
-            <div style="padding-top: 100px"></div>
+            <div class="footer">
+                <p class="authorship" style="padding-top:400px; font-size: large">
+                    <a href="html/authors.html">Authorship and Credits</a>
+                </p>
+            </div>
         </div>
     </div>
     <!-- Google tag (gtag.js) -->
