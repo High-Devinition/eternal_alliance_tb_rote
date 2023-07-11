@@ -278,6 +278,10 @@ td {
 }
 /*Formatting/Styling for map when mobile screen is being viewed vertically*/
 @media screen and (orientation:portrait) {
+	body {
+		background-color: silver;
+	}
+
 	.description {
 		position: absolute;
 		top: 100%;
@@ -297,6 +301,21 @@ td {
 		border-radius: 50%;
 		border: 2px solid #ffffff;
 		margin-right: 0.5%;
+	}
+
+	@font-face {
+		font-family: Impactful;
+		font-weight: bold;
+		src: url('../media/fonts/impact/impact.ttf');
+	}
+
+	.top-left {
+		font-family: Impactful, sans-serif;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		font-size: 18px;
+		color: white;
 	}
 }
 /*Formatting/Styling for map when mobile screen is being viewed horizontally*/
@@ -366,12 +385,6 @@ td {
 		cursor: pointer;
 	}
 
-
-
-
-
-
-
 	.description {
 		position: absolute;
 		opacity: 0.85;
@@ -436,12 +449,18 @@ td {
 			background-size: contain;
 		}
 	/* Home button text */
+	@font-face {
+		font-family: Impactful;
+		font-weight: bold;
+		src: url('../media/fonts/impact/impact.ttf');
+	}
+
 	.top-left {
-		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		font-family: Impactful, sans-serif;
 		position: fixed;
 		top: 0px;
 		left: 0px;
-		font-size: 2.0vw;
+		font-size: 18px;
 		color: white;
 	}
 
@@ -585,14 +604,18 @@ td {
 		left: 60%;
 	}
 
-
+	@font-face {
+		font-family: Impactful;
+		font-weight: bold;
+		src: url('../media/fonts/impact/impact.ttf');
+	}
 
 	.top-left {
-		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		font-family: Impactful, sans-serif;
 		position: fixed;
 		top: 0px;
 		left: 0px;
-		font-size: 8.0vw;
+		font-size: 18px;
 		color: white;
 	}
 }
