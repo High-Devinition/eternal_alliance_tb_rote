@@ -279,6 +279,10 @@ td {
 /*Formatting/Styling for map when mobile screen is being viewed vertically*/
 @media screen and (orientation:portrait) {
 
+	body {
+		background-color: black;
+	}
+
 	.description {
 		position: absolute;
 		top: 100%;
