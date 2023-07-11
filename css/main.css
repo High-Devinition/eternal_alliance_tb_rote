@@ -278,9 +278,6 @@ td {
 }
 /*Formatting/Styling for map when mobile screen is being viewed vertically*/
 @media screen and (orientation:portrait) {
-	body {
-		background-color: silver;
-	}
 
 	.description {
 		position: absolute;
@@ -288,6 +285,8 @@ td {
 		min-width: 100%;
 		min-height: 300px;
 		transform: none;
+		background-color: silver;
+		color: black;
 	}
 	.desc_left {
 		left: 0;
