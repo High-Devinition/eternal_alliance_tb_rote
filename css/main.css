@@ -1,12 +1,14 @@
 body {
-	margin: 0;
+	margin: auto;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	background-color: black;
+	background: url(../media/body_bg.png);
+	height: 100vh;
+	width: 100vw;
 }
 p {
 	margin-bottom: 0;
@@ -22,38 +24,54 @@ p {
 }
 .map {
 	position: relative;
-	top: -10%;
-	width: 100vw;
+	width: 100%;
 	height: auto;
 	background: url('../media/map_rote_lines.jpeg') no-repeat;
 	background-size: contain;
+	margin: auto;
+	top: -47%;
 }
 .part {
-	opacity: .3;
-	opacity: 0.2;
+	opacity: .55;
 	stroke: white;
-	stroke-width: 1%;
-	stroke-linejoin: round;
+	stroke-width: .5%;
+	stroke-linejoin: bevel;
 }
-.part:hover {
+
+#ds_path {
+	fill: darkred;
+}
+
+#mix_path {
+	fill: darkgreen;
+}
+
+#ls_path {
+	fill: navy;
+}
+
+/*.part:hover {
 	opacity: .5;
 	transition: all 0.5s ease;
 	cursor: pointer;
-}
+}*/
+
 svg text {
 	fill: #ffffff;
 	font-size: 10px;
 	display: none;
 }
-.part:hover + text {
+/*.part:hover + text {
 	display: block;
-}
+}*/
 text:hover {
 	display: block;
 	cursor: pointer;
 }
 
-
+.svgViewbox {
+	border: 15px solid black;
+}
 
 
 
@@ -62,7 +80,7 @@ text:hover {
 .description {
 	position: absolute;
 	opacity: 0.85;
-	background-color: black;/*rgb(35, 48, 67, 0.9);*/
+	background-color: navy; /*rgb(35, 48, 67, 0.9);*/
 	transform: translate(0, -45%);
 	top: 50%;
 	max-width: 48%;
@@ -70,7 +88,11 @@ text:hover {
 	color: #ffffff;
 	z-index: 100;
 	border-radius: 1%;
-    word-wrap: normal;
+	word-wrap: normal;
+	font-weight: bold;
+	font-family: Impactful, sans-serif;
+	text-align: center;
+	border: 5px solid black;
 }
 .desc_left {
 	left: 3%;
@@ -78,6 +100,7 @@ text:hover {
 .desc_right {
 	right: 3%;
 }
+
 .stars_info { 
 	position: absolute;
 	font-size: 1.2rem;
@@ -179,6 +202,41 @@ td {
 	width: 4%;
 }
 
+.points {
+	display: grid;
+	place-items: center;
+	position: center;
+	padding-right: 25px;
+}
+
+.container-fluid {
+	display: block;
+	align-items: center;
+	max-width: 75%;
+	max-height: 65%;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	padding: 0;
+
+}
+
+.console_container {
+	display: block;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	bottom: 7.05%;
+}
+
+.map_console_ls {
+	width: 100%;
+	height: 38%;
+	margin: auto;
+	position: relative;
+}
 
 /*Mission positions*/
 
@@ -284,12 +342,14 @@ td {
 	}
 
 	.description {
+		font-weight: bold;
 		position: absolute;
 		top: 100%;
 		min-width: 100%;
 		min-height: 300px;
 		transform: none;
-		background-color: silver;
+		opacity: 0.85;
+		background-color: steelblue;
 		color: black;
 	}
 	.desc_left {
