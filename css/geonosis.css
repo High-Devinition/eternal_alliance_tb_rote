@@ -96,31 +96,29 @@ text:hover {
 	z-index: 100;
 	border-radius: 1%;
 }
-.platoons {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 16%;
-	height: auto;
-	padding: 0.2rem;
-	font-size: 0.8rem;
-	line-height: 0.9rem;
-	border: 1px solid white;
-}
+
 .mission {
 	position: absolute;
 	width: 5%;
 	cursor: pointer;
 	transition: all 0.5s ease;
 }
+
 .mission:hover, .squad_fill:hover {
 	transform: scale(1.2);
 	transition: all 0.5s ease;
 }
 .mission:hover {
+	
 	background: url('../media/focus.svg') no-repeat;
 	background-size: contain;
 }
+/*
+	.m2 {
+		background-image: url('../media/map_ui/ops_droidfactory.png');
+	}*/
+
+
 /* Home button text */
 .top-left {
   position: fixed;
@@ -202,9 +200,10 @@ td {
 	top: 38%;
 	left: 27%;
 }
-.m2 {/*P3 middle platoons*/
+.m2 { /*P3 middle platoons*/
 	top: 33%;
 	left: 37%;
+
 }
 }
 @media (min-width: 1700px) {

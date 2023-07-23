@@ -17,6 +17,9 @@ Vue.component('mission', {
 	data: function () {
 		return {
 		isMobile: false,
+
+
+		
 		squads: [
 		//---------------------------------------------------------------------------------------------------------------------------------DS SQUADS
 			{	
@@ -506,18 +509,9 @@ Vue.component('mission', {
         "Wave 2: Kanan Jarrus (L), Ezra Bridger, Chopper, Rex, Partisan Fighter"//30
 		],
 		platoons: [
-        ["Boba Fett, Scion of Jango",	"7", "Darth Revan",	"6",
-"Scythe",	"6","Darth Malgus",	"5",
-"TIE/IN Interceptor Prototype",	"5","Chimaera",	"4","Emperor Palpatine",	"4",
-"Grand Admiral Thrawn",	"4","Maul",	"4","Darth Malak",	"3","Grand Inquisitor",	"3",
-"Imperial Probe Droid",	"3","Starkiller",	"3","B2 Super Battle Droid",	"2",
-"Executor",	"2","First Order Officer",	"2","Kylo Ren (Unmasked)",	"2","Sith Eternal Emperor",	"2",
-"Supreme Leader Kylo Ren",	"2","Wat Tambor",	"2",
-"Asajj Ventress",	"1","Cad Bane",	"1","Colonel Starck",	"1",
-"Darth Talon",	"1","Death Trooper",	"1","Dengar",	"1","Droideka",	"1",
-"Emperor's Shuttle",	"1","Executrix",	"1","General Grievous",	"1","General Veers",	"1","HK-47",	"1","Hyena Bomber",	"1",
-"Kylo Ren's Command Shuttle",	"1","Magmatrooper",	"1","Malevolence",	"1",
-"Scimitar",	"1","TIE Echelon",	"1","TIE Reaper",	"1",]
+			"Summon a BX - series Commando Droid to the ally slot if it is available. Dispell all buffs on all enemies, which can't be evaded.",
+			"Add Empire allies gain 30% Turn Meter and the first time the BX-series Commando Droid is defeated, it revives with 50% Health and Protection.",
+			"BX-series Commando Droid revives with 100% Health, Protection, and Turn Meter; add Droid allies reset their cooldowns at the start of their turn for 2 turns."
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -626,8 +620,13 @@ Vue.component('mission', {
                '3 Stars after maximum preload: 167,875,000 ',
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 6","Ships: 7-Star"], requiredToons: [0], platzones: [0,1,2]}
+			{id: 30, name: 'm2', type: 'geonosis', position: 'right', preqs:["Characters: Relic 6+","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			],
+			operations: [
+				
 		],
+		defaultPath: '../media/map_ui/mission_',
+		
 		selectedMission: '',
 		seen: false,
 	}
@@ -650,3 +649,4 @@ let app = new Vue({
 		isVisible: false
 	},
 });
+

@@ -1,5 +1,5 @@
 
-Vue.component('mission', {
+Vue.component('planet', {
 	data: function () {
 		return {
 		isMobile: false,
@@ -482,357 +482,377 @@ Vue.component('mission', {
 		'Phase 4 Middle (Self)',//14
 		'Phase 4 Bottom (Self)',//15
 		],
-		missions: [
+		planets: [
             {
 			id: 1,
 			name: 'c1',
 			type: 'deathstar',
+			zonepath: 'DS',
 			position: 'right',
 			planetlink: 'deathstar.html',
 			rewards: [
-				'1*: 582,632,425',
-                '2*: 1,059,331,682',
-                '3*: 1,246,272,567'
+				'1⭐: 582,632,425',
+                '2⭐: 1,059,331,682',
+                '3⭐: 1,246,272,567'
 				],
 		    planet: [
-            'Phase 6 DS - Death Star'
+            'Deathstar'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 6 | DS'
             ]
 			},
             {
 			id: 2,
 			name: 'c2',
 			type: 'malachor',
+			zonepath: 'DS',
 			position: 'right',
 			planetlink: 'malachor.html',
 			rewards: [
-				'1*: 341,250,768',
-                '2*: 620,455,942',
-                '3*: 729,948,167'
+				'1⭐: 341,250,768',
+                '2⭐: 620,455,942',
+                '3⭐: 729,948,167'
 				],
 		    planet: [
-            'Phase 5 DS - Malachor'
+            'Malachor'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 5 | DS'
             ]
 			},
             {
 			id: 3,
 			name: 'c3',
 			type: 'haven',
+			zonepath: 'DS',
 			position: 'right',
 			planetlink: 'haven.html',
 			rewards: [
-				'1*: 235,143,105',
-                '2*: 400,243,583',
-                '3*: 500,304,479'
+				'1⭐: 235,143,105',
+                '2⭐: 400,243,583',
+                '3⭐: 500,304,479'
 				],
 		    planet: [
-            'Phase 4 DS - Haven-Class Medical Station'
+				'Haven Station'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 4 | DS'
             ]
 			},
             {
 			id: 4,
 			name: 'c5',
 			type: 'lothal',
+			zonepath: 'LS',
 			position: 'left',
 			planetlink: 'lothal.html',
 			rewards: [
-				'1*: 246,742,558',
-                '2*: 419,987,333',
-                '3*: 524,984,167'
+				'1⭐: 246,742,558',
+                '2⭐: 419,987,333',
+                '3⭐: 524,984,167'
 				],
 		    planet: [
-            'Phase 4 LS - Lothal'
+            'Lothal'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 4 | LS'
             ]
 			},
             {
 			id: 5,
 			name: 'c6',
 			type: 'kessel',
-			position: 'right',
+			zonepath: 'Mixed',
+			position: 'left',
 			planetlink: 'kessel.html',
 			rewards: [
-				'1*: 235,143,105',
-                '2*: 400,243,583',
-                '3*: 500,304,479'
+				'1⭐: 235,143,105',
+                '2⭐: 400,243,583',
+                '3⭐: 500,304,479'
 				],
 		    planet: [
-            'Phase 4 Mixed - Kessel'
+            'Kessel'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 4 | Mixed'
             ]
 			},
 			{
 			id: 6,
 			name: 'c7',
 			type: 'dathomir',
+			zonepath: 'DS',
 			position: 'right',
 			planetlink: 'dathomir.html',
 			rewards: [
-				'1*: 158,960,938',
-                '2*: 254,337,500',
-                '3*: 339,116,667'
+				'1⭐: 158,960,938',
+                '2⭐: 254,337,500',
+                '3⭐: 339,116,667'
 				],
 		    planet: [
-            'Phase 3 DS - Dathomir'
+            'Dathomir'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 3 | DS'
             ]
 			},
 			{id: 7,
 			name: 'c8',
 			type: 'geonosis',
+			zonepath: 'DS',
 			position: 'right',
 			planetlink: 'geonosis.html',
 			rewards: [
-				'1*: 148,125,000',
-                '2*: 237,000,000',
-                '3*: 316,000,000'
+				'1⭐: 148,125,000',
+                '2⭐: 237,000,000',
+                '3⭐: 316,000,000'
 				],
 		    planet: [
-            'Phase 2 DS - Geonosis'
+            'Geonosis'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 2 | DS'
             ]
             },
 			{
 			id: 8,
 			name: 'c9',
 			type: 'tatooine',
+			zonepath: 'Mixed',
 			position: 'right',
 			planetlink: 'tatooine.html',
 			rewards: [
-				'1*: 190,953,125',
-                '2*: 305,525,000',
-                '3*: 407,366,667'
+				'1⭐: 190,953,125',
+                '2⭐: 305,525,000',
+                '3⭐: 407,366,667'
 				],
 		    planet: [
-            'Phase 3 Mixed - Tatooine'
+            'Tatooine'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 3 | Mixed'
             ]
 			},
 			{
 			id: 9,
 			name: 'c10',
 			type: 'mustafar',
+			zonepath: 'DS',
 			position: 'right',
 			planetlink: 'mustafar.html',
 			rewards: [
-				'1*: 116,406,250',
-                '2*: 186,250,000',
-                '3*: 248,333,333'
+				'1⭐: 116,406,250',
+                '2⭐: 186,250,000',
+                '3⭐: 248,333,333'
 				],
 		    planet: [
-            'Phase 1 DS - Mustafar'
+            'Mustafar'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 1 | DS'
             ]
 			},
 			{
-			id: 10,//Corellia p1m
+			id: 10,
 			name: 'c11',
-            type: 'corellia',
+			type: 'corellia',
+			zonepath: 'Mixed',
 			position: 'right',
             planetlink: 'corellia.html',
 			rewards: [
-				'1*: 111,718,750',
-                '2*: 178,750,000',
-                '3*: 238,333,333'
+				'1⭐: 111,718,750',
+                '2⭐: 178,750,000',
+                '3⭐: 238,333,333'
 				],
 		    planet: [
-            'Phase 1 Mixed - Corellia'
+            'Corellia'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 1 | Mixed'
             ]
 			},
             {
 			id: 12,
 			name: 'c12',
 			type: 'vandor',
+			zonepath: 'Mixed',
 			position: 'right',
 			planetlink: 'vandor.html',
 			rewards: [
-				'1*: 341,250,768',
-                '2*: 620,455,942',
-                '3*: 729,948,167'
+				'1⭐: 341,250,768',
+                '2⭐: 620,455,942',
+                '3⭐: 729,948,167'
 				],
 		    planet: [
-            'Phase 5 Mixed - Vandor'
+            'Vandor'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 5 | Mixed'
             ]
 			},
             {
 			id: 11,
 			name: 'c13',
 			type: 'hoth',
-			position: 'right',
+			zonepath: 'Mixed',
+			position: 'left',
 			planetlink: 'hoth.html',
 			rewards: [
-				'1*: 582,632,425',
-                '2*: 1,059,331,682',
-                '3*: 1,246,272,567'
+				'1⭐: 582,632,425',
+                '2⭐: 1,059,331,682',
+                '3⭐: 1,246,272,567'
 				],
 		    planet: [
-            'Phase 6 Mixed - Hoth'
+            'Hoth'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 6 | Mixed'
             ]
 			},
 			{
             id: 13,
 			name: 'c14',
 			type: 'felucia',
+			zonepath: 'Mixed',
 			position: 'left',
 			planetlink: 'felucia.html',
 			rewards: [
-				'1*: 148,125,000',
-                '2*: 237,000,000',
-                '3*: 316,000,000'
+				'1⭐: 148,125,000',
+                '2⭐: 237,000,000',
+                '3⭐: 316,000,000'
 				],
 		    planet: [
-            'Phase 2 Mixed - Felucia'
+            'Felucia'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 2 | Mixed'
             ]
 			},
 			{
 			id: 14,
 			name: 'c15',
 			type: 'kashyyyk',
+			zonepath: 'LS',
 			position: 'left',
 			planetlink: 'kashyyyk.html',
 			rewards: [
-				'1*: 190,953,125',
-                '2*: 305,525,000',
-                '3*: 407,366,667'
+				'1⭐: 190,953,125',
+                '2⭐: 305,525,000',
+                '3⭐: 407,366,667'
 				],
 		    planet: [
-            'Phase 3 LS - Kashyyyk'
+            'Kashyyyk'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 3 | LS'
             ]
 			},
 			{
 			id: 15,
 			name: 'c16',
 			type: 'coruscant',
+			zonepath: 'LS',
 			position: 'left',
 			planetlink: 'coruscant.html',
 			rewards: [
-				'1*: 116,406,250',
-                '2*: 186,250,000',
-                '3*: 248,333,333'
+				'1⭐: 116,406,250',
+                '2⭐: 186,250,000',
+                '3⭐: 248,333,333'
 				],
 		    planet: [
-            'Phase 1 LS - Coruscant'
+            'Coruscant'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 1 | LS'
             ]
 			},
 			{
 			id: 16,
 			name: 'c17',
-			type: 'bracca',//actual
+			type: 'bracca',
+			zonepath: 'LS',
 			position: 'left',
 			planetlink: 'bracca.html',
 			rewards: [
-				'1*: 142,265,625',
-                '2*: 227,625,000',
-                '3*: 303,500,000'
+				'1⭐: 142,265,625',
+                '2⭐: 227,625,000',
+                '3⭐: 303,500,000'
 				],
 		    planet: [
-            'Phase 2 LS - Bracca'
+            'Bracca'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 2 | LS'
             ]
 			},
             {
 			id: 11,
 			name: 'c18',
 			type: 'kafrene',
+			zonepath: 'LS',
 			position: 'left',
 			planetlink: 'kafrene.html',
 			rewards: [
-				'1*: 341,250,768',
-                '2*: 620,455,942',
-                '3*: 729,948,167'
+				'1⭐: 341,250,768',
+                '2⭐: 620,455,942',
+                '3⭐: 729,948,167'
 				],
 		    planet: [
-            'Phase 5 LS - Ring of Kafrene'
+            'Ring of Kafrene'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 5 | LS'
             ]
 			},
             {
 			id: 11,
 			name: 'c4',
 			type: 'scarif',
+			zonepath: 'LS',
 			position: 'left',
 			planetlink: 'scarif.html',
 			rewards: [
-				'1*: 555,710,999',
-                '2*: 1,010,383,635',
-                '3*: 1,188,686,629'
+				'1⭐: 555,710,999',
+                '2⭐: 1,010,383,635',
+                '3⭐: 1,188,686,629'
 				],
 		    planet: [
-            'Phase 6 LS - Scarif'
+            'Scarif'
             ],
             notes: [
-            'Click for recommended teams'
+            'Zone 6 | LS'
             ]
 			},
             {
 			id: 31,
 			name: 'c19',
 			type: 'zeffo',
+			zonepath: 'LS',
 			position: 'left',
 			planetlink: 'zeffo.html',
 			rewards: [
 				'Tier 1: 143,589,583',
                 'Tier 2: 229,743,333',
-                '1 star: 287,179,167',
+                '1⭐: 287,179,167',
 				],
 		    planet: [
-            'Phase 3 LS Bonus - Zeffo'
+            'Zeffo'
             ],
             notes: [
-            'Click for recommended teams'
+			'Zone 3 | LS\n',
+			'(Bonus Planet)',
             ]
 			}
 		],
-		selectedMission: '',
+		selectedPlanet: '',
 		seen: false,
 		hide: function() {
 			this.seen = false;
 		}
 	}
 	},
-	template: '#mission',
+	template: '#planet',
 	methods: {
 		mq () {
 			this.isMobile = window.matchMedia('(max-width: 600px)').matches;

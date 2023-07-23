@@ -6,7 +6,8 @@ body {
 	align-items: center;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	background: url(../media/body_bg.png);
+	background: url(../media/backgrounds/body_bg.png) no-repeat center center fixed;
+	background-size: cover;
 	height: 100vh;
 	width: 100vw;
 }
@@ -26,7 +27,7 @@ p {
 	position: relative;
 	width: 100%;
 	height: auto;
-	background: url('../media/map_rote_lines.jpeg') no-repeat;
+	background: url('../media/backgrounds/map_rote_lines.png') no-repeat;
 	background-size: contain;
 	margin: auto;
 	top: -47%;
@@ -40,14 +41,17 @@ p {
 
 #ds_path {
 	fill: darkred;
+
 }
 
 #mix_path {
-	fill: darkgreen;
+	fill: darkgoldenrod;
+
 }
 
 #ls_path {
 	fill: navy;
+
 }
 
 /*.part:hover {
@@ -79,21 +83,28 @@ text:hover {
 
 .description {
 	position: absolute;
-	opacity: 0.85;
-	background-color: navy; /*rgb(35, 48, 67, 0.9);*/
+	opacity: 0.95;
+	background-color: black;
 	transform: translate(0, -45%);
 	top: 50%;
-	max-width: 48%;
+	width: auto;
+	max-width: 22%;
 	padding: 1rem;
-	color: #ffffff;
+	/*color: #ffffff;*/
 	z-index: 100;
 	border-radius: 1%;
 	word-wrap: normal;
 	font-weight: bold;
-	font-family: Impactful, sans-serif;
+	font-family: Starjedi, sans-serif;
 	text-align: center;
 	border: 5px solid black;
 }
+
+.planetTitle {
+	text-transform: lowercase;
+	
+}
+
 .desc_left {
 	left: 3%;
 }
@@ -124,33 +135,33 @@ text:hover {
 	line-height: 0.9rem;
 	border: 1px solid white;
 }
-.mission {
+.planet {
 	position: absolute;
-	width: 5%;
+	width: 4.5%;
 	cursor: pointer;
 	transition: all 0.5s ease;
 }
-.mission:hover, .squad_fill:hover {
+.planet:hover, .squad_fill:hover {
 	transform: scale(1.7);
 	transition: all 0.5s ease;
 }
-.mission:hover {
-	/*background: url('../media/focus.svg') no-repeat;*/
+.planet:hover {
 	background-size: contain;
 }
 
 /* Home button text */
 @font-face {
-	font-family: Impactful;
+	font-family: Starjedi;
 	font-weight: bold;
-	src: url('../media/fonts/impact/impact.ttf');
+	src: url('../media/fonts/StarWars/Starjedi.ttf');
 }
 
 .top-left {
-	font-family: Impactful;
+	font-family: Starjedi;
+	text-align: center;
 	position: fixed;
-	top: 0px;
-	left: 0px;
+	top: 2%;
+	left: 1.5%;
 	font-size: 2.0vw;
 	color: white;
 }
@@ -238,89 +249,279 @@ td {
 	position: relative;
 }
 
-/*Mission positions*/
+/******************************************Planet Positions & Styling*********************************************/
 
-.c1 {/*death star*/
+/**********Dark Side************/
+
+.c1 { /*Z6 DS Death Star*/
 	top: 25%;
 	left: 18%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(191, 15, 35, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-.c2 {/*malachor*/
+	.c1:hover ~ .description {
+		color: darkred;
+		border: 5px solid darkred;
+	}
+
+.c2 { /*Z5 DS Malachor*/
 	top: 37.5%;
 	left: 16.5%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(191, 15, 35, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-.c3 {/*Haven*/
+	.c2:hover ~ .description {
+	color: darkred;
+	border: 5px solid darkred;		
+	}
+
+.c3 { /*Z4 DS Haven*/
 	top: 53%;
 	left: 18%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(191, 15, 35, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-.c5 {/*lothal*/
-	top: 53%;
-	left: 77%;
-}
-.c6 {/*kessel*/
-	top: 33%;
-	left: 55%;
-}
+	.c3:hover ~ .description {
+	color: darkred;
+	border: 5px solid darkred;		
+	}
 
-.c7 {/*P3 DS Dathomir*/
+.c7 { /*Z3 DS Dathomir*/
 	top: 64%;
 	left: 23%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(191, 15, 35, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-.c8 {/*P2 ds geonosis*/
-	top: 63%;
-	left: 34%;
+	.c7:hover ~ .description {
+	color: darkred;
+	border: 5px solid darkred;		
+	}	
+
+.c8 { /*Z2 DS Geonosis*/
+	width: 10%;
+	transform: rotate(-30deg);
+	top: 62%;
+	left: 30%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(191, 15, 35, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-.c9 {/*P3 middle tatooine*/
-	top: 43%;
-	left: 45%;
-}
-.c10 {/*P1 DS mustafar*/
+	.c8:hover {
+		transform: rotate(-30deg) scale(1.5);
+		transition: all 0.5s ease;
+	}
+	.c8:hover ~ .description {
+	color: darkred;
+	border: 5px solid darkred;
+	}
+
+.c10 { /*Z1 DS mustafar*/
 	top: 73%;
 	left: 38%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(191, 15, 35, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-.c11 {/*p1m corellia*/
-	top: 66%;
-	left: 47%;
+	.c10:hover ~ .description {
+	color: darkred;
+	border: 5px solid darkred;		
+	}
+
+/**********Mixed***********/
+
+
+.c6 { /*Z4 Mixed kessel*/
+	top: 33%;
+	left: 55%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(215, 185, 49, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
+}
+	.c6:hover ~ .description {
+		color: darkgoldenrod;
+		border: 5px solid darkgoldenrod;
+	}
+
+
+.c9 { /*Z3 Mixed Tatooine*/
+	width: 5.5%;
+    top: 42%;
+    left: 44%;
+    --stroke-pos: 2px;
+    --stroke-neg: -1.5px;
+    --stroke-color: rgba(215, 185, 49, 0.7);
+    filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-.c12 {/*vandor*/
+	.c9:hover ~ .description {
+		color: darkgoldenrod;
+		border: 5px solid darkgoldenrod;
+	}
+
+.c11 { /*Z1 Mixed Corellia*/
+	width: 6.5%;
+	top: 65%;
+	left: 46%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(215, 185, 49, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
+}
+
+	.c11:hover ~ .description {
+		color: darkgoldenrod;
+		border: 5px solid darkgoldenrod;
+	}
+
+.c12 { /*Z5 Mixed Vandor*/
 	top: 22%;
 	left: 50%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(215, 185, 49, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-.c13 {/*hoth*/
+	.c12:hover ~ .description {
+		color: darkgoldenrod;
+		border: 5px solid darkgoldenrod;
+	}
+
+.c13 { /*Z6 Mixed Hoth*/
 	top: 15%;
 	left: 59%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(215, 185, 49, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-.c14 {/*P2 middle felucia*/
+
+	.c13:hover ~ .description {
+		color: darkgoldenrod;
+		border: 5px solid darkgoldenrod;
+	}
+
+.c14 { /*Z2 Mixed Felucia*/
 	top: 53%;
 	left: 50%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(215, 185, 49, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-.c15 {/*p3 ls kashyyyk*/
+
+	.c14:hover ~ .description {
+		color: darkgoldenrod;
+		border: 5px solid darkgoldenrod;		
+	}
+
+/**********Light Side************/
+
+.c5 { /*Z4 LS lothal*/
+	top: 53%;
+	left: 77%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(68, 185, 252, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
+}
+
+	.c5:hover ~ .description {
+		color: lightskyblue;
+		border: 5px solid lightskyblue;
+	}
+
+.c15 { /*Z3 LS Kashyyyk*/
 	top: 63%;
 	left: 72%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(68, 185, 252, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-.c16 {/*P1 Coruscant*/
+	.c15:hover ~ .description {
+		color: lightskyblue;
+		border: 5px solid lightskyblue;
+	}
+.c16 { /*Z1 LS Coruscant*/
 	top: 73%;
 	left: 56%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(68, 185, 252, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-.c17 {/*P2 ls bracca*/
+
+	.c16:hover ~ .description {
+		color: lightskyblue;
+		border: 5px solid lightskyblue;
+	}
+
+.c17 { /*Z2 LS Bracca*/
 	top: 63%;
 	left: 60%;
-
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(68, 185, 252, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-.c18 {/*kafrene*/
+	.c17:hover ~ .description {
+		color: lightskyblue;
+		border: 5px solid lightskyblue;
+	}
+
+.c18 { /*Z5 LS Ring of Kafrene*/
 	top: 37%;
 	left: 77%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(68, 185, 252, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-.c4 {/*scarif*/
+
+	.c18:hover ~ .description {
+		color: lightskyblue;
+		border: 5px solid lightskyblue;
+	}
+
+.c4 { /*Z6 LS Scarif*/
 	top: 24%;
 	left: 76%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(68, 185, 252, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-.c19 {/*zeffo*/
+
+	.c4:hover ~ .description {
+		color: lightskyblue;
+		border: 5px solid lightskyblue;
+	}
+
+.c19 { /*Z3 LS Zeffo*/
 	top: 47%;
 	left: 60%;
+	--stroke-pos: 2px;
+	--stroke-neg: -1.5px;
+	--stroke-color: rgba(68, 185, 252, 0.7);
+	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
+	.c19:hover ~ .description {
+		color: lightskyblue;
+		border: 5px solid lightskyblue;
+	}
 
 
 @media (min-width: 1700px) {
@@ -334,6 +535,25 @@ td {
 		line-height: 0.6rem;
 	}
 }
+
+
+
+
+
+/******************************************************************************************************************/
+/******************************************************************************************************************/
+/***********************************************MOBILE STYLING*****************************************************/
+/******************************************************************************************************************/
+/******************************************************************************************************************/
+
+
+
+
+
+
+
+
+
 /*Formatting/Styling for map when mobile screen is being viewed vertically*/
 @media screen and (orientation:portrait) {
 
@@ -367,13 +587,13 @@ td {
 	}
 
 	@font-face {
-		font-family: Impactful;
+		font-family: Starjedi;
 		font-weight: bold;
-		src: url('../media/fonts/impact/impact.ttf');
+		src: url('../media/fonts/StarWars/Starjedi.ttf');
 	}
 
 	.top-left {
-		font-family: Impactful, sans-serif;
+		font-family: Starjedi, sans-serif;
 		position: fixed;
 		top: 0px;
 		left: 0px;

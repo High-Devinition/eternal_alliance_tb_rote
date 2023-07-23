@@ -3,14 +3,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ΞTΞRNAL ALLiΔNCE | ROTE TB</title>
+    <title>ROTE | Galaxy Map</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Interactive Rise of the Empire Territory Battle Map SWGoH">
     <meta name="keywords" content="swgoh, star wars, rote, territory, battle, map, interactive, eternal, alliance">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="icon" type="image" href="../media/favicon/ea1.png">
+    <link rel="icon" type="image" href="../media/favicon/get3.png">
 </head>
 <body>
     <div class="wrapper">
@@ -173,92 +173,52 @@
                         </text>-->
                         <path class="part" d="M 441 165 L 455 168 L 458 162 L 484 171 L 483 178 L 533 203 L 537 198 L 549 206 L 578 170 C 563 159 548 152 533 145 L 542 126 L 516 115 L 508 132 L 455 117 z"></path>
                     </svg>
-                    <mission></mission>
+                    <planet></planet>
                 </div>
             </div>
             <div class="console_container">
-                <img class="map_console_ls" style="pointer-events: none" src="../media/map_console_landscape.png" />
+                <img class="map_console_ls" style="pointer-events: none" src="../media/map_ui/map_console_landscape.png" />
             </div>
         </div>
     </div>
     <!--Templates for Vue-->
-    <template id="mission">
+    <template id="planet">
         <div>
-            <img class="mission"
-                 v-for="mission in missions"
-                 v-bind:key="mission.name"
-                 v-bind:class="mission.name"
-                 v-bind:src="'../media/planet_' +  mission.type + '.png'"
-                 @mouseover="isMobile ? null : selectedMission = mission; seen = true" @mouseleave="seen = false"
-                 v-on:click="window.open(mission.planetlink,'_self')">
+            <img class="planet"
+                 v-for="planet in planets"
+                 v-bind:key="planet.name"
+                 v-bind:class="planet.name"
+                 v-bind:src="'../media/planets/icons/planet_' +  planet.type + '.png'"
+                 @mouseover="isMobile ? null : selectedPlanet = planet; seen = true" @mouseleave="seen = false"
+                 v-on:click="window.open(planet.planetlink,'_self')">
             <!--v-click-outside="hide"-->
-            <div v-if="seen" class="description" id="planetDesc" v-bind:class="'desc_' + selectedMission.position">
+            <div v-if="seen" class="description" id="planetDesc" v-bind:class="'desc_' + selectedPlanet.position">
 
-                <div class="rewards mb-3" v-if="selectedMission.planet">
-                    <p class="h4" style="text-decoration: underline">Planet Info</p>
-                    <span v-for="item in selectedMission.planet">&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;</span>
+                <div class="rewards mb-3" v-if="selectedPlanet.planet">
+                    <p class="planetTitle" style="font-size: 34px">
+                        <span v-for="item in selectedPlanet.planet">{{item}}</span>
+                    </p>
                 </div>
-                <div class="rewards mb-3" v-if="selectedMission.notes">
-                    <span v-for="item in selectedMission.notes">&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;</span>
+                <div class="rewards mb-3" v-if="selectedPlanet.notes">
+                    <p class="planetTitle" style="text-decoration: underline">Planet Info</p>
+                    <p v-for="item in selectedPlanet.notes" style="color:white; font-family:sans-serif">&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;</p>
                 </div>
 
-                <div class="rewards mb-3" v-if="selectedMission.rewards">
-                    <p class="h4" style="text-decoration: underline">Points Needed</p>
-                    <ul class="points">
-                        <li class="text-justify" v-for="item in selectedMission.rewards">{{item}}</li>
+                <div class="rewards mb-3" v-if="selectedPlanet.rewards">
+                    <p class="planetTitle" style="text-decoration: underline">Points Needed</p>
+                    <ul class="points" style="color:white; font-family:sans-serif">
+                        <li class="text-justify" v-for="item in selectedPlanet.rewards">{{item}}</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-        <div>
-            <img id="planetImg" class="mission"
-                 v-for="mission in missions"
-                 v-bind:key="mission.name"
-                 v-bind:class="mission.name"
-                 v-bind:src="'../media/planet_' +  mission.type + '.png'"
-                 @mouseover="isMobile ? null : selectedMission = mission; seen = true" @mouseleave="seen = false"
-                 v-on:click="window.open(mission.planetlink,'_self')">
-
-            <!--v-click-outside="hide"-->
-            <div v-if="seen" class="description" id="desc" v-bind:class="'desc_' + selectedMission.position">
-                <div class="rewards mb-3" v-if="selectedMission.planet">
-                    <p class="h4" style="text-decoration: underline">Planet Info</p>
-                    <span v-for="item in selectedMission.planet" id="planetName">&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;</span>
-                </div>
-                <div class="rewards mb-3" v-if="selectedMission.notes">
-                    <span v-for="item in selectedMission.notes">&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;</span>
-                </div>
-                <div class="rewards mb-3" v-if="selectedMission.rewards">
-                    <p class="h4" style="text-decoration: underline">Points Needed</p>
-                    <ul class="points">
-                        <li class="text-justify" v-for="item in selectedMission.rewards">{{item}}</li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
     </template>
     <div class="top-left">
         <a href="../index.html" style="color:#FFFFFF;"> <i class="fa fa-home fa-fw"></i>Home</a><br>
     </div>
-    <script>
-        document.getElementById("planetImg").addEventListener("mouseover", function () {
-
-            if (document.getElementsByClassName("rewards").item.textContent.includes('Phase 1 DS - Mustafar')) {
-                document.getElementsById("desc").style.backgroundColor = "darkred";
-            }
-
-        });
-            
-            
-        
-        function mixDescription() {
-
-        }
-        function lsDescription() {
-
-        }
-    </script>
     <script src="../js/vue.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>-->
     <script src="../js/main.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7G9QJXCBX4"></script>
