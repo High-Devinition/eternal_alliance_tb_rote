@@ -52,6 +52,7 @@ body {
   
 }
 
+
 .description {
 
 }
@@ -100,9 +101,26 @@ body {
     width: 80%;
 }
 
+#ops_affected_img {
+    width: 75%;
+    height: auto;
+    padding-top: 10px;
+}
+
 .h4 {
     font-family: Starjedi;
     text-transform: lowercase;
 }
 
+.desc_right {
+    overflow-y: auto;
+}
+
+.desc_left {
+    overflow-y: auto;
+}
+
+#platoonsPopup {
+    padding-bottom: 15px;
+}
 

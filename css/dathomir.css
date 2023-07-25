@@ -24,9 +24,8 @@ p {
 	top: -10%;
 	width: 100vw;
 	height: auto;
-	background: url('../media/planets/dathomir.png') no-repeat ;
+	background: url('../media/planets/backdrops/dathomir_backdrop.png') no-repeat;
 	background-size: contain;
-
 }
 .part {
 	opacity: .3;

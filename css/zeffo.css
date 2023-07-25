@@ -24,7 +24,7 @@ p {
 	top: -10%;
 	width: 100vw;
 	height: auto;
-	background: url('../media/planets/zeffo.png') no-repeat ;
+	background: url('../media/planets/backdrops/zeffo_backdrop.png') no-repeat ;
 	background-size: contain;
 
 }

@@ -24,9 +24,8 @@ p {
 	top: -10%;
 	width: 100vw;
 	height: auto;
-	background: url('../media/planets/coruscant.png') no-repeat ;
+	background: url('../media/planets/backdrops/coruscant_backdrop.png') no-repeat;
 	background-size: contain;
-
 }
 .part {
 	opacity: .3;

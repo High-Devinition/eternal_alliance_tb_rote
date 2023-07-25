@@ -24,9 +24,8 @@ p {
 	top: -10%;
 	width: 100vw;
 	height: auto;
-	background: url('../media/planets/corellia.png') no-repeat ;
+	background: url('../media/planets/backdrops/corellia_backdrop.png') no-repeat;
 	background-size: contain;
-
 }
 .part {
 	opacity: .3;
