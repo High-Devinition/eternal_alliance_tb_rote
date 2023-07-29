@@ -1,18 +1,24 @@
-/* Custom directive for detecting click outside of element */
-/*Vue.directive('click-outside', {
-	bind: function (el, binding, vnode) {
-		this.event = function (event) {
-		if (!(el == event.target || el.contains(event.target))) {
-			vnode.context[binding.expression](event);
-		}
-	};
-	document.body.addEventListener('click', this.event)
-	},
-	unbind: function (el) {
-		document.body.removeEventListener('click', this.event)
-	},
-});
-	*/
+///* Custom directive for detecting click outside of element */
+//Vue.directive('click-outside', {
+//	bind: function (el, binding, vnode) {
+//		this.event = function (event) {
+//		if (!(el == event.target || el.contains(event.target))) {
+//			vnode.context[binding.expression](event);
+//		}
+//	};
+//	document.div.addEventListener('click', this.event)
+//	},
+//	unbind: function (el) {
+//		document.div.removeEventListener('click', this.event)
+//	},
+//});
+//$(document).ready(function () {
+//	$('.mission').click(function () {
+//		$('.mission').css({ 'background': 'url(../media/map_ui/mission_focused.png) no-repeat bottom padding-box' });
+//	});
+//});
+
+
 Vue.component('mission', {
 	data: function () {
 		return {
@@ -550,7 +556,7 @@ Vue.component('mission', {
 			id: 0,
 			name: 'c1',
 			type: 'usual',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 125,000',
                 'Wave 2: 250,000'
@@ -620,11 +626,10 @@ Vue.component('mission', {
                '3 Stars after maximum preload: 167,875,000 ',
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'geonosis', position: 'right', preqs:["Characters: Relic 6+","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			{ id: 30, name: 'm2', type: 'geonosis', position: 'right', preqs: ["Characters: Relic 6+", "Ships: 7⭐"], platoonAbility: [0], platzones: [0, 1, 2] }
+			
 			],
-			operations: [
-				
-		],
+			
 		defaultPath: '../media/map_ui/mission_',
 		
 		selectedMission: '',
@@ -638,7 +643,7 @@ Vue.component('mission', {
 		},	
         hide: function() {
 			    this.seen = false;
-		}
+		}	
 	},
 })
 
@@ -646,7 +651,19 @@ Vue.component('mission', {
 let app = new Vue({
 	el: '#app',
 	data: {
-		isVisible: false
+		isVisible: false,
 	},
 });
 
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
+});

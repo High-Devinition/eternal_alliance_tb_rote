@@ -210,7 +210,7 @@
                         <li class="text-justify" v-for="item in selectedPlanet.rewards">{{item}}</li>
                     </ul>
                 </div>
-                
+
             </div>
         </div>
     </template>
@@ -232,3 +232,9 @@
 
 </body>
 </html>
+
+
+
+@click="selectedMission = mission; seen = true"
+                 @mouseover="isMobile ? null : this.src='../media/map_ui/mission_focused.png'"
+                 @mouseleave="hover = false">

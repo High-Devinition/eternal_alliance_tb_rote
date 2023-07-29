@@ -21,12 +21,11 @@ p {
 }
 .map {
 	position: relative;
-	top: -10%;
 	width: 100vw;
 	height: auto;
-	background: url('../media/planets/backdrops/geonosis_backdrop.png') no-repeat ;
+	background: url('../media/planets/backdrops/geonosis_backdrop.png') no-repeat;
 	background-size: contain;
-
+	
 }
 .part {
 	opacity: .3;
@@ -58,10 +57,9 @@ text:hover {
 
 
 
-
 .description {
 	position: absolute;
-	background-color: rgb(35, 48, 67, 0.9);
+	background-color: rgb(14, 18, 27, 0.95);
 	transform: translate(0, -45%);
 	top: 50%;
 	max-width: 48%;
@@ -97,26 +95,6 @@ text:hover {
 	border-radius: 1%;
 }
 
-.mission {
-	position: absolute;
-	width: 5%;
-	cursor: pointer;
-	transition: all 0.5s ease;
-}
-
-.mission:hover, .squad_fill:hover {
-	transform: scale(1.2);
-	transition: all 0.5s ease;
-}
-.mission:hover {
-	
-	background: url('../media/focus.svg') no-repeat;
-	background-size: contain;
-}
-/*
-	.m2 {
-		background-image: url('../media/map_ui/ops_droidfactory.png');
-	}*/
 
 
 /* Home button text */
@@ -174,7 +152,6 @@ td {
 	width: 4%;
 }
 
-
 /*Mission positions*/
 .c1 {/*P4 middle battle*/
 	top: 36%;
@@ -203,6 +180,7 @@ td {
 .m2 { /*P3 middle platoons*/
 	top: 33%;
 	left: 37%;
+
 
 }
 }

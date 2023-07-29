@@ -9,11 +9,11 @@
 .top-left { 
     font-family: Starjedi, sans-serif;
     top: 1.5%;
-    font-size: 2.0vw;
+    font-size: 1.5vw;
     font-weight: bold;
     text-align: center;
     color: white;
-    width: 27%;
+    width: 20%;
     height: auto;
     margin: auto;
 }
@@ -26,15 +26,20 @@ body {
     overflow-x: hidden;
 }
 
+.map {
+    position: relative;  
+    width: 68vw;
+    height: auto;
+}
+
 .container-fluid {
     display: block;
     align-items: center;
-    max-width: 75%;
-    max-height: 85%;
+    max-width: 100%;
+    max-height: 100%;
     right: 50%;
-    width: 100%;
-    height: 100%;
     margin: auto;
+    top: 15%;
     padding: 0;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -47,22 +52,158 @@ body {
     height: 40px;
     position: absolute;
     color: white;
-    left: 8%;
-    bottom: 13%;
+    left: 5%;
+    bottom: 0.5%;
   
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+svg {
+    border: 10px solid black;
 }
 
 
 .description {
-
+    background-color: rgb(14, 18, 27, 0.95);
+    border: 5px solid white;
+    display: none;
 }
 .desc_left {
-    left: 20%;
+    left: -22%;
+    top: 40%;
 }
 
 .desc_right {
-    right: 20%;
+    right: -22%;
+    top: 40%;
 }
+
+#descClose {
+    position: absolute;
+    font-size: 30px;
+
+
+    font-weight: bold;
+}
+
+.mission {
+    position: absolute;
+    cursor: pointer;
+    background-size: cover;
+    transform: scale(0.8);
+    /*transition: all 0.5s ease;*/
+}
+
+    .mission:hover, .squad_fill:hover {
+        transform: scale(1.1);
+        transition: step-start 1.5s all;
+        background: url('../media/map_ui/mission_focused.png') no-repeat bottom padding-box;
+        background-size: cover;
+        position: absolute;
+        
+    }
+
+img.selected {
+    pointer-events: none;
+    background: url(../media/map_ui/mission_selected.png) no-repeat bottom padding-box;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    padding: 0 5px 25px 5px;
+}
+
+.c1 {
+    padding: 0 10px 0 10px;
+    width: 8%;
+}
+
+.c2 {
+    padding: 0 10px 0 10px;
+    width: 8%;
+}
+
+.c3 {
+    padding: 0 10px 0 10px;
+    width: 8%;
+}
+
+.c4 {
+    padding: 0 10px 0 10px;
+    width: 8%;
+}
+
+.c5 {
+    padding: 0 10px 0 10px;
+    width: 8%;
+}
+
+.c6 {
+    padding: 0 10px 0 10px;
+    width: 8%;
+}
+
+/*c7 is the deployment node for every planet*/
+.c7 {
+    /*padding: 0 10px 10px 10px;*/
+    padding: 0 10px 10px 10px;
+    width: 8%;
+}
+
+.c8 {
+    padding: 0 10px 0 10px;
+    width: 8%;
+}
+
+.c9 {
+    padding: 0 10px 0 10px;
+    width: 8%;
+}
+
+.c10 {
+    padding: 0 10px 0 10px;
+    width: 8%;
+}
+
+/*m2 is the platoon/operations node for every planet*/
+.m2 {
+    width: 9%;
+    padding: 0 15px 12px 15px;
+    
+}
+
+    .m2:hover {
+        background: url('../media/map_ui/mission_focused.png') no-repeat bottom padding-box;
+        background-size: cover;
+    }
+/*#animation {
+    background: url('../media/map_ui/pulse_animate.png') no-repeat bottom padding-box;
+    width: 8%;*/
+    /*transform: scale(1.1);*/
+    /*animation: pulsate 1.5s ease-out;
+    animation-iteration-count: infinite;
+    padding: 0 5px 25px 5px;
+
+}*/
+
+@keyframes pulsate {
+    0% {
+        transform: scale(0.1, 0.1);
+        opacity: 0.0;
+    }
+
+    50% {
+        opacity: 1.0;
+    }
+
+    100% {
+        transform: scale(1.2, 1.2);
+        opacity: 0.0;
+    }
+}
+
 
 /********************Operations/Platoons Description********************/
 
@@ -87,7 +228,7 @@ body {
     width: 80%;
     height: auto;
     padding: 0.2rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 #opLvl {
@@ -120,7 +261,4 @@ body {
     overflow-y: auto;
 }
 
-#platoonsPopup {
-    padding-bottom: 15px;
-}
 
