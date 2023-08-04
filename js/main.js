@@ -491,9 +491,9 @@ Vue.component('planet', {
 			position: 'right',
 			planetlink: 'deathstar.html',
 			rewards: [
-				'1⭐: 582,632,425',
-                '2⭐: 1,059,331,682',
-                '3⭐: 1,246,272,567'
+				'⭐: 582,632,425',
+                '⭐⭐: 1,059,331,682',
+                '⭐⭐⭐: 1,246,272,567'
 				],
 		    planet: [
             'Deathstar'
@@ -510,9 +510,9 @@ Vue.component('planet', {
 			position: 'right',
 			planetlink: 'malachor.html',
 			rewards: [
-				'1⭐: 341,250,768',
-                '2⭐: 620,455,942',
-                '3⭐: 729,948,167'
+				'⭐: 341,250,768',
+                '⭐⭐: 620,455,942',
+                '⭐⭐⭐: 729,948,167'
 				],
 		    planet: [
             'Malachor'
@@ -529,9 +529,9 @@ Vue.component('planet', {
 			position: 'right',
 			planetlink: 'haven.html',
 			rewards: [
-				'1⭐: 235,143,105',
-                '2⭐: 400,243,583',
-                '3⭐: 500,304,479'
+				'⭐: 235,143,105',
+                '⭐⭐: 400,243,583',
+                '⭐⭐⭐: 500,304,479'
 				],
 		    planet: [
 				'Haven Station'
@@ -548,9 +548,9 @@ Vue.component('planet', {
 			position: 'left',
 			planetlink: 'lothal.html',
 			rewards: [
-				'1⭐: 246,742,558',
-                '2⭐: 419,987,333',
-                '3⭐: 524,984,167'
+				'⭐: 246,742,558',
+                '⭐⭐: 419,987,333',
+                '⭐⭐⭐: 524,984,167'
 				],
 		    planet: [
             'Lothal'
@@ -567,9 +567,9 @@ Vue.component('planet', {
 			position: 'left',
 			planetlink: 'kessel.html',
 			rewards: [
-				'1⭐: 235,143,105',
-                '2⭐: 400,243,583',
-                '3⭐: 500,304,479'
+				'⭐: 235,143,105',
+                '⭐⭐: 400,243,583',
+                '⭐⭐⭐: 500,304,479'
 				],
 		    planet: [
             'Kessel'
@@ -586,9 +586,9 @@ Vue.component('planet', {
 			position: 'right',
 			planetlink: 'dathomir.html',
 			rewards: [
-				'1⭐: 158,960,938',
-                '2⭐: 254,337,500',
-                '3⭐: 339,116,667'
+				'⭐: 158,960,938',
+                '⭐⭐: 254,337,500',
+                '⭐⭐⭐: 339,116,667'
 				],
 		    planet: [
             'Dathomir'
@@ -604,9 +604,9 @@ Vue.component('planet', {
 			position: 'right',
 			planetlink: 'geonosis.html',
 			rewards: [
-				'1⭐: 148,125,000',
-                '2⭐: 237,000,000',
-                '3⭐: 316,000,000'
+				'⭐: 148,125,000',
+                '⭐⭐: 237,000,000',
+                '⭐⭐⭐: 316,000,000'
 				],
 		    planet: [
             'Geonosis'
@@ -623,9 +623,9 @@ Vue.component('planet', {
 			position: 'right',
 			planetlink: 'tatooine.html',
 			rewards: [
-				'1⭐: 190,953,125',
-                '2⭐: 305,525,000',
-                '3⭐: 407,366,667'
+				'⭐: 190,953,125',
+                '⭐⭐: 305,525,000',
+                '⭐⭐⭐: 407,366,667'
 				],
 		    planet: [
             'Tatooine'
@@ -642,9 +642,9 @@ Vue.component('planet', {
 			position: 'right',
 			planetlink: 'mustafar.html',
 			rewards: [
-				'1⭐: 116,406,250',
-                '2⭐: 186,250,000',
-                '3⭐: 248,333,333'
+				'⭐: 116,406,250',
+                '⭐⭐: 186,250,000',
+                '⭐⭐⭐: 248,333,333'
 				],
 		    planet: [
             'Mustafar'
@@ -661,9 +661,9 @@ Vue.component('planet', {
 			position: 'right',
             planetlink: 'corellia.html',
 			rewards: [
-				'1⭐: 111,718,750',
-                '2⭐: 178,750,000',
-                '3⭐: 238,333,333'
+				'⭐: 111,718,750',
+                '⭐⭐: 178,750,000',
+                '⭐⭐⭐: 238,333,333'
 				],
 		    planet: [
             'Corellia'
@@ -680,9 +680,9 @@ Vue.component('planet', {
 			position: 'right',
 			planetlink: 'vandor.html',
 			rewards: [
-				'1⭐: 341,250,768',
-                '2⭐: 620,455,942',
-                '3⭐: 729,948,167'
+				'⭐: 341,250,768',
+                '⭐⭐: 620,455,942',
+                '⭐⭐⭐: 729,948,167'
 				],
 		    planet: [
             'Vandor'
@@ -699,9 +699,9 @@ Vue.component('planet', {
 			position: 'left',
 			planetlink: 'hoth.html',
 			rewards: [
-				'1⭐: 582,632,425',
-                '2⭐: 1,059,331,682',
-                '3⭐: 1,246,272,567'
+				'⭐: 582,632,425',
+                '⭐⭐: 1,059,331,682',
+                '⭐⭐⭐: 1,246,272,567'
 				],
 		    planet: [
             'Hoth'
@@ -718,9 +718,9 @@ Vue.component('planet', {
 			position: 'left',
 			planetlink: 'felucia.html',
 			rewards: [
-				'1⭐: 148,125,000',
-                '2⭐: 237,000,000',
-                '3⭐: 316,000,000'
+				'⭐: 148,125,000',
+                '⭐⭐: 237,000,000',
+                '⭐⭐⭐: 316,000,000'
 				],
 		    planet: [
             'Felucia'
@@ -737,9 +737,9 @@ Vue.component('planet', {
 			position: 'left',
 			planetlink: 'kashyyyk.html',
 			rewards: [
-				'1⭐: 190,953,125',
-                '2⭐: 305,525,000',
-                '3⭐: 407,366,667'
+				'⭐: 190,953,125',
+                '⭐⭐: 305,525,000',
+                '⭐⭐⭐: 407,366,667'
 				],
 		    planet: [
             'Kashyyyk'
@@ -756,9 +756,9 @@ Vue.component('planet', {
 			position: 'left',
 			planetlink: 'coruscant.html',
 			rewards: [
-				'1⭐: 116,406,250',
-                '2⭐: 186,250,000',
-                '3⭐: 248,333,333'
+				'⭐: 116,406,250',
+                '⭐⭐: 186,250,000',
+                '⭐⭐⭐: 248,333,333'
 				],
 		    planet: [
             'Coruscant'
@@ -775,9 +775,9 @@ Vue.component('planet', {
 			position: 'left',
 			planetlink: 'bracca.html',
 			rewards: [
-				'1⭐: 142,265,625',
-                '2⭐: 227,625,000',
-                '3⭐: 303,500,000'
+				'⭐: 142,265,625',
+                '⭐⭐: 227,625,000',
+                '⭐⭐⭐: 303,500,000'
 				],
 		    planet: [
             'Bracca'
@@ -794,9 +794,9 @@ Vue.component('planet', {
 			position: 'left',
 			planetlink: 'kafrene.html',
 			rewards: [
-				'1⭐: 341,250,768',
-                '2⭐: 620,455,942',
-                '3⭐: 729,948,167'
+				'⭐: 341,250,768',
+                '⭐⭐: 620,455,942',
+                '⭐⭐⭐: 729,948,167'
 				],
 		    planet: [
             'Ring of Kafrene'
@@ -813,9 +813,9 @@ Vue.component('planet', {
 			position: 'left',
 			planetlink: 'scarif.html',
 			rewards: [
-				'1⭐: 555,710,999',
-                '2⭐: 1,010,383,635',
-                '3⭐: 1,188,686,629'
+				'⭐: 555,710,999',
+                '⭐⭐: 1,010,383,635',
+                '⭐⭐⭐: 1,188,686,629'
 				],
 		    planet: [
             'Scarif'
@@ -834,7 +834,7 @@ Vue.component('planet', {
 			rewards: [
 				'Tier 1: 143,589,583',
                 'Tier 2: 229,743,333',
-                '1⭐: 287,179,167',
+                '⭐: 287,179,167',
 				],
 		    planet: [
             'Zeffo'

@@ -501,15 +501,9 @@ Vue.component('mission', {
         "Wave 2: Imperial Officer (L), Stormtrooper Commander, Stormtrooper, Recon Trooper, Scout Trooper",
 		],
 		platoons: [
-        ["Boba Fett, Scion of Jango",	"5","Darth Revan",	"5","TIE/IN Interceptor Prototype",	"5","C-3PO",	"3","Chewbacca",	"3","Commander Ahsoka Tano",	"3","Commander Luke Skywalker",	"3","Darth Traya",	"3","Ben Solo",	"2",
-"Darth Malgus",	"2","General Kenobi",	"2","Geonosian Brood Alpha",	"2","Grand Master Yoda",	"2","Han Solo",	"2","Ki-Adi-Mundi",	"2",
-"R2-D2",	"2","The Mandalorian (Beskar Armor)",	"2","Wat Tambor",	"2","Admiral Piett",	"1","Anakin's Eta-2 Starfighter",	"1","BB-8",	"1","Bossk",	"1","BT-1",	"1","Chimaera",	"1","Clone Sergeant's ARC-170",	"1",
-"Clone Sergeant - Phase I",	"1","Colonel Starck",	"1","Darth Maul",	"1","Darth Sion",	"1","Darth Vader",	"1","Eeth Koth",	"1","Emperor Palpatine",	"1",
-"Hyena Bomber",	"1","Ima-Gun Di",	"1","Imperial Probe Droid",	"1","Jawa Engineer",	"1","Jedi Knight Revan",	"1","Jolee Bindo",	"1","Kylo Ren's Command Shuttle",	"1",
-"Logray",	"1","Malevolence",	"1","Padme Amidala",	"1","Paploo",	"1","Plo Koon's Jedi Starfighter",	"1","Poe Dameron",	"1","Razor Crest",	"1",
-"Rebel Officer Leia Organa",	"1","Rey (Jedi Training)",	"1","Sana Starros",	"1","Sith Trooper",	"1","T3-M4",	"1","Talia",	"1","Threepio & Chewie",	"1",
-"TIE Silencer",	"1",
-        ]
+			"All enemy ships have +15% Max Health and Speed. At the start of battle, the cooldown of Call Reinforcement on the enemy Capital Ship is reduced by 1.",
+			"-15% Max Health",
+			"-15% Speed."
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -535,15 +529,15 @@ Vue.component('mission', {
         reqs:[
         'Lord Vader (Relic 5+)',
         '5x Dark Side or Neutral (Relic 5+)',
-        'Dark Side Ships (7-Star), Scythe',
-        'Dark Side Ships (7-Star)',
+        'Dark Side Ships (7⭐), Scythe',
+        'Dark Side Ships (7⭐)',
         '5x Dark Side or Neutral (Relic 6+)',//4
         '5x Geonosian (Relic 7+)',//5
         '5x characters (Relic 5+)',
         '5x characters (Relic 5+), Doctor Aphra',
         '5x characters (Relic 5+), Jabba the Hutt',
         '5x characters (Relic 5+), Qi\'ra, Young Han Solo',
-        'Lando\'s Millenium Falcon (7-Star)'//10
+        'Lando\'s Millenium Falcon (7⭐)'//10
         ],
 		platims:[
 		'Phase 1 Mixed Corellia (Self)',//0
@@ -557,7 +551,7 @@ Vue.component('mission', {
 			id: 0,
 			name: 'c1',
 			type: 'usual',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 100,000',
                 'Wave 2: 200,000'
@@ -611,7 +605,7 @@ Vue.component('mission', {
 			id: 5,
 			name: 'c6',
 			type: 'fleet',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 400,000',
 				],
@@ -626,14 +620,15 @@ Vue.component('mission', {
 			type: 'deploy',
 			position: 'right',
             stars: [
-               '1 Star: 111,718,750',
-               '2 Stars: 178,750,000',
-               '3 Stars: 238,333,333',
-               '3 Stars after maximum preload: 126,614,583 ',
+               '⭐ 111,718,750',
+               '⭐⭐ 178,750,000',
+               '⭐⭐⭐ 238,333,333'
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 5","Ships: 7-Star"], requiredToons: [0], platzones: [0,1,2,3,4,5]}
-		],
+			{id: 30, name: 'm2', type: 'corellia', position: 'right', preqs:["Characters: Relic 5","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			],
+			defaultPath: '../media/map_ui/mission_',
+
 		selectedMission: '',
 		seen: false,
 	}
@@ -655,4 +650,17 @@ let app = new Vue({
 	data: {
 		isVisible: false
 	},
+});
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
 });

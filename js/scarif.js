@@ -566,23 +566,23 @@ Vue.component('mission', {
         reqs:[
         'Lord Vader (Relic 5+)',
         '5x Dark Side or Neutral (Relic 5+)',
-        'Dark Side Ships (7-Star), Scythe',
-        'Dark Side Ships (7-Star)',
+        'Dark Side Ships (7⭐), Scythe',
+        'Dark Side Ships (7⭐)',
         '5x Dark Side or Neutral (Relic 6+)',//4
         '5x Geonosian (Relic 7+)',//5
         '5x characters (Relic 5+)',
         '5x characters (Relic 5+), Doctor Aphra',
         '5x characters (Relic 5+), Jabba the Hutt',
         '5x characters (Relic 5+), Qi\'ra, Young Han Solo',
-        'Lando\'s Millenium Falcon (7-Star)',//10,
+        'Lando\'s Millenium Falcon (7⭐)',//10,
         "Dark Side or Neutral (Relic 7+)",
         "Dark Side or Neutral (Relic 7+), Doctor Aphra",
         "Empire (Relic 7+)",
         "5x Light Side or Neutral (Relic 7+)",
         "5x Light Side Wookiees (Relic 7+)",//15
-        "Light Side Ships (7-Star), Profundity",
+        "Light Side Ships (7⭐), Profundity",
         '5x characters (Relic 8+), Jabba the Hutt',
-        "Ships (7-Star), Ghost",
+        "Ships (7⭐), Ghost",
         '5x characters (Relic 8+), Qi\'ra, L3-37',
         '5x characters (Relic 8+)',//20
         '5x Light Side or Neutral (Relic 9+), Baze Malbus, Chirrut Îmwe, Scarif Rebel Pathfinder',
@@ -665,13 +665,13 @@ Vue.component('mission', {
 			type: 'deploy',
 			position: 'right',
             stars: [
-               '1 Star: 555,710,999',
-               '2 Stars: 1,010,383,635',
-               '3 Stars: 1,188,686,629',
-               '3 Stars after maximum preload: 632,975,630 ',
+               '⭐ 555,710,999',
+               '⭐⭐ 1,010,383,635',
+               '⭐⭐⭐ 1,188,686,629',
+               'Points to hit ⭐⭐⭐ after a max preload: 632,975,630 ',
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'left',preqs:["Characters: Relic 9","Ships: 7-Star"], requiredToons: [0], platzones: [0]}
+			{id: 30, name: 'm2', type: 'platoon', position: 'left',preqs:["Characters: Relic 9","Ships: 7⭐"], platoonAbility: [0], platzones: [0]}
 		],
 		selectedMission: '',
 		seen: false,

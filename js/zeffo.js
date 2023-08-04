@@ -513,18 +513,9 @@ Vue.component('mission', {
         "Malevolence, Hyena Bomber, Vulture Droid"
 		],
 		platoons: [
-        [      "General Skywalker",	"6","Jedi Knight Luke Skywalker",	"6",
-"Ki-Adi-Mundi",	"6","Jedi Master Luke Skywalker",	"5","Jedi Master Kenobi",	"4","Ben Solo",	"3","Commander Luke Skywalker",	"3","Han Solo",	"3",
-"Jedi Consular",	"3","Jedi Knight Guardian",	"3","Jolee Bindo",	"3","Kyle Katarn",	"3",
-"Rey",	"3","Rey (Jedi Training)",	"3","Chief Chirpa",	"2",
-"Chirrut ÃŽmwe",	"2","Clone Sergeant - Phase I",	"2","General Kenobi",	"2",
-"Luke Skywalker (Farmboy)",	"2","MG-100 StarFortress SF-17",	"2","Razor Crest",	"2","BB-8",	"1","C-3PO",	"1",
-"Chewbacca",	"1","Clone Sergeant's ARC-170",	"1","Commander Ahsoka Tano",	"1",
-"Enfys Nest",	"1","Garazeb Zeb Orrelios",	"1","Hermit Yoda",	"1","Home One",	"1",
-"Jedi Consular's Starfighter",	"1","Jedi Knight Revan",	"1","Juhani",	"1",
-"Kit Fisto",	"1","Mission Vao",	"1","Padme Amidala",	"1",
-"Plo Koon",	"1","Qi'ra",	"1","R2-D2",	"1","Raddus",	"1","Rex's ARC-170",	"1","Visas Marr",	"1",
-"Wrecker",	"1",  ]
+			"Grant the target ally Boon of Eilram until the end of battle, which can't be dispelled. Boon of Eilram: Gain 10 % Mastery each time an ally uses a Special Ability. (Maximum 100 %.)",
+			"If an ally already has Boon of Eilram, grant Boon of Eilram and Boon of Miktrull until the end of battle, which can't be dispelled. Boon of Miktrull: At the start of this character's turn, grant each ally every non-unique buff they have (excluding Stealth and Taunt) for 2 turns.",
+			"If an ally already has Boon of Miktrull, grant Boon of Eilram, Boon of Miktrull, and Boon of Kujet. If an ally already has Boon of Kujet, grant all allies all three Boons. All Boons last until the end of battle and can't be dispelled.Boon of Kujet: At the start of this unit's turn, Stun all enemy units that are below 10% health for 1 turn. When using a basic ability, inflict Massive Damage if the target unit is Stunned."
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -555,23 +546,23 @@ Vue.component('mission', {
         reqs:[
         'Lord Vader (Relic 5+)',
         '5x Dark Side or Neutral (Relic 5+)',
-        'Dark Side Ships (7-Star), Scythe',
-        'Dark Side Ships (7-Star)',
+        'Dark Side Ships (7⭐), Scythe',
+        'Dark Side Ships (7⭐)',
         '5x Dark Side or Neutral (Relic 6+)',//4
         '5x Geonosian (Relic 7+)',//5
         '5x characters (Relic 5+)',
         '5x characters (Relic 5+), Doctor Aphra',
         '5x characters (Relic 5+), Jabba the Hutt',
         '5x characters (Relic 5+), Qi\'ra, Young Han Solo',
-        'Lando\'s Millenium Falcon (7-Star)',//10,
+        'Lando\'s Millenium Falcon (7⭐)',//10,
         "Dark Side or Neutral (Relic 7+)",
         "Dark Side or Neutral (Relic 7+), Doctor Aphra",
         "Empire (Relic 7+)",
         "5x Light Side or Neutral (Relic 7+)",
         "5x Light Side Wookiees (Relic 7+)",//15
-        "Light Side Ships (7-Star), Profundity",
+        "Light Side Ships (7⭐), Profundity",
         "5x Clone Troopers (Relic 7+)",
-        "Light Side Ships (7-Star), Negotiator",
+        "Light Side Ships (7⭐), Negotiator",
         "5x Light Side or Neutral (Relic 7+), Jedi Knight Cal Kestis",
         "5x Unaligned Force Users (Relic 7+, Light side only)"
         ],
@@ -582,7 +573,7 @@ Vue.component('mission', {
 			id: 0,
 			name: 'c1',
 			type: 'fleet',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 682,500',
 				],
@@ -636,10 +627,9 @@ Vue.component('mission', {
 			type: 'deploy',
 			position: 'right',
             stars: [
-               'Tier 1 rewards (150 GETIII and 20 Kyros): 143,589,583',
-               'Tier 2 rewards (300 GETIII and 20 Kyros): 229,743,333',
-               'Tier 3 rewards (1 star): 287,179,167',
-               '1 Star after maximum preload: 143,589,584',
+               'Tier 1 rewards (150 GET3 and 20 Kyros): 143,589,583',
+               'Tier 2 rewards (300 GET3 and 20 Kyros): 229,743,333',
+               '⭐: 287,179,167'
             ],
             notes: [3]
 			}, 
@@ -657,8 +647,11 @@ Vue.component('mission', {
 				modifiers: [2,3,6],
             reqs: [19],
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 7","Ships: 7-Star"], requiredToons: [0], platzones: [0]}
-		],
+			{id: 30, name: 'm2', type: 'zeffo', position: 'right',preqs:["Characters: Relic 7","Ships: 7⭐"], platoonAbility: [0], platzones: [0]}
+			],
+
+			defaultPath: '../media/map_ui/mission_',
+
 		selectedMission: '',
 		seen: false,
 	}
@@ -681,3 +674,17 @@ let app = new Vue({
 		isVisible: false
 	},
 });
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
+});
+

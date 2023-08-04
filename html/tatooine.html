@@ -1,10 +1,9 @@
-<!DOCTYPE ht3l>
-<html lang="ennto">
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>ROTE | Tatooine</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Interactive Rise of the Empire Territory Battle Map SWGoH">
 	<meta name="keywords" content="swgoh, star wars, rote, territory, battle, map, tactics, interactive, tb_geo, genskaar">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -12,6 +11,8 @@
 	<link rel="stylesheet" href="../css/tatooine.css">
 	<link rel="stylesheet" href="../css/planets.css">
 	<link rel="icon" type="image" href="../media/favicon/get3.png">
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -25,33 +26,32 @@
 			</div>
 		</div>
 	</div>
+
 	<!--Templates for Vue-->
+
 	<template id="mission">
+
 		<div>
-            <!--<div v-if="focusedMission">
-                <img class="mission"
-                     v-for="mission in missions"
-                     v-bind:key="mission.name"
-                     v-bind:class="mission.name"
-                     v-bind:src="'../media/map_ui/mission_' +  mission.type + '_focused.png'"
-                     @mouseover="isMobile ? null : focusedMission = mission; seen = true" @mouseleave="seen = false"
-                     @click="selectedMission = mission; seen = true">
-            </div>-->
-
-                <img class="mission"
-                     v-for="mission in missions"
-                     v-bind:key="mission.name"
-                     v-bind:class="mission.name"
-                     v-bind:src="'../media/map_ui/mission_' +  mission.type + '.png'"
-                     @click="selectedMission = mission; seen = true">
+			<div id="animation">
+				<img class="mission" id="planetMission"
+					 v-for="mission in missions"
+					 v-bind:key="mission.name"
+					 v-bind:class="mission.name"
+					 v-bind:src="defaultPath + mission.type + '.png'"
+					 @click="selectedMission = mission; seen = true" />
+			</div>
 
 
-			<!--v-click-outside="hide"-->
-			<div v-if="seen" class="description" v-bind:class="'desc_' + selectedMission.position">
+			<div v-if="seen" class="description" id="descPopup" v-bind:class="'desc_' + selectedMission.position">
 
 				<div class="mb-3">
-					<p><i class="fa fa-window-close fa-fw topcorner" @click="hide"></i></p>
+					<p>
+						<i id="descClose" class="fa fa-window-close fa-fw topcorner" @click="hide" onclick="$('.selected').removeClass('selected')"></i>
+					</p>
+
 				</div>
+
+
 
 				<div class="mb-3" v-if="selectedMission.reqs">
 					<p class="h4">Requirements</p>
@@ -74,37 +74,43 @@
 
 				<div class="mb-3" v-if="selectedMission.dangerousEnemies">
 					<p class="h4">Wave Breakdown</p>
-					<ul>
+					<ul class="waves">
 						<li class="text-justify" v-for="item in selectedMission.dangerousEnemies">{{enemies[item]}}</li>
 					</ul>
 				</div>
 
-				<div class="mb-3 " v-if="selectedMission.requiredToons">
-					<p class="h4">Operation Requirements</p>
-					<span v-for="item in selectedMission.preqs">&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;</span>
+				<div id="platoonsWrapper" class="mb-3 " v-if="selectedMission.platoonAbility">
+					<p class="h4">Wretched Hive</p>
+					<p>(Disable Abilities)</p>
+					<span v-for="item in selectedMission.preqs">&nbsp;{{item}}&nbsp;</span>
 
-					<p class="h4">Required toons</p>
-					<div v-for="item in selectedMission.requiredToons" class="row justify-content-center .flex-nowrap">
-						<div class="platoons" v-for="item in platoons[item]">{{item}}</div>
+					<p class="h4" style="padding-top: 10px;">Ability Tiers</p>
+
+					<div class="justify-content-center" id="opAbilityWrapper">
+						<ul v-for="item in selectedMission.platoonAbility">
+							<li class="opAbilityTxt" v-for="(item, index) in platoons" :key="mission.platoons"><span id="opLvl">Level {{index+1}}:</span>&nbsp;{{item}}&nbsp;</li>
+						</ul>
 					</div>
 
-					<p class="h4"> Affected Territories </p>
+					<p class="h4">Affected Territories</p>
+					<div class="justify-content-center">
+						<img id="ops_affected_img" src="../media/map_ui/tatooine_ops_ability.png" />
+					</div>
 
-					<ul>
-						<li class="text-justify" v-for="item in selectedMission.platzones">{{platims[item]}}</li>
-					</ul>
+
 
 				</div>
 
 				<div class="mb-3" v-if="selectedMission.modifiers">
 					<p class="h4">Important Modifiers</p>
-					<ul>
+					<ul class="modifiers">
 						<li class="text-justify" v-for="item in selectedMission.modifiers">{{modifiers[item]}}</li>
 					</ul>
 				</div>
 				<div class="mb-3" v-if="selectedMission.notes">
 					<p class="h4">Notes</p>
-					<ul>
+					<p style="font-style: italic">Pirate will be present if platoon level 3 is not disabled!</p>
+					<ul class="notes" style="white-space: pre-wrap;">
 						<li class="text-justify" v-for="item in selectedMission.notes">{{notes[item]}}</li>
 					</ul>
 				</div>
@@ -114,22 +120,28 @@
 					<p class="h4">Rewards</p>
 					<span v-for="item in selectedMission.rewards">&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;</span>
 				</div>
-
 				<div class="rewards mb-3" v-if="selectedMission.stars">
-					<h2>Tatooine</h2>
 					<p class="h4">Star Requirements</p>
-					<ul>
+					<ul class="points">
 						<li class="text-justify" v-for="item in selectedMission.stars">{{item}}</li>
 					</ul>
+					<p>Points required after preloading:</p>
+					<p>216,413,542</p>
 				</div>
-
 			</div>
+
+
+
+
 		</div>
+
+
 	</template>
 	<div class="top-left">
 		<a href="main.html" style="color:#FFFFFF"><i class="icon"></i>Galaxy Map</a>
 	</div><br>
 	<script src="../js/vue.min.js"></script>
+
 	<script src="../js/tatooine.js"></script>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7G9QJXCBX4"></script>
@@ -140,7 +152,7 @@
 
 		gtag('config', 'G-7G9QJXCBX4');
 	</script>
-
-
 </body>
 </html>
+
+

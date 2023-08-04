@@ -578,22 +578,22 @@ Vue.component('mission', {
         reqs:[
         'Lord Vader (Relic 5+)',
         '5x Dark Side or Neutral (Relic 5+)',
-        'Dark Side Ships (7-Star), Scythe',
-        'Dark Side Ships (7-Star)',
+        'Dark Side Ships (7⭐), Scythe',
+        'Dark Side Ships (7⭐)',
         '5x Dark Side or Neutral (Relic 6+)',//4
         '5x Geonosian (Relic 7+)',//5
         '5x characters (Relic 5+)',
         '5x characters (Relic 5+), Doctor Aphra',
         '5x characters (Relic 5+), Jabba the Hutt',
         '5x characters (Relic 5+), Qi\'ra, Young Han Solo',
-        'Lando\'s Millenium Falcon (7-Star)',//10,
+        'Lando\'s Millenium Falcon (7⭐)',//10,
         "Dark Side or Neutral (Relic 7+)",
         "Dark Side or Neutral (Relic 7+), Doctor Aphra",
         "Empire (Relic 7+)",
         "5x Light Side or Neutral (Relic 7+)",
         "5x Light Side Wookiees (Relic 7+)",//15
-        "Light Side Ships (7-Star), Profundity",
-        "Light Side Ships (7-Star)",
+        "Light Side Ships (7⭐), Profundity",
+        "Light Side Ships (7⭐)",
         '5x Pheonix (Relic 8+)',
         "5x Light Side or Neutral (Relic 7+)",
         "5x Jedi (Relic 8+)",//20
@@ -661,13 +661,13 @@ Vue.component('mission', {
 			type: 'deploy',
 			position: 'right',
             stars: [
-               '1 Star: 246,742,558',
-               '2 Stars: 419,987,333',
-               '3 Stars: 524,984,167',
-               '3 Stars after maximum preload: 278,241,609 ',
+               '⭐ 246,742,558',
+               '⭐⭐ 419,987,333',
+               '⭐⭐⭐ 524,984,167',
+               'Points to hit ⭐⭐⭐ after a max preload: 278,241,609 ',
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right', preqs:["Characters: Relic 8","Ships: 7-Star"], requiredToons: [0], platzones: [0]}
+			{id: 30, name: 'm2', type: 'platoon', position: 'right', preqs:["Characters: Relic 8","Ships: 7⭐"], platoonAbility: [0], platzones: [0]}
 		],
 		selectedMission: '',
 		seen: false,

@@ -547,21 +547,21 @@ Vue.component('mission', {
         reqs:[
         'Lord Vader (Relic 5+)',
         '5x Dark Side or Neutral (Relic 5+)',
-        'Dark Side Ships (7-Star), Scythe',
-        'Dark Side Ships (7-Star)',
+        'Dark Side Ships (7⭐), Scythe',
+        'Dark Side Ships (7⭐)',
         '5x Dark Side or Neutral (Relic 6+)',//4
         '5x Geonosian (Relic 7+)',//5
         '5x characters (Relic 5+)',
         '5x characters (Relic 5+), Doctor Aphra',
         '5x characters (Relic 5+), Jabba the Hutt',
         '5x characters (Relic 5+), Qi\'ra, Young Han Solo',
-        'Lando\'s Millenium Falcon (7-Star)',//10,
+        'Lando\'s Millenium Falcon (7⭐)',//10,
         "Dark Side or Neutral (Relic 7+)",
         "Dark Side or Neutral (Relic 7+), Doctor Aphra",
         "Empire (Relic 7+)",
         "5x Light Side or Neutral (Relic 7+)",
         "5x Light Side Wookiees (Relic 7+)",//15
-        "Light Side Ships (7-Star), Profundity",
+        "Light Side Ships (7⭐), Profundity",
         "Rebel Fighter (Relic 7+), Saw Gerrera",
         ],
 		platims:[
@@ -629,10 +629,10 @@ Vue.component('mission', {
 			type: 'deploy',
 			position: 'right',
             stars: [
-               '1 Star: 190,953,125',
-               '2 Stars: 305,525,000',
-               '3 Stars: 407,366,667',
-               '3 Stars after maximum preload: 216,413,542 ',
+               '⭐ 190,953,125',
+               '⭐⭐ 305,525,000',
+               '⭐⭐⭐ 407,366,667',
+               'Points to hit ⭐⭐⭐ after a max preload: 216,413,542 ',
             ]
 			}, 
             {
@@ -649,7 +649,7 @@ Vue.component('mission', {
             reqs: [17],
             notes: [1],
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 7","Ships: 7-Star"], requiredToons: [0], platzones: [0,1,2,3,4]}
+			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 7","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2,3,4]}
 		],
 		selectedMission: '',
 		seen: false,

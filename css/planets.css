@@ -1,12 +1,12 @@
-/*Home button text styling for each planet*/
-
+/*Custom Star Wars font*/
 @font-face {
     font-family: Starjedi;
     font-weight: bold;
     src: url('../media/fonts/StarWars/Starjedi.ttf');
 }
 
-.top-left { 
+/*Home button text styling for each planet*/
+.top-left {
     font-family: Starjedi, sans-serif;
     top: 1.5%;
     font-size: 1.5vw;
@@ -16,8 +16,23 @@
     width: 20%;
     height: auto;
     margin: auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
 }
 
+.stars_info {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: translate(0, -50%);
+    top: 45%;
+    left: 16%;
+    padding: 0.2rem;
+    color: #ffffff;
+    z-index: 100;
+    border-radius: 1%;
+}
 
 body {
     background: url(../media/backgrounds/body_bg.png) no-repeat center center fixed;
@@ -30,6 +45,19 @@ body {
     position: relative;  
     width: 68vw;
     height: auto;
+    background-size: contain;
+}
+
+.rewards img {
+    width: 4%;
+}
+
+.img_block img {
+    max-width: 10%;
+    max-height: 10%;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    margin-right: 0.5%;
 }
 
 .container-fluid {
@@ -66,12 +94,27 @@ svg {
     border: 10px solid black;
 }
 
-
 .description {
+    position: absolute;
     background-color: rgb(14, 18, 27, 0.95);
+    transform: translate(0, -45%);
+    top: 50%;
+    max-width: 48%;
+    max-height: 85%;
+    padding: 0.5rem;
+    color: #ffffff;
+    z-index: 100;
+    border-radius: 1%;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: block;
+    line-height: 1em;
+    overflow-x: hidden;
     border: 5px solid white;
     display: none;
 }
+
 .desc_left {
     left: -22%;
     top: 40%;
@@ -85,9 +128,11 @@ svg {
 #descClose {
     position: absolute;
     font-size: 30px;
-
-
     font-weight: bold;
+}
+
+.points {
+    list-style-type: none !important;
 }
 
 .mission {
@@ -95,82 +140,120 @@ svg {
     cursor: pointer;
     background-size: cover;
     transform: scale(0.8);
-    /*transition: all 0.5s ease;*/
 }
 
     .mission:hover, .squad_fill:hover {
         transform: scale(1.1);
-        transition: step-start 1.5s all;
+        transition: step-start 0.5s all;
         background: url('../media/map_ui/mission_focused.png') no-repeat bottom padding-box;
         background-size: cover;
         position: absolute;
-        
+
     }
 
 img.selected {
     pointer-events: none;
     background: url(../media/map_ui/mission_selected.png) no-repeat bottom padding-box;
     transform: scale(1.1);
-    transition: all 0.5s ease;
-    padding: 0 5px 25px 5px;
+    transition: all 0.2s ease;
+    padding: 0 5px 16px 4px;
 }
+
+
+
+/*Styling for ALL mission nodes*/
 
 .c1 {
     padding: 0 10px 0 10px;
     width: 8%;
 }
+    .c1:hover {
+        padding: 0 10px 4px 8px;
+    }
 
 .c2 {
     padding: 0 10px 0 10px;
     width: 8%;
 }
+    .c2:hover {
+        padding: 0 10px 4px 8px;
+    }
 
 .c3 {
     padding: 0 10px 0 10px;
     width: 8%;
 }
 
+    .c3:hover {
+        padding: 0 10px 4px 8px;
+    }
+
 .c4 {
     padding: 0 10px 0 10px;
     width: 8%;
 }
+    .c4:hover {
+        padding: 0 10px 4px 8px;
+    }
 
 .c5 {
     padding: 0 10px 0 10px;
     width: 8%;
 }
+    .c5:hover {
+        padding: 0 10px 4px 8px;
+    }
 
 .c6 {
     padding: 0 10px 0 10px;
     width: 8%;
 }
+    .c6:hover {
+        padding: 0 10px 4px 8px;
+    }
 
 /*c7 is the deployment node for every planet*/
 .c7 {
-    /*padding: 0 10px 10px 10px;*/
     padding: 0 10px 10px 10px;
     width: 8%;
 }
+
+    .c7:hover {
+        padding: 0 10px 10px 10px;
+    }    
+
+    img.mission.c7.selected {
+        padding: 0 5px 25px 5px !important;
+    }
 
 .c8 {
     padding: 0 10px 0 10px;
     width: 8%;
 }
+    .c8:hover {
+        padding: 0 10px 4px 8px;
+    }
 
 .c9 {
     padding: 0 10px 0 10px;
     width: 8%;
 }
+    .c9:hover {
+        padding: 0 10px 4px 8px;
+    }
 
 .c10 {
     padding: 0 10px 0 10px;
     width: 8%;
 }
+    .c10:hover {
+        padding: 0 10px 4px 8px;
+    }
 
-/*m2 is the platoon/operations node for every planet*/
+/*M2 is the platoon/operations node for every planet*/
 .m2 {
     width: 9%;
-    padding: 0 15px 12px 15px;
+    padding: 0 15px 12px 14px;
     
 }
 
@@ -178,6 +261,11 @@ img.selected {
         background: url('../media/map_ui/mission_focused.png') no-repeat bottom padding-box;
         background-size: cover;
     }
+
+    img.mission.m2.selected {
+        padding: 0 5px 25px 5px !important;
+    }
+
 /*#animation {
     background: url('../media/map_ui/pulse_animate.png') no-repeat bottom padding-box;
     width: 8%;*/
@@ -188,7 +276,7 @@ img.selected {
 
 }*/
 
-@keyframes pulsate {
+/*@keyframes pulsate {
     0% {
         transform: scale(0.1, 0.1);
         opacity: 0.0;
@@ -202,11 +290,10 @@ img.selected {
         transform: scale(1.2, 1.2);
         opacity: 0.0;
     }
-}
+}*/
 
 
 /********************Operations/Platoons Description********************/
-
 #platoonsWrapper {
     width: 85%;
     margin: auto;
@@ -261,4 +348,18 @@ img.selected {
     overflow-y: auto;
 }
 
+/*Close button*/
+.topcorner {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#descClose {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+}
 
+.notes {
+    white-space: pre-wrap;
+}

@@ -542,8 +542,8 @@ Vue.component('mission', {
         reqs:[
         'Lord Vader (Relic 5+)',
         '5x Dark Side or Neutral (Relic 5+)',
-        'Dark Side Ships (7-Star), Scythe',
-        'Dark Side Ships (7-Star)',
+        'Dark Side Ships (7⭐), Scythe',
+        'Dark Side Ships (7⭐)',
         '5x Dark Side or Neutral (Relic 6+)',//4
         '5x Geonosian (Relic 7+)',//5
         ],
@@ -620,10 +620,9 @@ Vue.component('mission', {
 			type: 'deploy',
 			position: 'right',
             stars: [
-               '1 Star: 148,125,000',
-               '2 Stars: 237,000,000',
-               '3 Stars: 316,000,000',
-               '3 Stars after maximum preload: 167,875,000 ',
+               '⭐: 148,125,000',
+               '⭐⭐: 237,000,000',
+               '⭐⭐⭐: 316,000,000'
             ]
 			}, 
 			{ id: 30, name: 'm2', type: 'geonosis', position: 'right', preqs: ["Characters: Relic 6+", "Ships: 7⭐"], platoonAbility: [0], platzones: [0, 1, 2] }

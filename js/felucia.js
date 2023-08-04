@@ -519,15 +519,9 @@ Vue.component('mission', {
         "Wave 2: Iden Versio (L), Stormtrooper Commander, Stormtrooper, Recon Trooper, Range Trooper, Scout Trooper",
 		],
 		platoons: [
-        ["Scythe",	"7",
-"Commander Ahsoka Tano",	"6","Boba Fett, Scion of Jango",	"5","Darth Malgus",	"5","General Skywalker",	"4","Maul",	"4","Rebel Officer Leia Organa",	"4",
-"Ben Solo",	"3","Grand Inquisitor",	"3","Jedi Knight Luke Skywalker",	"3",
-"Razor Crest",	"3","TIE/IN Interceptor Prototype",	"3","Embo",	"2","Sith Eternal Emperor",	"2","Wat Tambor",	"2","Aayla Secura",	"1","Admiral Ackbar",	"1","Bastila Shan",	"1","BT-1",	"1","Cassian's U-wing",	"1","Count Dooku",	"1",
-"Darth Malak",	"1","Death Trooper",	"1","Emperor's Shuttle",	"1","General Hux",	"1","General Kenobi",	"1","General Veers",	"1",
-"Han Solo",	"1","Hermit Yoda",	"1","Imperial Probe Droid",	"1","Jawa",	"1","Jedi Master Luke Skywalker",	"1","Ki-Adi-Mundi",	"1","Kuiil",	"1","L3-37",	"1","Lando Calrissian",	"1","Logray",	"1",
-"Lord Vader",	"1","Outrider",	"1","Plo Koon's Jedi Starfighter",	"1","Rey",	"1","Sana Starros",	"1","Sith Trooper",	"1","Snowtrooper",	"1",
-"Starkiller",	"1","Supreme Leader Kylo Ren",	"1","The Mandalorian",	"1","Threepio & Chewie",	"1","Zaalbar",	"1",       
-        ]
+			"Whenever an ally uses a Special ability,they gain a stack of Profit for 2 turns. Profit :+10% Critical Chance and Critical Damage per stack",
+			"Add at the start of battle, grant all allies 2 stacks of Profit for 2 turns.",
+			"At the start of battle, grant all allies 4 stacks of Profit for 2 turns."
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -553,16 +547,16 @@ Vue.component('mission', {
         reqs:[
         'Lord Vader (Relic 5+)',
         '5x Dark Side or Neutral (Relic 5+)',
-        'Dark Side Ships (7-Star), Scythe',
-        'Dark Side Ships (7-Star)',
+        'Dark Side Ships (7⭐), Scythe',
+        'Dark Side Ships (7⭐)',
         '5x Dark Side or Neutral (Relic 6+)',//4
         '5x Geonosian (Relic 7+)',//5
         '5x characters (Relic 5+)',
         '5x characters (Relic 5+), Doctor Aphra',
         '5x characters (Relic 5+), Jabba the Hutt',
         '5x characters (Relic 5+), Qi\'ra, Young Han Solo',
-        'Lando\'s Millenium Falcon (7-Star)',//10
-        'Ships (7-Star)',
+        'Lando\'s Millenium Falcon (7⭐)',//10
+        'Ships (7⭐)',
         '5x characters (Relic 6+)',
         "5x characters (Relic 6+), Young Lando Calrissian",
         "5x characters (Relic 6+), Hondo Ohnaka",
@@ -576,7 +570,7 @@ Vue.component('mission', {
 			id: 0,
 			name: 'c1',
 			type: 'usual',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 125,000',
                 'Wave 2: 250,000'
@@ -600,7 +594,7 @@ Vue.component('mission', {
 			id: 2,
 			name: 'c3',
 			type: 'usual',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 125,000',
                 'Wave 2: 250,000'
@@ -628,7 +622,7 @@ Vue.component('mission', {
 			id: 5,
 			name: 'c6',
 			type: 'fleet',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 500,000',
 				],
@@ -642,14 +636,15 @@ Vue.component('mission', {
 			type: 'deploy',
 			position: 'right',
             stars: [
-               '1 Star: 148,125,000',
-               '2 Stars: 237,000,000',
-               '3 Stars: 316,000,000',
-               '3 Stars after maximum preload: 167,875,000 ',
+               '⭐ 148,125,000',
+               '⭐⭐ 237,000,000',
+               '⭐⭐⭐ 316,000,000'
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'left',preqs:["Characters: Relic 6","Ships: 7-Star"], requiredToons: [0], platzones: [0,1]}
-		],
+			{id: 30, name: 'm2', type: 'felucia', position: 'right',preqs:["Characters: Relic 6","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			],
+			defaultPath: '../media/map_ui/mission_',
+
 		selectedMission: '',
 		seen: false,
 	}
@@ -670,4 +665,17 @@ let app = new Vue({
 	data: {
 		isVisible: false
 	},
+});
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
 });

@@ -3,7 +3,7 @@
     <title>ETERNAL ALLIANCE</title>
     <meta http-equiv="content-type" content="../ea1.png" />
     <meta name="generator" content="Geany 1.32" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="icon" type="image" href="media/favicon/ea1.png">
@@ -43,7 +43,7 @@
     }
 
     .bgimg {
-        background-image: url('media/backgrounds/ea_bg.jpg');
+        background-image: url('media/backgrounds/ea_bg.png');
         min-height: 100%;
         background-position: center;
         background-repeat: no-repeat;
@@ -70,13 +70,30 @@
             border: 5px solid white;
             padding: 3px;
             padding-bottom: 7px;
-            text-decoration: none
+            text-decoration: none;
+            opacity: 85%;
+            
         }
 
     .authorship {
-        padding-top: 400px;
-        font-size: 24px;
+        position: absolute;
+        left: 40%;
+        right: 40%;
+        top: 85%;
+        font-size: 20px;
+        color: white;
+        background-color: black;
+        text-align: center;
+        padding-bottom: 5px;
+        text-decoration: none;
     }
+
+        .authorship:hover {
+            color: black;
+            background-color: white;
+            text-decoration: underline;
+            opacity: 85%;
+        }
 
     /*Page when user views mobile screen vertically (portrait orientation)*/
     @media (orientation: portrait) and (hover: none) and (pointer: coarse) {
@@ -237,7 +254,7 @@
             </div>
             <div class="footer w3-center">
                 <p class="authorship" font-size: large">
-                    <a href="html/authors.html">Authorship and Credits</a>
+                    <a href="html/authors.html" style="text-decoration: none">Authorship and Credits</a>
                 </p>
             </div>
         </div>

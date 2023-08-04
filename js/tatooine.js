@@ -521,62 +521,51 @@ Vue.component('mission', {
         "Wave 2: Imperial Officer, 2x Sandtrooper, 2x Sandtrooper Scout, Sandtrooper Commander",
         "Wave 1: Tusken Elder, Tusken Brute, 2x Tusken Raider, Tusken Shaman, (?)Pirate Leader",//50
         "Wave 2: Tusken Elder, Tusken Brute, 2x Tusken Raider, Tusken Shaman, (?)Pirate Leader",
-        "Wave 1: Chief Nebit (L), Jawa Scavenger, Jawa Engineer, Jawa, Dathcha, (?)Pirate Leader",
-        "Wave 2: Jedi Master Kenobi, (?)Pirate Leader",
+        "Wave 1: Chief Nebit (L), Jawa Scavenger, Jawa Engineer, Jawa, Dathcha",
+        "Wave 2: Jedi Master Kenobi",
 		],
 		platoons: [
-        [ "Boba Fett, Scion of Jango",	"6","Darth Malgus",	"5","Maul",	"5","TIE/IN Interceptor Prototype",	"5","Jedi Knight Luke Skywalker",	"4","Razor Crest",	"4",
-"Scythe",	"4","Commander Ahsoka Tano",	"3","Jedi Master Kenobi",	"3","Sith Eternal Emperor",	"3","Bastila Shan (Fallen)",	"2",
-"Darth Malak",	"2","Jedi Master Luke Skywalker",	"2","Obi-Wan Kenobi (Old Ben)",	"2","Rey",	"2","Starkiller",	"2","Supreme Leader Kylo Ren",	"2","50R-T",	"1",
-"B1 Battle Droid",	"1","Barriss Offee",	"1","Ben Solo",	"1","Bodhi Rook",	"1","Cara Dune",	"1","Chirrut ÃŽmwe",	"1","Coruscant Underworld Police",	"1","Ewok Elder",	"1","Ewok Scout",	"1","Fifth Brother",	"1",
-"Finalizer",	"1","First Order SF TIE Fighter",	"1","Gauntlet Starfighter",	"1","General Skywalker",	"1","Geonosian Spy",	"1","HK-47",	"1","Hondo Ohnaka",	"1","Hoth Rebel Scout",	"1",
-"Hunter",	"1","IG-2000",	"1","Kylo Ren (Unmasked)",	"1","Luminara Unduli",	"1","Mara Jade, The Emperor's Hand",	"1","Nightsister Acolyte",	"1","Outrider",	"1",
-"Qui-Gon Jinn",	"1","Resistance Hero Finn",	"1","Resistance Hero Poe",	"1","Rose Tico",	"1","Skiff Guard (Lando Calrissian)",	"1","Teebo",	"1","TIE Reaper",	"1",
-"Young Han Solo",	"1", ]
+			"Assault Formation: Reduce allied non-Capital ships' cooldowns by 2 and they gain 50% Turn Meter. This ship takes a bonus turn without reducing its cooldowns. This ability starts on cooldown and shares a cooldown with Defensive Formation. (Cooldown:2)",
+			"Remove grant all allies 25% Turn Meter.",
+			"Remove whenever an ally is defeated (excluding summons), summon a random pirate to take their place."
 		],
 		guides:[
-		'See also: 50 Shards of Kam Discord Server',
-		'Its Just Ian Modding and Strategy: www.youtube.com/watch?v=9eLKxWumn_Y',
-		'McMole2 Defeat the Reek: www.youtube.com/watch?v=ktfNTjiUiGY',
-		'Mikayas Sky & Ahsoka guide www.youtube.com/watch?v=rWu4qahiA-g',
-		'BitDynasty GAS + Ahsoka guide: www.youtube.com/watch?v=mV7PPNRL2Nc',
-		'Z-Gaming JTR with C3P0: www.youtube.com/watch?v=rOqVwTLFMOE',//5
-		'DBofficial G10 SARGE guide: www.youtube.com/watch?v=QPfu0URQliU&',//6
-		'Warrior SWGOH Livestream t/s 10:06: www.youtube.com/watch?v=YAP5s-bavXE',//7
-		'Bulldog g12 JKL destorys LS geo tb: www.youtube.com/watch?v=g_co0UtkMvA',//8
+		
 		],
         modifiers:[
         'At the beginning of battle, each side summons a random Corellian Engineering Cargo Ship. At the start of their turn, Cargo Ships gain Protection Over Time (10%) for 1 turn.',
         'Coaxium: +25% Critical Damage and Speed; -15% Accuracy; will be critically hit if able; enemies can ignore Taunt to target this character; if this character is defeated by a status effect, Coaxium will not be granted to anyone',
         "Summons Probe Droid whenever possible",
-        "At the end of every other turn, all units are inflicted with Damage Over Time until defeated, which can't be resisted."
+        "At the end of every other turn, all units are inflicted with Damage Over Time (DOT) until defeated, which can't be resisted."
         ],
         notes:[
-        'With Lord Vader\'s ultimate ability, this can be done on full auto',
-        'Unclear if this is even possible right now',
-        "Currently Bugged!",
-        "Potentially a wampa team could be consistent here.",
-        "Join the 50 Shards of KAM server for streaming with the experts who know this mission better than anyone"
+			"Dispel Nebit's taunt, or ability block him with 7th special 1 so he can’t taunt.\n\n",
+			"Remove stealth from Scavenger with Fifth special 1.\n\n",
+			"Use GI special 2 to apply torture to Scavenger; burn him down til' death.\n\n",
+			"Continue to use basics along with 9th/8th specials; spread debuffs and heal with 7th if necessary!\n\n",
+			"Cleanse with GI special 1 around this point (6+ DOTs).\n\n",
+			"Focus down Engineer, kill the other 2 Jawas, and leave Nebit for last.\n\n",
+			"On the last wave, debuff him as much as you possibly can. Remember to dispel DOTs from yourself with GI special 1 to survive, and you shall be victorious!\n\n"
         ],
         reqs:[
         'Lord Vader (Relic 5+)',
         '5x Dark Side or Neutral (Relic 5+)',
-        'Dark Side Ships (7-Star), Scythe',
-        'Dark Side Ships (7-Star)',
+        'Dark Side Ships (7⭐), Scythe',
+        'Dark Side Ships (7⭐)',
         '5x Dark Side or Neutral (Relic 6+)',//4
         '5x Geonosian (Relic 7+)',//5
         '5x characters (Relic 5+)',
         '5x characters (Relic 5+), Doctor Aphra',
         '5x characters (Relic 5+), Jabba the Hutt',
         '5x characters (Relic 5+), Qi\'ra, Young Han Solo',
-        'Lando\'s Millenium Falcon (7-Star)',//10,
+        'Lando\'s Millenium Falcon (7⭐)',//10,
         "Dark Side or Neutral (Relic 7+)",
         "Dark Side or Neutral (Relic 7+), Doctor Aphra",
         "Empire (Relic 7+)",
         "5x Light Side or Neutral (Relic 7+)",
         "5x Light Side Wookiees (Relic 7+)",//15
-        "Light Side Ships (7-Star), Profundity",
-        "Ships (7-Star), Executor",
+        "Light Side Ships (7⭐), Profundity",
+        "Ships (7⭐), Executor",
         "5x characters (Relic 7+), Fennec Shand",
         "5x Inquisitorius (Relic 7+), Grand Inquisitor",
         "5x characters (Relic 7+), Jabba the Hutt",//20
@@ -590,7 +579,7 @@ Vue.component('mission', {
 			id: 0,
 			name: 'c1',
 			type: 'fleet',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 682,500',
 				],
@@ -628,7 +617,7 @@ Vue.component('mission', {
 			id: 3,
 			name: 'c4',
 			type: 'reva',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'1 Reva Shard',
 				],
@@ -636,7 +625,7 @@ Vue.component('mission', {
 			dangerousEnemies: [52,53],
             reqs: [19],
             modifiers: [3],
-            notes: [4],
+            notes: [0, 1, 2, 3, 4, 5, 6],
 			},
 			{
 			id: 5,
@@ -651,7 +640,6 @@ Vue.component('mission', {
 				dangerousEnemies: [48,49],
 				modifiers: [3],
             reqs: [21],
-            notes: [3]
 			}, 
             {
 			id: 6,
@@ -659,14 +647,16 @@ Vue.component('mission', {
 			type: 'deploy',
 			position: 'right',
             stars: [
-               '1 Star: 190,953,125',
-               '2 Stars: 305,525,000',
-               '3 Stars: 407,366,667',
-               '3 Stars after maximum preload: 216,413,542 ',
+               '⭐ 190,953,125',
+               '⭐⭐ 305,525,000',
+               '⭐⭐⭐ 407,366,667',
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'left',preqs:["Characters: Relic 7","Ships: 7-Star"], requiredToons: [0], platzones: [0,1]}
-		],
+			{id: 30, name: 'm2', type: 'tatooine', position: 'right', preqs:["Characters: Relic 7","Ships: 7⭐"], platoonAbility: [0], platzones: [0, 1, 2]}
+			],
+
+			defaultPath: '../media/map_ui/mission_',
+
 		selectedMission: '',
 		seen: false,
 	}
@@ -688,4 +678,17 @@ let app = new Vue({
 	data: {
 		isVisible: false
 	},
+});
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
 });

@@ -494,17 +494,9 @@ Vue.component('mission', {
         "Malevolence, Hyena Bomber, Vulture Droid, Geo Starfighter"
 		],
 		platoons: [
-        ["Darth Traya",	"7","Chimaera",	"6","Darth Revan",	"5","General Grevious",	"5",
-         "Emperor Palpatine",	"4", "Wat Tambor",	"4", "0-0-0",	"4", "Grand Admiral Thrawn",	"3",
-"Ugnaught",	"3","Darth Sidious",	"2","Canderous Ordo",	"2","IG-88",	"2","Darth Sion",	"2",
-"Darth Vader",	"2","BT-1",	"2","Imperial Probe Droid",	"2","First Order Officer",	"2","Darth Maul",	"2",
-"Droideka",	"2","First Order SF Pilot",	"1","Tusken Shaman",	"1","IG-86",	"1",
-"Ninth Sister",	"1","Nute Gunray",	"1",
-"Dengar",	"1","Jango Fett",	"1",
-"Fifth Brother",	"1","Boba Fett",	"1",
-"Mara Jade",	"1","First Order SF Tie Pilot",	"1", "Embo",	"1","Sith Assassin",	"1",
-"Asajj Ventress",	"1","Sith Trooper",	"1","Imperial Super Commando",	"1","Gamorrean Guard",	"1",
-"Count Dooku",	"1","B1 Battle Droid",	"1","Dark Trooper",	"1","Tie Fighter Pilot",	"1"]
+			"Deal Physical damage to all enemies and inflict Ability Block for 1 turn.",
+			"+35% Damage.",
+			"+30 Cooldown Speed."
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -528,7 +520,7 @@ Vue.component('mission', {
         reqs:[
         'Lord Vader (Relic 5+)',
         '5x Dark Side or Neutral (Relic 5+)',
-        'Dark Side Ships (7-Star), Scythe'
+        'Dark Side Ships (7⭐), Scythe'
         ],
 		platims:[
 		'Phase 1 DS Mustafar (Self)',//0
@@ -609,14 +601,16 @@ Vue.component('mission', {
 			type: 'deploy',
 			position: 'right',
             stars: [
-               '1 Star: 116,406,250',
-               '2 Stars: 186,250,000',
-               '3 Stars: 248,333,333',
-               '3 Stars after maximum preload: 131,927,083 ',
+               '⭐: 116,406,250',
+               '⭐⭐: 186,250,000',
+               '⭐⭐⭐: 248,333,333'
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 5","Ships: 7-Star"], requiredToons: [0], platzones: [0,1]}
-		],
+			{ id: 30, name: 'm2', type: 'mustafar', position: 'right', preqs: ["Characters: Relic 5", "Ships: 7⭐"], platoonAbility: [0], platzones: [0, 1, 2] }
+			],
+
+			defaultPath: '../media/map_ui/mission_',
+		
 		selectedMission: '',
 		seen: false,
 	}
@@ -638,4 +632,17 @@ let app = new Vue({
 	data: {
 		isVisible: false
 	},
+});
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
 });

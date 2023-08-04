@@ -16,7 +16,7 @@
 Vue.component('mission', {
 	data: function () {
 		return {
-		isMobile: false,
+			isMobile: false,
 		squads: [
 		//---------------------------------------------------------------------------------------------------------------------------------DS SQUADS
 			{	
@@ -510,14 +510,14 @@ Vue.component('mission', {
         "Wave 2: Mother Talzin (L), Old Daka, Nightsister Acolyte, Nightsister Zombie, Nightsister Spirit", 
         "Wave 1: Hondo Onaka (L), IG-88, 2x Jabba's Enforcer, Weequay Saboteur",
         "Wave 2: Maul (L), Qi-ra, Dash Rendar, Cartel Spy, Cartel Bruiser"
-		],
+			],
 		platoons: [
-        ["Darth Malgus",	"9","Scythe",	"9","TIE/IN Interceptor Prototype",	"8","Lord Vader",	"6","Maul",	"6","Boba Fett, Scion of Jango",	"4","Sith Eternal Emperor",	"4","General Grievous",	"3","Wat Tambor",	"3","Dengar",	"2","Imperial Probe Droid",	"2",
-"Supreme Leader Kylo Ren",	"2","Tusken Raider",	"2","0-0-0",	"1","Aurra Sing",	"1","Cad Bane",	"1","Chimaera",	"1","Dark Trooper",	"1","Darth Maul",	"1","Darth Revan",	"1","Darth Traya",	"1","Director Krennic",	"1","Embo",	"1",
-"Emperor's Shuttle",	"1","First Order SF TIE Fighter",	"1","First Order SF TIE Pilot",	"1","Gar Saxon",	"1","General Hux",	"1","Geonosian Soldier's Starfighter",	"1","Geonosian Spy's Starfighter",	"1","Grand Admiral Thrawn",	"1",
-"Grand Moff Tarkin",	"1","HK-47",	"1","Hyena Bomber",	"1","IG-88",	"1","Imperial TIE Fighter",	"1","Mother Talzin",	"1","Savage Opress",	"1","Seventh Sister",	"1","Sith Assassin",	"1","Sith Trooper",	"1",
-"Talia",	"1","TIE Advanced x1",	"1",
-        ]
+			"The allied Capital Ship gains two abilities; Assault Formation and Defensive Formation. (Allied ships start in Defensive Formation).\n\n" +
+			"Assault Formation: Reduce allied non-Capital ships' cooldowns by 2 and they gain 50% Turn Meter. This ship takes a bonus turn without reducing its cooldowns.This ability starts on cooldown and shares a cooldown with Defensive Formation. (Cooldown:2)\n\n" +
+			"Defensive Formation: Until a new Formation is issued, allied Tanks Taunt at the start of each turn if they don't already have it. This ship takes a bonus turn without reducing its cooldowns. This ability starts on cooldown and shares a cooldown with Assault Formation. (Cooldown:2)\n\n",
+			"Add to Defensive Formation: Allied non-Capital ships recover 25% of their Max Health and all of their Protection.\n\n",
+			"Add to Assault Formation: Until a new Formation is issued, allied non-Capital ships deal 100% more damage."
+
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -545,15 +545,15 @@ Vue.component('mission', {
         reqs:[
         'Lord Vader (Relic 5+)',
         '5x Dark Side or Neutral (Relic 5+)',
-        'Dark Side Ships (7-Star), Scythe',
-        'Dark Side Ships (7-Star)',
+        'Dark Side Ships (7⭐), Scythe',
+        'Dark Side Ships (7⭐)',
         '5x Dark Side or Neutral (Relic 6+)',//4
         '5x Geonosian (Relic 7+)',//5
         '5x characters (Relic 5+)',
         '5x characters (Relic 5+), Doctor Aphra',
         '5x characters (Relic 5+), Jabba the Hutt',
         '5x characters (Relic 5+), Qi\'ra, Young Han Solo',
-        'Lando\'s Millenium Falcon (7-Star)',//10,
+        'Lando\'s Millenium Falcon (7⭐)',//10,
         "Dark Side or Neutral (Relic 7+)",
         "Dark Side or Neutral (Relic 7+), Doctor Aphra",
         "Empire (Relic 7+)",
@@ -566,7 +566,7 @@ Vue.component('mission', {
 			id: 0,
 			name: 'c1',
 			type: 'usual',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 162,500',
                 'Wave 2: 341,250'
@@ -608,7 +608,7 @@ Vue.component('mission', {
 			id: 5,
 			name: 'c6',
 			type: 'usual',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 162,500',
                 'Wave 2: 341,250'
@@ -625,10 +625,9 @@ Vue.component('mission', {
 			type: 'deploy',
 			position: 'right',
             stars: [
-               '1 Star: 158,960,938',
-               '2 Stars: 254,337,500',
-               '3 Stars: 339,116,667',
-               '3 Stars after maximum preload: 180,155,729 ',
+               '⭐ 158,960,938',
+               '⭐⭐ 254,337,500',
+               '⭐⭐⭐ 339,116,667'             
             ]
 			}, 
             {
@@ -644,8 +643,11 @@ Vue.component('mission', {
 				modifiers: [2],
             reqs: [14],
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 7","Ships: 7-Star"], requiredToons: [0], platzones: [0,]}
-		],
+			{id: 30, name: 'm2', type: 'dathomir', position: 'right', preqs:["Characters: Relic 7","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			],
+
+			defaultPath: '../media/map_ui/mission_',
+
 		selectedMission: '',
 		seen: false,
 	}
@@ -661,10 +663,25 @@ Vue.component('mission', {
 	},
 })
 
-
 let app = new Vue({
 	el: '#app',
 	data: {
 		isVisible: false
 	},
+});
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
+	opAbility
+
 });
