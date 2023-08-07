@@ -5,7 +5,9 @@
     src: url('../media/fonts/StarWars/Starjedi.ttf');
 }
 
-/*Home button text styling for each planet*/
+/**********************General Formatting**************************/
+
+/*Home button styling/position for each planet*/
 .top-left {
     font-family: Starjedi, sans-serif;
     top: 1.5%;
@@ -21,17 +23,16 @@
     left: 0px;
 }
 
-.stars_info {
+.icon {
+    background: url('../media/icons/spiral-galaxy-icon.png') no-repeat;
+    background-size: 50px;
+    width: 50px;
+    height: 40px;
     position: absolute;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transform: translate(0, -50%);
-    top: 45%;
-    left: 16%;
-    padding: 0.2rem;
-    color: #ffffff;
-    z-index: 100;
-    border-radius: 1%;
+    color: white;
+    left: 5%;
+    bottom: 0.5%;
+  
 }
 
 body {
@@ -39,6 +40,10 @@ body {
     background-size: cover;
     overflow-y: hidden;
     overflow-x: hidden;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
 }
 
 .map {
@@ -50,14 +55,6 @@ body {
 
 .rewards img {
     width: 4%;
-}
-
-.img_block img {
-    max-width: 10%;
-    max-height: 10%;
-    border-radius: 50%;
-    border: 2px solid #ffffff;
-    margin-right: 0.5%;
 }
 
 .container-fluid {
@@ -73,67 +70,11 @@ body {
     overflow-x: hidden;
 }
 
-.icon {
-    background: url('../media/icons/spiral-galaxy-icon.png') no-repeat;
-    background-size: 50px;
-    width: 50px;
-    height: 40px;
-    position: absolute;
-    color: white;
-    left: 5%;
-    bottom: 0.5%;
-  
-}
-
-.row {
-    margin-left: 0;
-    margin-right: 0;
-}
-
 svg {
     border: 10px solid black;
 }
 
-.description {
-    position: absolute;
-    background-color: rgb(14, 18, 27, 0.95);
-    transform: translate(0, -45%);
-    top: 50%;
-    max-width: 48%;
-    max-height: 85%;
-    padding: 0.5rem;
-    color: #ffffff;
-    z-index: 100;
-    border-radius: 1%;
-    overflow: scroll;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-    display: block;
-    line-height: 1em;
-    overflow-x: hidden;
-    border: 5px solid white;
-    display: none;
-}
-
-.desc_left {
-    left: -22%;
-    top: 40%;
-}
-
-.desc_right {
-    right: -22%;
-    top: 40%;
-}
-
-#descClose {
-    position: absolute;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.points {
-    list-style-type: none !important;
-}
+/***************************Styling for ALL mission nodes****************************/
 
 .mission {
     position: absolute;
@@ -150,7 +91,7 @@ svg {
         position: absolute;
 
     }
-
+/*Determines styling when node is selected (See bottom of .js files)*/
 img.selected {
     pointer-events: none;
     background: url(../media/map_ui/mission_selected.png) no-repeat bottom padding-box;
@@ -160,8 +101,7 @@ img.selected {
 }
 
 
-
-/*Styling for ALL mission nodes*/
+/*************************Styling for individual mission nodes*****************************/
 
 .c1 {
     padding: 0 10px 0 10px;
@@ -266,6 +206,9 @@ img.selected {
         padding: 0 5px 25px 5px !important;
     }
 
+
+/**************Pulse Glow Animation for Mission nodes****************/
+
 /*#animation {
     background: url('../media/map_ui/pulse_animate.png') no-repeat bottom padding-box;
     width: 8%;*/
@@ -293,7 +236,165 @@ img.selected {
 }*/
 
 
-/********************Operations/Platoons Description********************/
+/**************************************Description PopUp************************************/
+/*Headers*/
+.h3 {
+    font-family: Starjedi;
+    text-transform: lowercase;
+}
+
+.h4 {
+    font-family: Starjedi;
+    text-transform: lowercase;
+    border-bottom: 5px solid white;
+    padding-bottom: 10px;
+}
+
+/*General Formatting*/
+.description {
+    position: absolute;
+    background-color: rgb(14, 18, 27, 0.95);
+    transform: translate(0, -45%);
+    margin: 0;
+    max-width: 48%;
+    height: 97%;
+    padding: 0.5rem;
+    color: #ffffff;
+    z-index: 1;
+    border-radius: 1%;
+    overflow: auto;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: block;
+    line-height: 1em;
+    overflow-x: hidden;
+    border: 5px solid white;
+    display: none;
+}
+
+/*Positions*/
+.desc_left {
+    left: -22%;
+    top: 40%;
+    overflow-y: auto;
+}
+
+.desc_right {
+    right: -23%;
+    top: 45.5%;
+    bottom: -25%;
+    overflow-y: auto;
+}
+
+.mb-3 {
+    text-align: center;
+    width: 100%;
+}
+
+/*Close button*/
+.topcorner {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#descClose {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.rewards img {
+    width: 4%;
+}
+
+.img_block {
+    padding-bottom: 10px;
+}
+
+    .img_block img {
+        max-width: 15%;
+        max-height: 15%;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+        margin-right: 0.5%;
+    }
+
+.waves {
+    padding-bottom: 10px;
+}
+
+    .waves img {
+        max-width: 15%;
+        max-height: 15%;
+        border-radius: 50%;
+        border: 2px solid red;
+        margin-right: 0.5%;
+    }
+
+.checked {
+    border: 4px solid yellow !important;
+}
+
+/*Text*/
+.wavesTxt {
+    position: relative;
+    text-align: left !important;
+    font-size: 20px;
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: Starjedi;
+    padding-right: 5px;
+    padding-top: 20px;
+    width: 80%;
+    left: -10%;
+}
+
+.modifiers {
+    text-align: center !important;
+    display: block;
+    justify-content: center;
+    font-family: sans-serif;
+    height: auto;
+    line-height: 2rem;
+    font-size: 1rem;
+    white-space: pre-wrap;
+}
+
+.notes {
+    text-align: left;
+    display: block;
+    justify-content: center;
+    font-family: sans-serif;
+    height: auto;
+    line-height: 2rem;
+    font-size: 1rem;
+    white-space: pre-wrap;
+}
+
+.points {
+    text-align: left !important;
+    list-style-type: none !important;
+    display: block;
+    font-family: sans-serif;
+    height: auto;
+    font-size: 1rem;
+    line-height: 2rem;
+    white-space: pre-wrap;
+    border-bottom: 5px solid white;
+    padding-bottom: 10px;
+}
+
+.deployNode {
+    top: 35%;
+    width: 98%;
+    text-align: center !important;
+    list-style-type: none !important;
+    display: block;
+    line-height: 1rem;
+}
+
+/***********Operations/Platoons Node*************/
 #platoonsWrapper {
     width: 85%;
     margin: auto;
@@ -316,6 +417,7 @@ img.selected {
     height: auto;
     padding: 0.2rem;
     font-size: 1rem;
+    white-space: pre-wrap;
 }
 
 #opLvl {
@@ -333,33 +435,4 @@ img.selected {
     width: 75%;
     height: auto;
     padding-top: 10px;
-}
-
-.h4 {
-    font-family: Starjedi;
-    text-transform: lowercase;
-}
-
-.desc_right {
-    overflow-y: auto;
-}
-
-.desc_left {
-    overflow-y: auto;
-}
-
-/*Close button*/
-.topcorner {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-#descClose {
-    position: absolute;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.notes {
-    white-space: pre-wrap;
 }

@@ -525,22 +525,11 @@ Vue.component('mission', {
         
 		],
 		platoons: [
-        [ "TIE/IN Interceptor Prototype",	"7",
-"Starkiller",	"6","Lord Vader",	"5","Scythe",	"5","Supreme Leader Kylo Ren",	"5",
-"Boba Fett, Scion of Jango",	"4","Executor",	"4","Sith Eternal Emperor",	"4","Darth Malak",	"3",
-"Maul",	"3","Asajj Ventress",	"2","Aurra Sing",	"2","Darth Malgus",	"2","Emperor's Shuttle",	"2",
-"Hyena Bomber",	"2","Snowtrooper",	"2","B2 Super Battle Droid",	"1","Bastila Shan (Fallen)",	"1",
-"BT-1",	"1","Cad Bane",	"1","Darth Maul",	"1","Darth Vader",	"1","Dathcha",	"1","Dengar",	"1",
-"Director Krennic",	"1","Eighth Brother",	"1","Embo",	"1","First Order Stormtrooper",	"1",
-"First Order TIE Pilot",	"1","General Veers",	"1","HK-47",	"1","Hondo Ohnaka",	"1","Iden Versio",	"1",
-"IG-88",	"1","Krrsantan",	"1","Malevolence",	"1",
-"Mara Jade, The Emperor's Hand",	"1",
-"Nightsister Acolyte",	"1","Nightsister Initiate",	"1",
-"Nightsister Spirit",	"1","Nightsister Zombie",	"1","Range Trooper",	"1",
-"Savage Opress",	"1","Second Sister",	"1","Seventh Sister",	"1",
-"TIE Fighter Pilot",	"1","TIE Silencer",	"1",
-"Wampa",	"1",   
-                ]
+			"At the start of encounter, grant all allies 100% Turn Meter and all Morale buffs for 2 turns.\n\n" +
+			"Morale I: +100% Defense Penetration Morale II: +25% Speed \nMorale III: +50% Critical Damage",
+			"Instead, grant 50% Turn Meter and 2 random Morale buffs.",
+			"Instead, grant 25% Turn Meter and 1 random Morale buff."
+
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -593,7 +582,7 @@ Vue.component('mission', {
 			id: 0,
 			name: 'c1',
 			type: 'usual',
-			position: 'left',
+			position: 'right',
 			rewards: [
                 'Wave 1: 219,375',
                 'Wave 2: 493,594'
@@ -665,12 +654,14 @@ Vue.component('mission', {
             stars: [
                '⭐ 235,143,105',
                '⭐⭐ 400,243,583',
-               '⭐⭐⭐ 500,304,479',
-               'Points to hit ⭐⭐⭐ after a max preload: 265,161,374 ',
+               '⭐⭐⭐ 500,304,479'
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'left',preqs:["Characters: Relic 8","Ships: 7⭐"], platoonAbility: [0], platzones: [0]}
-		],
+			{id: 30, name: 'm2', type: 'haven', position: 'right', preqs:["Characters: Relic 8","Ships: 7⭐"], platoonAbility: [0], platzones: [0, 1, 2]}
+			],
+
+			defaultPath: '../media/map_ui/mission_',
+
 		selectedMission: '',
 		seen: false,
 	}
@@ -692,4 +683,17 @@ let app = new Vue({
 	data: {
 		isVisible: false
 	},
+});
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
 });

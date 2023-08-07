@@ -529,19 +529,9 @@ Vue.component('mission', {
 
 		],
 		platoons: [
-        [  "Darth Malgus",	"7","Scythe",	"6","Commander Ahsoka Tano",	"5","Rey",	"5","Supreme Leader Kylo Ren",	"4",
-"Ben Solo",	"3","Boba Fett, Scion of Jango",	"3","Darth Traya",	"3","General Kenobi",	"3","Han Solo",	"3",
-"Lord Vader",	"3","Maul",	"3","Razor Crest",	"3","Imperial Probe Droid",	"2",
-"Jedi Master Kenobi",	"2","Jedi Master Luke Skywalker",	"2",
-"Sana Starros",	"2","Wat Tambor",	"2","Admiral Raddus",	"1","Asajj Ventress",	"1","Aurra Sing",	"1",
-"B1 Battle Droid",	"1","Chief Nebit",	"1","Clone Sergeant - Phase I",	"1","Dark Trooper",	"1","Dengar",	"1",
-"Emperor's Shuttle",	"1","Executor",	"1","First Order Officer",	"1","Hermit Yoda",	"1",
-"HK-47",	"1","IG-100 MagnaGuard",	"1","Jedi Consular",	"1",
-"Nightsister Initiate",	"1","Ninth Sister",	"1","Nute Gunray",	"1","Old Daka",	"1","Outrider",	"1","Pao",	"1","Rebel Officer Leia Organa",	"1",
-"Resistance Pilot",	"1","Sith Empire Trooper",	"1",
-"Sith Eternal Emperor",	"1","Sith Trooper",	"1","TIE Echelon",	"1","Veteran Smuggler Chewbacca",	"1",
-"Young Lando Calrissian",	"1",  
-          ]
+			"Whenever a non-Tank ally uses a Special ability, grant them Stealth for 2 turns.",
+			"Add Stealthed allies deal an additional 15% damage.",
+			"Add Stealthed allies recieve 15% less damage from all sources."
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -603,7 +593,7 @@ Vue.component('mission', {
 			id: 0,
 			name: 'c1',
 			type: 'fleet',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 2,303,438',
 				],
@@ -642,7 +632,7 @@ Vue.component('mission', {
 			id: 5,
 			name: 'c4',
 			type: 'usual',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 460,668',
                 'Wave 2: 1,151,719'
@@ -674,12 +664,14 @@ Vue.component('mission', {
             stars: [
                '⭐ 582,632,425',
                '⭐⭐ 1,059,331,682',
-               '⭐⭐⭐ 1,246,272,567',
-               'Points to hit ⭐⭐⭐ after a max preload: 663,640,142 ',
+               '⭐⭐⭐ 1,246,272,567'
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 9","Ships: 7⭐"], platoonAbility: [0], platzones: [0]}
-		],
+			{id: 30, name: 'm2', type: 'hoth', position: 'right', preqs:["Characters: Relic 9","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			],
+
+			defaultPath: '../media/map_ui/mission_',
+
 		selectedMission: '',
 		seen: false,
 	}
@@ -701,4 +693,17 @@ let app = new Vue({
 	data: {
 		isVisible: false
 	},
+});
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
 });

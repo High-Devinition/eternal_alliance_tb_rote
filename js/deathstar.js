@@ -544,21 +544,9 @@ Vue.component('mission', {
 
 		],
 		platoons: [
-        [ "Lord Vader",	"7","Boba Fett, Scion of Jango",	"6","Executor",	"5","Maul",	"5","Darth Malgus",	"4",
-"Supreme Leader Kylo Ren",	"4","Hondo Ohnaka",	"3","Hyena Bomber",	"3","Scythe",	"3","Count Dooku",	"2",
-"Emperor's Shuttle",	"2","Geonosian Brood Alpha",	"2","IG-88",	"2","Imperial Super Commando",	"2",
-"Malevolence",	"2","Nightsister Acolyte",	"2","Sith Eternal Emperor",	"2",
-"Ugnaught",	"2","Asajj Ventress",	"1","B1 Battle Droid",	"1","B2 Super Battle Droid",	"1","Darth Maul",	"1",
-"Darth Talon",	"1","Executrix",	"1","Fifth Brother",	"1",
-"General Hux",	"1","Geonosian Soldier",	"1","Geonosian Spy",	"1","Geonosian Spy's Starfighter",	"1",
-"Grand Moff Tarkin",	"1","HK-47",	"1","Hound's Tooth",	"1","IG-100 MagnaGuard",	"1",
-"IG-86 Sentinel Droid",	"1","Jawa",	"1","Jawa Engineer",	"1","Jawa Scavenger",	"1","Krrsantan",	"1",
-"Kylo Ren (Unmasked)",	"1","Mara Jade, The Emperor's Hand",	"1",
-"Nightsister Spirit",	"1","Ninth Sister",	"1",
-"Range Trooper",	"1","Royal Guard",	"1",
-"Savage Opress",	"1","Shoretrooper",	"1","Sith Trooper",	"1",
-"Tusken Raider",	"1","URoRRuR'R'R",	"1","Zam Wesell",	"1",  
-         ]
+			"At the start of encounter, grant all allies 100% Turn Meter and 3 Morale buffs until the end of the encounter, which can't be dispelled.",
+			"Instead, grant 50% Turn Meter and 2 Morale buffs.",
+			"Instead, grant 25% Turn Meter and 1 Morale buff."
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -617,7 +605,7 @@ Vue.component('mission', {
 			id: 0,
 			name: 'c1',
 			type: 'fleet',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 2,303,438',
 				],
@@ -629,7 +617,7 @@ Vue.component('mission', {
 			id: 1,
 			name: 'c2',
 			type: 'usual',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 460,668',
                 'Wave 2: 1,151,719'
@@ -656,7 +644,7 @@ Vue.component('mission', {
 			id: 5,
 			name: 'c4',
 			type: 'usual',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 460,668',
                 'Wave 2: 1,151,719'
@@ -688,12 +676,14 @@ Vue.component('mission', {
             stars: [
                '⭐ 582,632,425',
                '⭐⭐ 1,059,331,682',
-               '⭐⭐⭐ 1,246,272,567',
-               'Points to hit ⭐⭐⭐ after a max preload: 663,640,142 ',
+               '⭐⭐⭐ 1,246,272,567'
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 9","Ships: 7⭐"], platoonAbility: [0], platzones: [0]}
-		],
+			{id: 30, name: 'm2', type: 'deathstar', position: 'right', preqs:["Characters: Relic 9","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			],
+
+			defaultPath: '../media/map_ui/mission_',
+
 		selectedMission: '',
 		seen: false,
 	}
@@ -716,3 +706,17 @@ let app = new Vue({
 		isVisible: false
 	},
 });
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
+});
+

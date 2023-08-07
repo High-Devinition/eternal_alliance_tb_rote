@@ -533,19 +533,9 @@ Vue.component('mission', {
 
 		],
 		platoons: [
-        [ "Starkiller",	"9","Boba Fett, Scion of Jango",	"7",
-"Darth Malak",	"6","Scythe",	"6","Sith Eternal Emperor",	"6","Darth Malgus",	"5",
-"Executor",	"5","Lord Vader",	"4","Grand Inquisitor",	"3","IG-88",	"3",
-"Maul",	"3","Supreme Leader Kylo Ren",	"3",
-"First Order SF TIE Pilot",	"2","Sith Empire Trooper",	"2","B-28 Extinction-class Bomber",	"1",
-"Boba Fett",	"1","Colonel Starck",	"1","Count Dooku",	"1",
-"Executrix",	"1","First Order Officer",	"1","First Order TIE Fighter",	"1","First Order TIE Pilot",	"1",
-"Gauntlet Starfighter",	"1","Geonosian Soldier",	"1","Geonosian Soldier's Starfighter",	"1","Hyena Bomber",	"1",
-"Iden Versio",	"1","IG-2000",	"1","Jango Fett",	"1","Kylo Ren",	"1",
-"Kylo Ren (Unmasked)",	"1","Magmatrooper",	"1","Moff Gideon",	"1",
-"Nightsister Zombie",	"1","Sith Assassin",	"1","Snowtrooper",	"1","Talia",	"1","Tusken Shaman",	"1",
-"Vulture Droid",	"1","Wampa",	"1",   
-         ]
+			"At the start of battle,inflict Fear for 1 turn on a random enemy, which can't be evaded or resisted.",
+			"Instead, inflict Fear on 3 random enemies.",
+			"Instead, inflict Fear on all enemies."
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -663,12 +653,14 @@ Vue.component('mission', {
             stars: [
 				'⭐ 341,250,768',
                 '⭐⭐ 620,455,942',
-                '⭐⭐⭐ 729,948,167',
-                'Points to hit ⭐⭐⭐ after a max preload: 388,697,399 ',
+                '⭐⭐⭐ 729,948,167'
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 9","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1]}
-		],
+			{id: 30, name: 'm2', type: 'malachor', position: 'right', preqs:["Characters: Relic 9","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			],
+
+			defaultPath: '../media/map_ui/mission_',
+
 		selectedMission: '',
 		seen: false,
 	}
@@ -690,4 +682,17 @@ let app = new Vue({
 	data: {
 		isVisible: false
 	},
+});
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
 });

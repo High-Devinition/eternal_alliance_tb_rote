@@ -54,7 +54,7 @@
 
 
 				<div class="mb-3" v-if="selectedMission.reqs">
-					<p class="h4">Requirements</p>
+					<p class="h3">Requirements</p>
 					<div v-for="item in selectedMission.reqs">
 						<p>{{reqs[item]}}</p>
 					</div>
@@ -119,7 +119,7 @@
 					<p class="h4">Rewards</p>
 					<span v-for="item in selectedMission.rewards">&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;</span>
 				</div>
-				<div class="rewards mb-3" v-if="selectedMission.stars">
+				<div class="deployNode" v-if="selectedMission.stars">
 					<p class="h4">Star Requirements</p>
 					<ul class="points">
 						<li class="text-justify" v-for="item in selectedMission.stars">{{item}}</li>

@@ -54,20 +54,12 @@ p {
 
 }
 
-/*.part:hover {
-	opacity: .5;
-	transition: all 0.5s ease;
-	cursor: pointer;
-}*/
-
 svg text {
 	fill: #ffffff;
 	font-size: 10px;
 	display: none;
 }
-/*.part:hover + text {
-	display: block;
-}*/
+
 text:hover {
 	display: block;
 	cursor: pointer;
@@ -76,10 +68,6 @@ text:hover {
 .svgViewbox {
 	border: 15px solid black;
 }
-
-
-
-
 
 .description {
 	position: absolute;
@@ -90,7 +78,6 @@ text:hover {
 	width: auto;
 	max-width: 25%;
 	padding: 1rem;
-	/*color: #ffffff;*/
 	z-index: 100;
 	border-radius: 1%;
 	word-wrap: normal;

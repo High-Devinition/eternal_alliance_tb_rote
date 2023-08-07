@@ -514,14 +514,11 @@ Vue.component('mission', {
         "Wave 2: Unknown"
 		],
 		platoons: [
-        [        "Ben Solo",	"6","Commander Ahsoka Tano",	"6","Razor Crest",	"6",
-"Han's Millennium Falcon",	"5","Jedi Master Luke Skywalker",	"5","Logray",	"5","Rey",	"5","The Mandalorian (Beskar Armor)",	"5",
-"R2-D2",	"4","BB-8",	"3","C-3PO",	"3","Commander Luke Skywalker",	"3","Ki-Adi-Mundi",	"3","Padme Amidala",	"3","Grand Master Yoda",	"2",
-"Han Solo",	"2","Hermit Yoda",	"2","Jedi Knight Revan",	"2","Jedi Master Kenobi",	"2","Rebel Officer Leia Organa",	"2",
-"Resistance Trooper",	"2","Clone Sergeant - Phase I",	"1",
-"CT-5555 Fives",	"1","Ewok Scout",	"1","General Kenobi",	"1","Hoth Rebel Scout",	"1","Hoth Rebel Soldier",	"1",
-"Jedi Knight Anakin",	"1","K-2SO",	"1","Lando's Millennium Falcon",	"1","Mace Windu",	"1","Negotiator",	"1","Raven's Claw",	"1",
-"Rey (Jedi Training)",	"1","Skiff Guard (Lando Calrissian)",	"1",        ]
+			"The allied Capital Ship gains two abilities; Assault Formation and Defensive Formation. (Allied ships start in Defensive Formation).\n\n" +
+			"Assault Formation:\n\n Reduce allied non-Capital ships' cooldowns by 2 and they gain 50% Turn Meter. This ship takes a bonus turn without reducing its cooldowns.This ability starts on cooldown and shares a cooldown with Defensive Formation. (Cooldown:2)\n\n" +
+			"Defensive Formation:\n\n Until a new Formation is issued, allied Tanks Taunt at the start of each turn if they don't already have it. This ship takes a bonus turn without reducing its cooldowns. This ability starts on cooldown and shares a cooldown with Assault Formation. (Cooldown:2)\n\n",
+			"Add to Defensive Formation: Allied non-Capital ships recover 25% of their Max Health and all of their Protection.\n\n",
+			"Add to Assault Formation: Until a new Formation is issued, allied non-Capital ships deal 100% more damage."
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -575,7 +572,7 @@ Vue.component('mission', {
 			id: 0,
 			name: 'c1',
 			type: 'fleet',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 682,500',
 				],
@@ -631,8 +628,7 @@ Vue.component('mission', {
             stars: [
                '⭐ 190,953,125',
                '⭐⭐ 305,525,000',
-               '⭐⭐⭐ 407,366,667',
-               'Points to hit ⭐⭐⭐ after a max preload: 216,413,542 ',
+               '⭐⭐⭐ 407,366,667'
             ]
 			}, 
             {
@@ -649,8 +645,11 @@ Vue.component('mission', {
             reqs: [17],
             notes: [1],
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 7","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2,3,4]}
-		],
+			{id: 30, name: 'm2', type: 'kashyyyk', position: 'right', preqs:["Characters: Relic 7","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			],
+
+			defaultPath: '../media/map_ui/mission_',
+
 		selectedMission: '',
 		seen: false,
 	}
@@ -672,4 +671,17 @@ let app = new Vue({
 	data: {
 		isVisible: false
 	},
+});
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
 });

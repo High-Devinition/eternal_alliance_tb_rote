@@ -530,19 +530,10 @@ Vue.component('mission', {
         "Wave 2: Enfys Nest (L), 2x Cartel Bruiser, 2x Cartel Spy, Cartel Saboteur",//55
 		],
 		platoons: [
-        [  "Grand Inquisitor",	"7","Commander Ahsoka Tano",	"6",
-"Profundity",	"5","Starkiller",	"4","Darth Malak",	"3","General Skywalker",	"3","Jedi Master Kenobi",	"3","Scythe",	"3","Ben Solo",	"2",
-"Boba Fett, Scion of Jango",	"2","Darth Malgus",	"2","Executor",	"2","Hyena Bomber",	"2",
-"Jedi Consular's Starfighter",	"2","Jedi Master Luke Skywalker",	"2","Old Daka",	"2","Razor Crest",	"2",
-"Sith Eternal Emperor",	"2","Supreme Leader Kylo Ren",	"2","50R-T",	"1","Ahsoka Tano (Fulcrum)",	"1",
-"Anakin's Eta-2 Starfighter",	"1","Barriss Offee",	"1","Bastila Shan",	"1","Bistan",	"1",
-"Bodhi Rook",	"1","Chewbacca",	"1","Darth Sidious",	"1",
-"Echo",	"1","Emperor Palpatine",	"1","First Order Executioner",	"1","Gauntlet Starfighter",	"1","Hondo Ohnaka",	"1",
-"Hound's Tooth",	"1","Hunter",	"1","IG-100 MagnaGuard",	"1","Imperial TIE Bomber",	"1",
-"Jedi Knight Luke Skywalker",	"1","Jolee Bindo",	"1","Kylo Ren",	"1","Lord Vader",	"1","Mace Windu",	"1","Maul",	"1","Nightsister Initiate",	"1",
-"Padme Amidala",	"1","Raven's Claw",	"1","Resistance Hero Finn",	"1","Rey",	"1","Talia",	"1",
-"TIE Echelon",	"1","Tusken Shaman",	"1","Wedge Antilles's X-wing",	"1","Wicket",	"1",
-         ]
+			"Whenever an ally uses a Special abilty,they gain a stack of Profit for 2 turns.\n" +
+			"\nProfit: +10% Critical Chance and Critical Damage per stack (max 50%)",
+			"At the start of battle, grant all allies 2 stacks of Profit for 2 turns.",
+			"At the start of battle, grant all allies 4 stacks of Profit for 2 turns."
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -605,7 +596,7 @@ Vue.component('mission', {
 			id: 0,
 			name: 'c1',
 			type: 'fleet',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 1,443,488',
 				],
@@ -617,7 +608,7 @@ Vue.component('mission', {
 			id: 1,
 			name: 'c2',
 			type: 'usual',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 307,125',
                 'Wave 2: 721,744'
@@ -675,12 +666,14 @@ Vue.component('mission', {
             stars: [
 				'⭐ 341,250,768',
                 '⭐⭐ 620,455,942',
-                '⭐⭐⭐ 729,948,167',
-               'Points to hit ⭐⭐⭐ after a max preload: 388,697,399 ',
+                '⭐⭐⭐ 729,948,167'
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 9","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1]}
-		],
+			{id: 30, name: 'm2', type: 'vandor', position: 'right', preqs:["Characters: Relic 9","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			],
+
+			defaultPath: '../media/map_ui/mission_',
+
 		selectedMission: '',
 		seen: false,
 	}
@@ -702,4 +695,17 @@ let app = new Vue({
 	data: {
 		isVisible: false
 	},
+});
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
 });

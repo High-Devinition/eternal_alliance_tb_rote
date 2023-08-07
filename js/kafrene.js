@@ -525,19 +525,9 @@ Vue.component('mission', {
 
 		],
 		platoons: [
-        [     "Jedi Knight Luke Skywalker",	"11","General Skywalker",	"7",
-"Jedi Master Kenobi",	"6",
-"Jedi Master Luke Skywalker",	"6","Grand Master Yoda",	"5","Rey",	"4","Commander Luke Skywalker",	"3",
-"Jedi Knight Revan",	"3","50R-T",	"2","Baze Malbus",	"2","C-3PO",	"2",
-"Eeth Koth",	"2","Profundity",	"2","R2-D2",	"2","Tech",	"2","Wedge Antilles's X-wing",	"2",
-"Amilyn Holdo",	"1","Barriss Offee",	"1","Bastila Shan",	"1","Bodhi Rook",	"1","Boushh (Leia Organa)",	"1",
-"Chewbacca",	"1","Chirrut ÃŽmwe",	"1","Chopper",	"1","Clone Sergeant's ARC-170",	"1",
-"Clone Wars Chewbacca",	"1","CT-7567 Rex",	"1","Echo",	"1","Ghost",	"1","Han's Millennium Falcon",	"1",
-"Hoth Rebel Soldier",	"1","Ima-Gun Di",	"1","Lando Calrissian",	"1","Lobot",	"1",
-"Mon Mothma",	"1","Negotiator",	"1","Omega",	"1","Padme Amidala",	"1","Resistance Trooper",	"1",
-"Rose Tico",	"1","T3-M4",	"1","The Armorer",	"1","Umbaran Starfighter",	"1","Veteran Smuggler Chewbacca",	"1",
-"Zaalbar",	"1",
-         ]
+			"At the start of the encounter, Stun all enemies for 1 turn and inflict Defense Down, Offense Down, Stagger and Tenacity Down for 2 turns which can't be resisted",
+			"Instead Stun three random enemies; remove inflict Defense Down and Offense Down.",
+			"Instead Stun one random enemy; remove inflict Stagger."
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -597,7 +587,7 @@ Vue.component('mission', {
 			id: 0,
 			name: 'c1',
 			type: 'fleet',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 1,443,488',
 				],
@@ -608,7 +598,7 @@ Vue.component('mission', {
 			id: 1,
 			name: 'c2',
 			type: 'usual',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 307,125',
                 'Wave 2: 721,744'
@@ -667,12 +657,14 @@ Vue.component('mission', {
             stars: [
 				'⭐ 341,250,768',
                 '⭐⭐ 620,455,942',
-                '⭐⭐⭐ 729,948,167',
-               'Points to hit ⭐⭐⭐ after a max preload: 388,697,399 ',
+                '⭐⭐⭐ 729,948,167'
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 9","Ships: 7⭐"], platoonAbility: [0], platzones: [0]}
-		],
+			{id: 30, name: 'm2', type: 'kafrene', position: 'right', preqs:["Characters: Relic 9","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			],
+
+			defaultPath: '../media/map_ui/mission_',
+
 		selectedMission: '',
 		seen: false,
 	}
@@ -694,4 +686,18 @@ let app = new Vue({
 	data: {
 		isVisible: false
 	},
+});
+
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
 });

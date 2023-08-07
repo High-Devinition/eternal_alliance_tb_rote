@@ -513,8 +513,8 @@ Vue.component('mission', {
 			],
 		platoons: [
 			"The allied Capital Ship gains two abilities; Assault Formation and Defensive Formation. (Allied ships start in Defensive Formation).\n\n" +
-			"Assault Formation: Reduce allied non-Capital ships' cooldowns by 2 and they gain 50% Turn Meter. This ship takes a bonus turn without reducing its cooldowns.This ability starts on cooldown and shares a cooldown with Defensive Formation. (Cooldown:2)\n\n" +
-			"Defensive Formation: Until a new Formation is issued, allied Tanks Taunt at the start of each turn if they don't already have it. This ship takes a bonus turn without reducing its cooldowns. This ability starts on cooldown and shares a cooldown with Assault Formation. (Cooldown:2)\n\n",
+			"Assault Formation:\n\n Reduce allied non-Capital ships' cooldowns by 2 and they gain 50% Turn Meter. This ship takes a bonus turn without reducing its cooldowns.This ability starts on cooldown and shares a cooldown with Defensive Formation. (Cooldown:2)\n\n" +
+			"Defensive Formation:\n\n Until a new Formation is issued, allied Tanks Taunt at the start of each turn if they don't already have it. This ship takes a bonus turn without reducing its cooldowns. This ability starts on cooldown and shares a cooldown with Assault Formation. (Cooldown:2)\n\n",
 			"Add to Defensive Formation: Allied non-Capital ships recover 25% of their Max Health and all of their Protection.\n\n",
 			"Add to Assault Formation: Until a new Formation is issued, allied non-Capital ships deal 100% more damage."
 

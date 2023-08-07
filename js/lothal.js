@@ -533,24 +533,9 @@ Vue.component('mission', {
 
 		],
 		platoons: [
-        [      "Jedi Master Luke Skywalker",	"8","Profundity",	"7",
-"Commander Ahsoka Tano",	"5","Hermit Yoda",	"5","Razor Crest",	"4","Rebel Officer Leia Organa",	"4",
-"Ben Solo",	"3","General Kenobi",	"3","50R-T",	"2","Chewbacca",	"2",
-"Ghost",	"2","Han Solo",	"2","Jedi Knight Revan",	"2",
-"Jedi Master Kenobi",	"2","Ki-Adi-Mundi",	"2","Logray",	"2",
-"Padme Amidala",	"2","Scarif Rebel Pathfinder",	"2","Xanadu Blood",	"2","Zaalbar",	"2",
-"Aayla Secura",	"1","BB-8",	"1","Bistan",	"1","Chief Nebit",	"1","Dash Rendar",	"1",
-"Ebon Hawk",	"1","Echo",	"1","Eeth Koth",	"1",
-"Finn",	"1","Grand Master Yoda",	"1","Han's Millennium Falcon",	"1",
-"Hondo Ohnaka",	"1","Jedi Consular",	"1",
-"Jolee Bindo",	"1","Kyle Katarn",	"1",
-"Outrider",	"1","R2-D2",	"1","Raven's Claw",	"1",
-"Rebel Y-wing",	"1","Rey",	"1","Rey (Jedi Training)",	"1","Sana Starros",	"1","Tech",	"1",
-"The Mandalorian (Beskar Armor)",	"1",
-"Veteran Smuggler Chewbacca",	"1",
-"Wedge Antilles's X-wing",	"1",
-"Wicket",	"1",
-           ]
+			"All allies have +30% Critical Chance and Critical Damage and a 35% chance to Daze the target with their first attack each turn",
+			"Add allies gain Advantage for 2 turns at the start of their turn",
+			"Add whenever an ally critically hits on their turn, call a random ally to assist"
 		],
 		guides:[
 		'See also: 50 Shards of Kam Discord Server',
@@ -620,7 +605,7 @@ Vue.component('mission', {
 			id: 1,
 			name: 'c2',
 			type: 'usual',
-			position: 'left',
+			position: 'right',
 			rewards: [
 				'Wave 1: 219,375',
                 'Wave 2: 493,594'
@@ -663,12 +648,14 @@ Vue.component('mission', {
             stars: [
                '⭐ 246,742,558',
                '⭐⭐ 419,987,333',
-               '⭐⭐⭐ 524,984,167',
-               'Points to hit ⭐⭐⭐ after a max preload: 278,241,609 ',
+               '⭐⭐⭐ 524,984,167'              
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right', preqs:["Characters: Relic 8","Ships: 7⭐"], platoonAbility: [0], platzones: [0]}
-		],
+			{id: 30, name: 'm2', type: 'lothal', position: 'right', preqs:["Characters: Relic 8","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			],
+
+			defaultPath: '../media/map_ui/mission_',
+
 		selectedMission: '',
 		seen: false,
 	}
@@ -690,4 +677,17 @@ let app = new Vue({
 	data: {
 		isVisible: false
 	},
+});
+
+//Mission Selected functionality
+$(document).ready(function () {
+
+	$("img").click(function () {
+
+		$('.selected').removeClass('selected');
+
+		$(this).addClass('selected');
+		$('.description').show();
+	});
+
 });

@@ -519,7 +519,8 @@ Vue.component('mission', {
         "Wave 2: Iden Versio (L), Stormtrooper Commander, Stormtrooper, Recon Trooper, Range Trooper, Scout Trooper",
 		],
 		platoons: [
-			"Whenever an ally uses a Special ability,they gain a stack of Profit for 2 turns. Profit :+10% Critical Chance and Critical Damage per stack",
+			"Whenever an ally uses a Special abilty,they gain a stack of Profit for 2 turns.\n" +
+			"\nProfit: +10% Critical Chance and Critical Damage per stack (max 50%)",
 			"Add at the start of battle, grant all allies 2 stacks of Profit for 2 turns.",
 			"At the start of battle, grant all allies 4 stacks of Profit for 2 turns."
 		],
