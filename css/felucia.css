@@ -4,31 +4,31 @@
 }
 
 /*Mission positions*/
-.c1 {/*P4 middle battle*/
+.M1 {/*P4 middle battle*/
 	top: 56%;
 	left: 55%;
 }
-.c2 {/*P4 top battle*/
+.M2 {/*P4 top battle*/
 	top: 44%;
 	left: 24%;
 }
-.c3 {/*P4 lower battle*/
+.M3 {/*P4 lower battle*/
 	top: 45%;
 	left: 48%;
 }
-.c5 {/*P3 top battle*/
+.M5 {/*P3 top battle*/
 	top: 63%;
 	left: 29%;
 }
-.c6 {/*P3 top special*/
+.M6 {/*P3 top special*/
 	top: 22%;
 	left: 61%;
 }
-.c7 {/*P3 top special*/
+.DP {/*P3 top special*/
 	top: 50%;
 	left: 38%;
 }
-.m2 {/*P3 middle platoons*/
+.OP {/*P3 middle platoons*/
 	top: 70%;
 	left: 50%;
 }

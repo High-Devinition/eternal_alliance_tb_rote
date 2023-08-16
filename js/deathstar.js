@@ -17,7 +17,7 @@ Vue.component('mission', {
 	data: function () {
 		return {
 		isMobile: false,
-		squads: [
+		playerSquads: [
 		//---------------------------------------------------------------------------------------------------------------------------------DS SQUADS
 			{	
 				id: 0,
@@ -62,7 +62,7 @@ Vue.component('mission', {
 			{
 				id: 8,
 				name: 'Nute team',
-				toons: ['nute_gunrey', 'b1_battle_droid', 'b2_super_battle_droid', 'droideka', 'ig100_magnaguard' ]
+				toons: ['nute_gunray', 'b1_battle_droid', 'b2_super_battle_droid', 'droideka', 'ig100_magnaguard' ]
 			},
 			{
 				id: 9,
@@ -102,7 +102,7 @@ Vue.component('mission', {
 			{
 				id: 16,
 				name: 'Test squad',
-				toons: ['count_dooku', 'general_grievous', 'b2_super_battle_droid', 'nute_gunrey', 'b1_battle_droid']
+				toons: ['count_dooku', 'general_grievous', 'b2_super_battle_droid', 'nute_gunray', 'b1_battle_droid']
 			},
 			{
 				id: 17,
@@ -603,74 +603,74 @@ Vue.component('mission', {
 		],
 		missions: [{
 			id: 0,
-			name: 'c1',
+			name: 'M1',
 			type: 'fleet',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'Wave 1: 2,303,438',
 				],
-            preferredSquads: [84],//fleet
-			dangerousEnemies: [51],
+            recommendedSquads: [84],//fleet
+			enemyWaves: [51],
             reqs: [18],
             modifiers: [4],
 			},	{
 			id: 1,
-			name: 'c2',
+			name: 'M2',
 			type: 'usual',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'Wave 1: 460,668',
                 'Wave 2: 1,151,719'
 				],
-			preferredSquads: [83],//vader
-			dangerousEnemies: [34],
+			recommendedSquads: [83],//vader
+			enemyWaves: [34],
 			modifiers: [5],
             reqs: [23],
 			}, {
 			id: 2,
-			name: 'c3',
+			name: 'M3',
 			type: 'usual',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'Wave 1: 460,668',
                 'Wave 2: 1,151,719'
 				],
-            preferredSquads: [24],//special
-			dangerousEnemies: [49,50],
+            recommendedSquads: [24],//special
+			enemyWaves: [49,50],
             reqs: [21],
             modifiers: [5],
 			},
             {
 			id: 5,
-			name: 'c4',
+			name: 'M4',
 			type: 'usual',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'Wave 1: 460,668',
                 'Wave 2: 1,151,719'
 				],
-			preferredSquads: [24],//br Jabba
-			dangerousEnemies: [49,50],
+			recommendedSquads: [24],//br Jabba
+			enemyWaves: [49,50],
 			modifiers: [5],
             reqs: [21],
 			},
 			{
 			id: 5,
-			name: 'c6',
+			name: 'M6',
 			type: 'usual',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'Wave 1: 460,668',
                 'Wave 2: 1,151,719'
 				],
-				preferredSquads: [85],//iden
-				dangerousEnemies: [34],
+				recommendedSquads: [85],//iden
+				enemyWaves: [34],
 				modifiers: [5],
             reqs: [22],
 			}, 
             {
 			id: 6,
-			name: 'c7',
+			name: 'DP',
 			type: 'deploy',
 			position: 'right',
             stars: [
@@ -679,7 +679,7 @@ Vue.component('mission', {
                '⭐⭐⭐ 1,246,272,567'
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'deathstar', position: 'right', preqs:["Characters: Relic 9","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			{id: 30, name: 'OP', type: 'deathstar', position: 'right', preqs:["Characters: Relic 9","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
 			],
 
 			defaultPath: '../media/map_ui/mission_',

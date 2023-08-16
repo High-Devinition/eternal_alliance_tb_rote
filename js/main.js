@@ -3,7 +3,7 @@ Vue.component('planet', {
 	data: function () {
 		return {
 		isMobile: false,
-		squads: [
+		playerSquads: [
 		//---------------------------------------------------------------------------------------------------------------------------------DS SQUADS
 			{	
 				id: 0,
@@ -48,7 +48,7 @@ Vue.component('planet', {
 			{
 				id: 8,
 				name: 'Nute team',
-				toons: ['nute_gunrey', 'b1_battle_droid', 'b2_super_battle_droid', 'droideka', 'ig100_magnaguard' ]
+				toons: ['nute_gunray', 'b1_battle_droid', 'b2_super_battle_droid', 'droideka', 'ig100_magnaguard' ]
 			},
 			{
 				id: 9,
@@ -88,7 +88,7 @@ Vue.component('planet', {
 			{
 				id: 16,
 				name: 'Test squad',
-				toons: ['count_dooku', 'general_grievous', 'b2_super_battle_droid', 'nute_gunrey', 'b1_battle_droid']
+				toons: ['count_dooku', 'general_grievous', 'b2_super_battle_droid', 'nute_gunray', 'b1_battle_droid']
 			},
 			{
 				id: 17,
@@ -485,7 +485,7 @@ Vue.component('planet', {
 		planets: [
             {
 			id: 1,
-			name: 'c1',
+			name: 'M1',
 			type: 'deathstar',
 			zonepath: 'DS',
 			position: 'right',
@@ -504,7 +504,7 @@ Vue.component('planet', {
 			},
             {
 			id: 2,
-			name: 'c2',
+			name: 'M2',
 			type: 'malachor',
 			zonepath: 'DS',
 			position: 'right',
@@ -523,7 +523,7 @@ Vue.component('planet', {
 			},
             {
 			id: 3,
-			name: 'c3',
+			name: 'M3',
 			type: 'haven',
 			zonepath: 'DS',
 			position: 'right',
@@ -542,7 +542,7 @@ Vue.component('planet', {
 			},
             {
 			id: 4,
-			name: 'c5',
+			name: 'M5',
 			type: 'lothal',
 			zonepath: 'LS',
 			position: 'left',
@@ -561,7 +561,7 @@ Vue.component('planet', {
 			},
             {
 			id: 5,
-			name: 'c6',
+			name: 'M6',
 			type: 'kessel',
 			zonepath: 'Mixed',
 			position: 'left',
@@ -580,7 +580,7 @@ Vue.component('planet', {
 			},
 			{
 			id: 6,
-			name: 'c7',
+			name: 'DP',
 			type: 'dathomir',
 			zonepath: 'DS',
 			position: 'right',
@@ -807,7 +807,7 @@ Vue.component('planet', {
 			},
             {
 			id: 11,
-			name: 'c4',
+			name: 'M4',
 			type: 'scarif',
 			zonepath: 'LS',
 			position: 'left',

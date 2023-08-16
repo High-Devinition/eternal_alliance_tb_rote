@@ -3,59 +3,33 @@
 .map {
 	background: url('../media/planets/backdrops/geonosis_backdrop.png') no-repeat;	
 }
-/*.part {
-	opacity: .3;
-	opacity: 0.1;
-	stroke: white;
-	stroke-width: 1%;
-	stroke-linejoin: round;
-}
-.part:hover {
-	opacity: .5;
-	transition: all 0.5s ease;
-	cursor: pointer;
-}
-svg text {
-	fill: #ffffff;
-	font-size: 10px;
-	display: none;
-}
-.part:hover + text {
-	display: block;
-}
-text:hover {
-	display: block;
-	cursor: pointer;
-}
 
 /*Mission positions*/
-
-/*Mission positions*/
-.c1 {/*P4 middle battle*/
-	top: 36%;
-	left: 53%;
-}
-.c2 {/*P4 top battle*/
-	top: 71%;
-	left: 32%;
-}
-.c3 {/*P4 lower battle*/
-	top: 59%;
-	left: 20%;
-}
-.c5 {/*P3 top battle*/
+.M1 { /*P3 top battle*/
 	top: 55%;
 	left: 42%;
 }
-.c6 {/*P3 top special*/
+.M2 { /*P4 middle battle*/
+	top: 36%;
+	left: 53%;
+}
+.M3 { /*P4 top battle*/
+	top: 71%;
+	left: 32%;
+}
+.M5 { /*P4 lower battle*/
+	top: 59%;
+	left: 20%;
+}
+.M6 {/*P3 top special*/
 	top: 77%;
 	left: 55%;
 }
-.c7 {/*P3 top special*/
+.DP {/*P3 top special*/
 	top: 38%;
 	left: 27%;
 }
-.m2 { /*P3 middle platoons*/
+.OP { /*P3 middle platoons*/
 	top: 33%;
 	left: 37%;
 }

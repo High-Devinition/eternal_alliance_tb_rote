@@ -4,39 +4,39 @@
 }
 
 /*Mission positions*/
-.c1 {/*P4 middle battle*/
+.M1 {/*P4 middle battle*/
 	top: 38%;
 	left: 55%;
 }
-.c2 {/*P4 top battle*/
+.M2 {/*P4 top battle*/
 	top: 29%;
 	left: 44%;
 }
-.c3 {/*P4 lower battle*/
+.M3 {/*P4 lower battle*/
 	top: 31%;
 	left: 24%;
 }
-.c4 {/*New Bracca Special Mission*/
+.M4 {/*New Bracca Special Mission*/
 	top: 61%;
 	left: 26%;
 }
-	.c4:hover {
+	.M4:hover {
 		padding: 0 10px 10px 10px !important;
 	}
 
-	img.mission.c4.selected {
+	img.mission.M4.selected {
 		padding: 0 3px 26px 5px !important;
 	}
 
-.c6 {/*P3 top special*/
+.M6 {/*P3 top special*/
 	top: 19%;
 	left: 61%;
 }
-.c7 {/*P3 top special*/
+.DP {/*P3 top special*/
 	top: 46%;
 	left: 34%;
 }
-.m2 {/*P3 middle platoons*/
+.OP {/*P3 middle platoons*/
 	top: 62%;
 	left: 48%;
 }

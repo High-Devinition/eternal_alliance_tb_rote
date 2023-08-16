@@ -17,7 +17,7 @@ Vue.component('mission', {
 	data: function () {
 		return {
 		isMobile: false,
-		squads: [
+		playerSquads: [
 		//---------------------------------------------------------------------------------------------------------------------------------DS SQUADS
 			{	
 				id: 0,
@@ -62,7 +62,7 @@ Vue.component('mission', {
 			{
 				id: 8,
 				name: 'Nute team',
-				toons: ['nute_gunrey', 'b1_battle_droid', 'b2_super_battle_droid', 'droideka', 'ig100_magnaguard' ]
+				toons: ['nute_gunray', 'b1_battle_droid', 'b2_super_battle_droid', 'droideka', 'ig100_magnaguard' ]
 			},
 			{
 				id: 9,
@@ -102,7 +102,7 @@ Vue.component('mission', {
 			{
 				id: 16,
 				name: 'Test squad',
-				toons: ['count_dooku', 'general_grievous', 'b2_super_battle_droid', 'nute_gunrey', 'b1_battle_droid']
+				toons: ['count_dooku', 'general_grievous', 'b2_super_battle_droid', 'nute_gunray', 'b1_battle_droid']
 			},
 			{
 				id: 17,
@@ -577,73 +577,73 @@ Vue.component('mission', {
 		],
 		missions: [{
 			id: 0,
-			name: 'c1',
+			name: 'M1',
 			type: 'fleet',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'Wave 1: 682,500',
 				],
-            preferredSquads: [74],//aphra
-			dangerousEnemies: [45],
+            recommendedSquads: [74],//aphra
+			enemyWaves: [45],
             reqs: [17],
 			},	{
 			id: 1,
-			name: 'c2',
+			name: 'M2',
 			type: 'usual',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'Wave 1: 162,500',
                 'Wave 2: 341,250'
 				],
-			preferredSquads: [75],//jabba
-			dangerousEnemies: [46,47],
+			recommendedSquads: [75],//jabba
+			enemyWaves: [46,47],
 			modifiers: [3],
             reqs: [20],
 			}, {
 			id: 2,
-			name: 'c3',
+			name: 'M3',
 			type: 'usual',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'Wave 1: 162,500',
                 'Wave 2: 341,250'
 				],
-            preferredSquads: [77,78],//fennec
-			dangerousEnemies: [50,51],
+            recommendedSquads: [77,78],//fennec
+			enemyWaves: [50,51],
             reqs: [18],
             modifiers: [3],
 			},
 			{
 			id: 3,
-			name: 'c4',
+			name: 'M4',
 			type: 'reva',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'1 Reva Shard',
 				],
-            preferredSquads: [76],//reva
-			dangerousEnemies: [52,53],
+            recommendedSquads: [76],//reva
+			enemyWaves: [52,53],
             reqs: [19],
             modifiers: [3],
             notes: [0, 1, 2, 3, 4, 5, 6],
 			},
 			{
 			id: 5,
-			name: 'c6',
+			name: 'M6',
 			type: 'usual',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'Wave 1: 162,500',
                 'Wave 2: 341,250'
 				],
-				preferredSquads: [35,80,81,79],//gen
-				dangerousEnemies: [48,49],
+				recommendedSquads: [35,80,81,79],//gen
+				enemyWaves: [48,49],
 				modifiers: [3],
             reqs: [21],
 			}, 
             {
 			id: 6,
-			name: 'c7',
+			name: 'DP',
 			type: 'deploy',
 			position: 'right',
             stars: [
@@ -652,7 +652,7 @@ Vue.component('mission', {
                '⭐⭐⭐ 407,366,667',
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'tatooine', position: 'right', preqs:["Characters: Relic 7","Ships: 7⭐"], platoonAbility: [0], platzones: [0, 1, 2]}
+			{id: 30, name: 'OP', type: 'tatooine', position: 'right', preqs:["Characters: Relic 7","Ships: 7⭐"], platoonAbility: [0], platzones: [0, 1, 2]}
 			],
 
 			defaultPath: '../media/map_ui/mission_',

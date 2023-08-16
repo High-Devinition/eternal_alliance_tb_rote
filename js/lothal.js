@@ -17,7 +17,7 @@ Vue.component('mission', {
 	data: function () {
 		return {
 		isMobile: false,
-		squads: [
+		playerSquads: [
 		//---------------------------------------------------------------------------------------------------------------------------------DS SQUADS
 			{	
 				id: 0,
@@ -62,7 +62,7 @@ Vue.component('mission', {
 			{
 				id: 8,
 				name: 'Nute team',
-				toons: ['nute_gunrey', 'b1_battle_droid', 'b2_super_battle_droid', 'droideka', 'ig100_magnaguard' ]
+				toons: ['nute_gunray', 'b1_battle_droid', 'b2_super_battle_droid', 'droideka', 'ig100_magnaguard' ]
 			},
 			{
 				id: 9,
@@ -102,7 +102,7 @@ Vue.component('mission', {
 			{
 				id: 16,
 				name: 'Test squad',
-				toons: ['count_dooku', 'general_grievous', 'b2_super_battle_droid', 'nute_gunrey', 'b1_battle_droid']
+				toons: ['count_dooku', 'general_grievous', 'b2_super_battle_droid', 'nute_gunray', 'b1_battle_droid']
 			},
 			{
 				id: 17,
@@ -533,8 +533,8 @@ Vue.component('mission', {
 
 		],
 		platoons: [
-			"All allies have +30% Critical Chance and Critical Damage and a 35% chance to Daze the target with their first attack each turn",
-			"Add allies gain Advantage for 2 turns at the start of their turn",
+			"All allies have +30% Critical Chance and Critical Damage and a 35% chance to Daze the target with their first attack each turn\n\n",
+			"Add allies gain Advantage for 2 turns at the start of their turn\n\n",
 			"Add whenever an ally critically hits on their turn, call a random ally to assist"
 		],
 		guides:[
@@ -590,59 +590,59 @@ Vue.component('mission', {
 		],
 		missions: [{
 			id: 0,
-			name: 'c1',
+			name: 'M1',
 			type: 'usual',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'Wave 1: 219,375',
                 'Wave 2: 493,594'
 				],
-            preferredSquads: [76,82],//br
-			dangerousEnemies: [46,47],
+            recommendedSquads: [76,82],//br
+			enemyWaves: [46,47],
             modifiers: [3,4],
             reqs: [20],
 			},	{
 			id: 1,
-			name: 'c2',
+			name: 'M2',
 			type: 'usual',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'Wave 1: 219,375',
                 'Wave 2: 493,594'
 				],
-			preferredSquads: [77,81,83],//tr
-			dangerousEnemies: [46,47],
+			recommendedSquads: [77,81,83],//tr
+			enemyWaves: [46,47],
 			modifiers: [3,4],
             reqs: [19],
 			}, {
 			id: 2,
-			name: 'c3',
+			name: 'M3',
 			type: 'usual',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'Wave 1: 219,375',
                 'Wave 2: 493,594'
 				],
-            preferredSquads: [80],//bl
-			dangerousEnemies: [34],
+            recommendedSquads: [80],//bl
+			enemyWaves: [34],
             reqs: [19],
             modifiers: [3,4],
 			},
 			{
 			id: 5,
-			name: 'c6',
+			name: 'M6',
 			type: 'fleet',
 			position: 'right',
-			rewards: [
+			territoryPoints: [
 				'Wave 1: 987,188',
 				],
-				preferredSquads: [75,31],//fleet
-				dangerousEnemies: [45],
+				recommendedSquads: [75,31],//fleet
+				enemyWaves: [45],
             reqs: [17],
 			}, 
             {
 			id: 6,
-			name: 'c7',
+			name: 'DP',
 			type: 'deploy',
 			position: 'right',
             stars: [
@@ -651,7 +651,7 @@ Vue.component('mission', {
                '⭐⭐⭐ 524,984,167'              
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'lothal', position: 'right', preqs:["Characters: Relic 8","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
+			{id: 30, name: 'OP', type: 'lothal', position: 'right', preqs:["Characters: Relic 8","Ships: 7⭐"], platoonAbility: [0], platzones: [0,1,2]}
 			],
 
 			defaultPath: '../media/map_ui/mission_',

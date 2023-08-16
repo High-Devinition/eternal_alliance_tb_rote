@@ -240,7 +240,7 @@ td {
 
 /**********Dark Side************/
 
-.c1 { /*Z6 DS Death Star*/
+.M1 { /*Z6 DS Death Star*/
 	top: 25%;
 	left: 18%;
 	--stroke-pos: 2px;
@@ -248,12 +248,12 @@ td {
 	--stroke-color: rgba(191, 15, 35, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.c1:hover ~ .description {
+	.M1:hover ~ .description {
 		color: darkred;
 		border: 5px solid darkred;
 	}
 
-.c2 { /*Z5 DS Malachor*/
+.M2 { /*Z5 DS Malachor*/
 	top: 37.5%;
 	left: 16.5%;
 	--stroke-pos: 2px;
@@ -261,12 +261,12 @@ td {
 	--stroke-color: rgba(191, 15, 35, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.c2:hover ~ .description {
+	.M2:hover ~ .description {
 	color: darkred;
 	border: 5px solid darkred;		
 	}
 
-.c3 { /*Z4 DS Haven*/
+.M3 { /*Z4 DS Haven*/
 	top: 53%;
 	left: 18%;
 	--stroke-pos: 2px;
@@ -274,12 +274,12 @@ td {
 	--stroke-color: rgba(191, 15, 35, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.c3:hover ~ .description {
+	.M3:hover ~ .description {
 	color: darkred;
 	border: 5px solid darkred;		
 	}
 
-.c7 { /*Z3 DS Dathomir*/
+.DP { /*Z3 DS Dathomir*/
 	top: 64%;
 	left: 23%;
 	--stroke-pos: 2px;
@@ -287,7 +287,7 @@ td {
 	--stroke-color: rgba(191, 15, 35, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.c7:hover ~ .description {
+	.DP:hover ~ .description {
 	color: darkred;
 	border: 5px solid darkred;		
 	}	
@@ -327,7 +327,7 @@ td {
 /**********Mixed***********/
 
 
-.c6 { /*Z4 Mixed kessel*/
+.M6 { /*Z4 Mixed kessel*/
 	top: 33%;
 	left: 55%;
 	--stroke-pos: 2px;
@@ -335,7 +335,7 @@ td {
 	--stroke-color: rgba(215, 185, 49, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.c6:hover ~ .description {
+	.M6:hover ~ .description {
 		color: darkgoldenrod;
 		border: 5px solid darkgoldenrod;
 	}
@@ -415,7 +415,7 @@ td {
 
 /**********Light Side************/
 
-.c5 { /*Z4 LS lothal*/
+.M5 { /*Z4 LS lothal*/
 	top: 53%;
 	left: 77%;
 	--stroke-pos: 2px;
@@ -424,7 +424,7 @@ td {
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-	.c5:hover ~ .description {
+	.M5:hover ~ .description {
 		color: lightskyblue;
 		border: 5px solid lightskyblue;
 	}
@@ -483,7 +483,7 @@ td {
 		border: 5px solid lightskyblue;
 	}
 
-.c4 { /*Z6 LS Scarif*/
+.M4 { /*Z6 LS Scarif*/
 	top: 24%;
 	left: 76%;
 	--stroke-pos: 2px;
@@ -492,7 +492,7 @@ td {
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-	.c4:hover ~ .description {
+	.M4:hover ~ .description {
 		color: lightskyblue;
 		border: 5px solid lightskyblue;
 	}
@@ -779,32 +779,32 @@ td {
 
 	/*Mission positions*/
 
-	.c1 { /*death star*/
+	.M1 { /*death star*/
 		top: 25%;
 		left: 18%;
 	}
 
-	.c2 { /*malachor*/
+	.M2 { /*malachor*/
 		top: 37.5%;
 		left: 16.5%;
 	}
 
-	.c3 { /*Haven*/
+	.M3 { /*Haven*/
 		top: 53%;
 		left: 18%;
 	}
 
-	.c5 { /*lothal*/
+	.M5 { /*lothal*/
 		top: 53%;
 		left: 77%;
 	}
 
-	.c6 { /*kessel*/
+	.M6 { /*kessel*/
 		top: 33%;
 		left: 55%;
 	}
 
-	.c7 { /*P3 DS Dathomir*/
+	.DP { /*P3 DS Dathomir*/
 		top: 64%;
 		left: 23%;
 	}
@@ -864,7 +864,7 @@ td {
 		left: 77%;
 	}
 
-	.c4 { /*scarif*/
+	.M4 { /*scarif*/
 		top: 24%;
 		left: 76%;
 	}
