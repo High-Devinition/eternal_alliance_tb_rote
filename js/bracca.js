@@ -20,59 +20,64 @@ Vue.component('mission', {
 
 			playerSquads: [
 				//*******************************************************PLAYER SQUADS*************************************************************************/
-				//DMus-1 (M2)********************************************
+				//LBra-1 (M1)********************************************
 				{
 					id: 0,
-					name: 'Lord Vader (Solo)',
-					toons: ['gl_vader'],
-					video: "https://youtu.be/S88QWy8_nMg?t=1899"
+					name: 'JML & JKL +3 Jedi',
+					toons: ['gl_luke', 'jedi_knight_luke_skywalker', 'hermit_yoda', 'jedi_knight_revan', 'unknown'],
 				},
-
-				//DMus-2 (M1)********************************************
 				{
 					id: 1,
-					name: 'SEE+Wat+3 Sith',
-					toons: ['gl_palp', 'wat_tambor', 'unknown', 'unknown', 'unknown'],
-
+					name: "Jedi Cal & JML +3 Jedi",
+					toons: ['jedi_cal', 'gl_luke', 'unknown', 'unknown', 'unknown']
 				},
 
-				//DMus-3 (M3)********************************************
+				//LBra-2 (M2)********************************************
 				{
 					id: 2,
-					name: 'Reva led Inquisitors',
-					toons: ['thirdsister', 'grand_inquisitor', 'seventh_sister', 'fifth_brother', 'eighth_brother']
-
+					name: 'JMK & CAT',
+					toons: ['gl_kenobi', 'commander_ahsoka_tano', 'padmé_amidala', 'ahsoka_tano', 'general_kenobi']
 				},
 				{
 					id: 3,
-					name: 'Inquisitors',
-					toons: ['grand_inquisitor', 'seventh_sister', 'ninth_sister', 'fifth_brother', 'eighth_brother'],
-					video: "https://www.youtube.com/watch?v=-OFAp5BwpaA"
+					name: "MM+Cara (+oKyle helps) +2 Rebels",
+					toons: ['mon_mothma', 'cara_dune', 'kyle_katarn_o', 'unknown', 'unknown']
 				},
 				{
 					id: 4,
-					name: 'EP+Mara+SK+2 Empire/Sith',
-					toons: ['emperor_palpatine', 'mara_jade', 'starkiller', 'unknown', 'unknown']
+					name: 'oRolo +4 Rebels',
+					toons: ['rolo', 'unknown', 'unknown', 'unknown', 'unknown']
 				},
-				//DMus-4 (M5)********************************************
+
+				//LBra-3 (M3)********************************************
 				{
 					id: 5,
-					name: 'SLKR & FO',
-					toons: ['gl_kylo', 'first_order_officer', 'kylo_ren_(unmasked)', 'general_hux', 'sith_trooper']
-
+					name: 'JMK & CAT',
+					toons: ['gl_kenobi', 'commander_ahsoka_tano', 'padmé_amidala', 'ahsoka_tano', 'general_kenobi']
 				},
+				{
+					id: 6,
+					name: "MM+Cara (+oKyle helps) +2 Rebels",
+					toons: ['mon_mothma', 'cara_dune', 'kyle_katarn_o', 'unknown', 'unknown']
+				},
+				{
+					id: 7,
+					name: 'oRolo +4 Rebels',
+					toons: ['rolo', 'unknown', 'unknown', 'unknown', 'unknown']
+				},
+				//LBra-4 (M4)********************************************
 
 				{
-					id: 81,
-					name: 'Cere and Jedi Cal',
+					id: 8,
+					name: 'Cere & Jedi Cal',
 					toons: ['cere_junda', 'jedi_cal', 'noone', 'noone', 'noone']
 				},
 
-				//DMus-5 (M6)********************************************
+				//LBra-5 (M6)********************************************
 				{
-					id: 6,
-					name: 'Executrix fleet',
-					toons: ['executrix', 'scythe', 'tie_interceptor', 'palp_shuttle', 'tie_defender', 'imperial_tie_bomber', 'gauntlet_starfighter']
+					id: 9,
+					name: 'Profundity fleet',
+					toons: ['profundity', 'rebel_y-wing', 'outrider', 'han\'s_millennium_falcon', 'biggs_darklighter\'s_x-wing', 'phantom_ii', 'ghost', 'cassian\'s_u-wing']
 				},
 
 
@@ -87,31 +92,31 @@ Vue.component('mission', {
 				{
 					id: 0,
 					missionId: 'M1',
-					wave1: ['commander_battle_droid', 'droideka', 'magnaguard', 'b1', 'b2', 'magnaguard'],
-					wave2: ['wat_tambor', 'droideka', 'magnaguard', 'b1', 'b2', 'magnaguard'],
+					wave1: ['stormtrooper_commander', 'purgetrooper', 'stormtrooper', 'purgetrooper', 'recon_stormtrooper'],
+					wave2: ['secondsister_enemy', 'purgetrooper', 'stormtrooper', 'purgetrooper', 'purgetrooper'],
 				},
 				{
 					id: 1,
 					missionId: 'M2',
-					wave1: ['wat_tambor', 'nute_gunray', 'poggle_the_lesser'],
-					wave2: ['gl_kenobi'],
+					wave1: ['stormtrooper_commander', 'purgetrooper', 'stormtrooper', 'purgetrooper', 'recon_stormtrooper',],
+					wave2: ['ninth_sister', 'purgetrooper', 'stormtrooper', 'purgetrooper', 'purgetrooper'],
 				},
 				{
 					id: 2,
 					missionId: 'M3',
-					wave1: ['commander_battle_droid', 'droideka', 'magnaguard', 'b1', 'b2', 'magnaguard'],
-					wave2: ['nute_gunray', 'droideka', 'magnaguard', 'b1', 'b2', 'magnaguard'],
+					wave1: ['stormtrooper_commander', 'purgetrooper', 'stormtrooper', 'purgetrooper', 'recon_stormtrooper'],
+					wave2: ['crosshair', 'purgetrooper', 'stormtrooper_commander', 'stormtrooper', 'purgetrooper'],
 				},
 				{
 					id: 3,
-					missionId: 'M5',
-					wave1: ['commander_battle_droid', 'droideka', 'magnaguard', 'b1', 'b2', 'magnaguard'],
-					wave2: ['geonosian_brood_alpha', 'geonosian_spy', 'geonosian_soldier', 'poggle_the_lesser', 'sun_fac'],
+					missionId: 'M4',
+					wave1: ['purgetrooper', 'purgetrooper'],
+					wave2: ['secondsister_enemy', 'purgetrooper'],
 				},
 				{
 					id: 4,
 					missionId: 'M6',
-					wave1: ['malevolence', 'hyena_bomber', 'vulture_droid', 'geonosian_soldier_starfighter'],
+					wave1: ['chimaera', 'tie_advanced_x1', 'scythe', 'imperial_tie_fighter', 'tie_interceptor'],
 				},
 			],	
 
@@ -122,15 +127,13 @@ Vue.component('mission', {
 			],
 
 			modifiers: [
-				'At the beginning of battle, each side summons a random Corellian Engineering Cargo Ship. At the start of their turn, Cargo Ships gain Protection Over Time (10%) for 1 turn.',
-				'Coaxium:\n\n +25% Critical Damage and Speed; -15% Accuracy; will be critically hit if able; enemies can ignore Taunt to target this character; if this character is defeated by a status effect, Coaxium will not be granted to anyone',
-				'Enemies start with 5 stacks of Endless Ranks',
-				"Summons probe droids whenever available."
+				'At the start of the battle, Imperial Troopers gain 1 stack of Endless Ranks for each Imperial Trooper ally.\n\nEndless Ranks:\n\n When defeated, remove 1 stack of Endless Ranks from all Imperial Trooper allies and they revive with 60% Health and Protection.\n\n',
+				"Imperial Troopers will summon an Imperial Probe Droid with Taunt if the allied slot is available.",
+				"The first time a ship is reduced to 1% Health (excluding summoned ships), it recovers 100% Health and Protection, and gains Decommissioned until the end of the encounter, which can't be dispelled or prevented.\n\n If a ship is inflicted with Decommisioned at the start of its turn, it is destroyed, and all other allies gain 20% Max Health, Max Protection, and Offense (stacking) until the end of the encounter.\n\nDecommissioned:\n\n -50% Speed; can't assist, counter attack, gain bonus Turn Meter or buffs.",
+				"Whenever an ally defeats an enemy, all enemies are inflicted with 5 stacks of Fatigue. At 20 stacks of Fatigue, Inquisitorius allies gain Coup De Grâce, which can't be copied, dispelled, or prevented.\n\nFatigue:\n\n -2% Speed and -2% Tenacity\n\nCoup De Grâce:\n\n On the next Special attack, deal true damage equal to 100% of the target's Max Health and dispel Coup De Grâce from all Inquisitorius allies and dispel fatigue from all enemies.\n\n"
 			],
 
 			notes: [
-				"Rey is likely a 1/2. Rey 501st can also work.",
-				"Ninth Sister's lead prevents speed limiting effects e.g. jkl",
 				"This mission needs to be completed 30 times (throughout each event) in order to unlock the bonus planet, Zeffo."
 			],
 
@@ -138,72 +141,95 @@ Vue.component('mission', {
 				'Light Side Ships (7⭐)',
 				"5x Jedi (Relic 6+)",
 				"5x Light Side or Neutral (Relic 6+)",
-				"Cere Junda (Relic 7+), Any Cal Kestis (Relic 7+)"
+				"Cere Junda (Relic 7+) | Cal Kestis or Jedi Cal (Relic 7+)"
+			],
+
+			missionId: [
+				'LBra-1 (M2)',
+				'LBra-2 (M1)',
+				'LBra-3 (M3)',
+				'Cal SM-1 (M4)',
+				'LBra-4 (M6)',
 			],
 
 			missions: [{
+				//LBra-2
 				id: 0,
+				missionId: [1],
 				name: 'M1',
 				type: 'usual',
 				position: 'right',
 				rewards: '',
 				wave1Points: '\n(125,000 TP)',
 				wave2Points: '\n(250,000 TP)',
-				recommendedSquads: [76, 79, 78, 77, 80],//generic
-				enemyWaves: [39, 42],
-				modifiers: [2, 3],
-				reqs: [13],
-			}, {
+				recommendedSquads: [2, 3, 4],//generic
+				enemyWaves: [0],
+				modifiers: [0, 1],
+				reqs: [0],
+
+			}, //LBra-1
+
+			{
 				id: 1,
+				missionId: [0],
 				name: 'M2',
 				type: 'usual',
 				position: 'right',
 				rewards: '',
 				wave1Points: '\n(125,000 TP)',
 				wave2Points: '\n(250,000 TP)',
-				recommendedSquads: [75],//jedi
-				enemyWaves: [39, 40],
-				modifiers: [2, 3],
-				reqs: [12],
-				notes: [5],
-			}, {
+				recommendedSquads: [0, 1],//jedi
+				enemyWaves: [1],
+				modifiers: [0, 1],
+				reqs: [1],
+
+			}, //LBra-3
+
+			{
 				id: 2,
+				missionId: [2],
 				name: 'M3',
 				type: 'usual',
 				position: 'right',
 				rewards: '',
 				wave1Points: '\n(125,000 TP)',
 				wave2Points: '\n(250,000 TP)',
-				recommendedSquads: [76, 79, 78, 77, 80],//generic
-				enemyWaves: [39, 41],
-				reqs: [13],
-				modifiers: [2, 3],
-			},
+				recommendedSquads: [5, 6, 7],//generic
+				enemyWaves: [2],
+				reqs: [0],
+				modifiers: [0, 1],
+
+			}, //Cal SM-1
+
 			{
 				id: 4,
+				missionId: [3],
 				name: 'M4',
 				type: 'special3',
 				position: 'right',
-				rewards: '',
-				territoryPoints: [
-					'Wave 1: 50 GET2',
+				rewards: [
+					'50',//GET2
 				],
-				recommendedSquads: [81],//special
-				enemyWaves: [43, 44],
-				modifiers: [2, 3],
-				reqs: [14],
-				notes: [6]
-			},
+				recommendedSquads: [8],//special
+				enemyWaves: [3],
+				modifiers: [3, 1],
+				reqs: [3],
+				notes: [0],
+
+			}, //LBra-4
+
 			{
 				id: 5,
+				missionId: [4],
 				name: 'M6',
 				type: 'fleet',
 				position: 'right',
 				rewards: '',
 				wave1Points: '\n(500,000 TP)',
-				recommendedSquads: [74],
-				enemyWaves: [38],
-				reqs: [11],
+				recommendedSquads: [9],
+				enemyWaves: [4],
+				reqs: [0],
+				modifiers: [2],
 			},
 			{
 				id: 6,
@@ -216,7 +242,15 @@ Vue.component('mission', {
 					'⭐⭐⭐: 303,500,000'
             ]
 			}, 
-			{ id: 30, name: 'OP', type: 'bracca', position: 'right', preqs: ["Characters: Relic 6","Ships: 7⭐"], platoonAbility: [0], platzones: [0, 1 ,2]}
+			{
+				id: 30,
+				name: 'OP',
+				type: 'bracca',
+				position: 'right',
+				preqs: ["Characters: Relic 6", "Ships: 7⭐"],
+				platoonAbility: [0],
+				platzones: [0, 1, 2],
+			}
 			],
 			defaultPath: '../media/map_ui/mission_',
 

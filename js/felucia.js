@@ -5,53 +5,64 @@ Vue.component('mission', {
 
 			playerSquads: [
 				//*******************************************************PLAYER SQUADS*************************************************************************/
-				//NFel-1 (M2)********************************************
+				//NFel-1 (M1)********************************************
 				{
 					id: 0,
-					name: 'Lord Vader (Solo)',
-					toons: ['gl_vader'],
-					video: "https://youtu.be/S88QWy8_nMg?t=1899"
-				},
+					name: 'Jabba & Hutt Cartel',
+					toons: ['gl_jabba', 'krrsantan', 'skiff_lando', 'boba_fett', 'boushh']
+				},	
 
-				//NFel-2 (M1)********************************************
+				//NFel-2 (M2)********************************************
 				{
 					id: 1,
-					name: 'SEE+Wat+3 Sith',
-					toons: ['gl_palp', 'wat_tambor', 'unknown', 'unknown', 'unknown'],
+					name: 'Unknown team comp.',
+					toons: ['unknown', 'young_lando_calrissian', 'unknown', 'unknown', 'unknown'],
 
 				},
 
 				//NFel-3 (M3)********************************************
 				{
 					id: 2,
-					name: 'Reva led Inquisitors',
-					toons: ['thirdsister', 'grand_inquisitor', 'seventh_sister', 'fifth_brother', 'eighth_brother']
-
+					name: 'CLS',
+					toons: ['commander_luke_skywalker', 'chewbacca', 'han_solo', 'threepio_&_chewie', 'c-3po'],
 				},
 				{
 					id: 3,
-					name: 'Inquisitors',
-					toons: ['grand_inquisitor', 'seventh_sister', 'ninth_sister', 'fifth_brother', 'eighth_brother'],
-					video: "https://www.youtube.com/watch?v=-OFAp5BwpaA"
+					name: "Trench & Separatists",
+					toons: ['admiral_trench', 'nute_gunray', 'count_dooku', 'jango_fett', 'geonosian_brood_alpha']
 				},
-				{
-					id: 4,
-					name: 'EP+Mara+SK+2 Empire/Sith',
-					toons: ['emperor_palpatine', 'mara_jade', 'starkiller', 'unknown', 'unknown']
-				},
+
 				//NFel-4 (M5)********************************************
 				{
+					id: 4,
+					name: 'Rey & Scoundrels (+Ben helps)',
+					toons: ['gl_rey', 'hondo_ohnaka', 'ben_solo', 'beskar_mando', 'l3-37']
+
+				},
+				{
 					id: 5,
-					name: 'SLKR & FO',
-					toons: ['gl_kylo', 'first_order_officer', 'kylo_ren_(unmasked)', 'general_hux', 'sith_trooper']
+					name: 'Rey & Scoundrels (No Ben)',
+					toons: ['gl_rey', 'hondo_ohnaka', 'beskar_mando', 'dash_rendar', 'l3-37']
 
 				},
 
 				//NFel-5 (M6)********************************************
 				{
 					id: 6,
-					name: 'Executrix fleet',
-					toons: ['executrix', 'scythe', 'tie_interceptor', 'palp_shuttle', 'tie_defender', 'imperial_tie_bomber', 'gauntlet_starfighter']
+					name: 'Executor fleet',
+					toons: ['executor', 'hound\'s_tooth', 'razor_crest', 'xanadu_blood', 'slave_i', 'ig-2000']
+				},
+				{
+					id: 7,
+					name: 'Profundity fleet',
+					toons: ['profundity', 'rebel_y-wing', 'outrider', 'han\'s_millennium_falcon', 'biggs_darklighter\'s_x-wing', 'phantom_ii', 'ghost']
+
+				},
+				{
+					id: 8,
+					name: 'Leviathan fleet',
+					toons: ['leviathan', 'b-28_bomber', 'fury_interceptor', 'tie_dagger', 'palp_shuttle', 'sith_fighter', 'markvi_interceptor']
+
 				},
 
 
@@ -65,31 +76,31 @@ Vue.component('mission', {
 				{
 					id: 0,
 					missionId: 'M1',
-					wave1: ['commander_battle_droid', 'droideka', 'magnaguard', 'b1', 'b2', 'magnaguard'],
-					wave2: ['wat_tambor', 'droideka', 'magnaguard', 'b1', 'b2', 'magnaguard'],
+					wave1: ['imperial_officer', 'stormtrooper_commander', 'stormtrooper', 'recon_stormtrooper', 'range_trooper'],
+					wave2: ['imperial_officer', 'stormtrooper_commander', 'stormtrooper', 'recon_stormtrooper', 'range_trooper', 'scout_trooper'],
 				},
 				{
 					id: 1,
 					missionId: 'M2',
-					wave1: ['wat_tambor', 'nute_gunray', 'poggle_the_lesser'],
-					wave2: ['gl_kenobi'],
+					wave1: ['imperial_officer', 'stormtrooper_commander', 'stormtrooper', 'recon_stormtrooper', 'range_trooper'],
+					wave2: ['iden_versio', 'imperial_officer', 'stormtrooper_commander', 'stormtrooper', 'recon_stormtrooper', 'range_trooper', 'scout_trooper']
 				},
 				{
 					id: 2,
 					missionId: 'M3',
-					wave1: ['commander_battle_droid', 'droideka', 'magnaguard', 'b1', 'b2', 'magnaguard'],
-					wave2: ['nute_gunray', 'droideka', 'magnaguard', 'b1', 'b2', 'magnaguard'],
+					wave1: ['pirate_leader', 'pirate_enforcer', 'pirate_saboteur', 'pirate_spy', 'pirate_bruiser'],
+					wave2: ['hondo_ohnaka', 'pirate_enforcer', 'pirate_saboteur', 'pirate_spy', 'pirate_bruiser'],
 				},
 				{
 					id: 3,
 					missionId: 'M5',
-					wave1: ['commander_battle_droid', 'droideka', 'magnaguard', 'b1', 'b2', 'magnaguard'],
-					wave2: ['geonosian_brood_alpha', 'geonosian_spy', 'geonosian_soldier', 'poggle_the_lesser', 'sun_fac'],
+					wave1: ['imperial_officer', 'stormtrooper_commander', 'stormtrooper', 'recon_stormtrooper', 'range_trooper'],
+					wave2: ['grand_moff_tarkin','imperial_officer', 'stormtrooper_commander', 'stormtrooper', 'recon_stormtrooper', 'range_trooper'],
 				},
 				{
 					id: 4,
 					missionId: 'M6',
-					wave1: ['malevolence', 'hyena_bomber', 'vulture_droid', 'geonosian_soldier_starfighter'],
+					wave1: ['chimaera', 'tie_advanced_x1', 'imperial_tie_bomber', 'imperial_tie_fighter', 'tie_interceptor'],
 				},
 			],	
              
@@ -100,77 +111,107 @@ Vue.component('mission', {
 			"At the start of battle, grant all allies 4 stacks of Profit for 2 turns."
 			],
 
-        modifiers:[
-        'At the beginning of battle, each side summons a random Corellian Engineering Cargo Ship. At the start of their turn, Cargo Ships gain Protection Over Time (10%) for 1 turn.',
-        'Coaxium: +25% Critical Damage and Speed; -15% Accuracy; will be critically hit if able; enemies can ignore Taunt to target this character; if this character is defeated by a status effect, Coaxium will not be granted to anyone'
-			],
+		modifiers: [
+			"At the start of each character's turn, they gain Heal Over Time (10%) for 2 turns. While a character has Heal Over Time, they have 25% Defense and are immune to Buff Immunity.\n\n Whenever a Heal Over Time expires, the character gains Offense Up for 1 turn. Recovery effects are increased by 20%.",
+			"At the start of each ship's turn, they gain Protection Over Time (10%) for 2 turns. While a ship has Protection Over Time, they have 25% Defense and are immune to Buff Immunity.\n\n Whenever a Protection Over Time expires, the character gains Offense Up for 1 turn. Recovery effects are increased by 20%."
+		],
 
         notes:[
-        "A variation of most GL lineups should also work",
+			'Put Rey\'s Life-Blood onto L3-37. Use her Ultimate and her Whirlwind whenever possible. Use BAM\'s Special 2 to keep scoundrels alive.',
+			'With great mods and high relics, this mission can be easily completed on auto.'
 			],
 
         reqs:[
-        'Ships (7⭐)',
-        '5x characters (Relic 6+)',
-        "5x characters (Relic 6+), Young Lando Calrissian",
-        "5x characters (Relic 6+), Hondo Ohnaka",
-        "5x characters (Relic 6+), Jabba the Hutt",//15
-        ],
+			'Ships (7⭐)',
+			'5x characters (Relic 6+)',
+			"5x characters (Relic 6+) | Young Lando Calrissian",
+			"5x characters (Relic 6+) | Hondo Ohnaka",
+			"5x characters (Relic 6+) | Jabba the Hutt",
+			],
+
+		missionId: [
+			'NTat-1 (M2)',
+			'NTat-2 (M3)',
+			'NTat-3 (M5)',
+			'NFel-4 (M6)',
+			'NTat-5 (M1)',
+		],
 
 		missions: [{
+			//NFel-5
 			id: 0,
+			missionId: [4],
 			name: 'M1',
 			type: 'usual',
 			position: 'right',
 			wave1Points: '\n(125,000 TP)',
 			wave2Points: '\n(250,000 TP)',
-            recommendedSquads: [74],//jabba
-			enemyWaves: [41,42],
-            reqs: [4],
-			},	{
+            recommendedSquads: [0],//jabba
+			enemyWaves: [0],
+			reqs: [4],
+			modifiers: [0],
+			notes: [1],
+
+		}, //NFel-1
+			{
 			id: 1,
+			missionId: [0],
 			name: 'M2',
 			type: 'usual',
 			position: 'right',
 			wave1Points: '\n(125,000 TP)',
 			wave2Points: '\n(250,000 TP)',
-			recommendedSquads: [78],//lando
-			enemyWaves: [41,44],
-            reqs: [2],
-			}, {
+			recommendedSquads: [1],//lando
+			enemyWaves: [1],
+			reqs: [2],
+			modifiers: [0],
+
+		}, //NFel-2
+
+			{
 			id: 2,
+			missionId: [1],
 			name: 'M3',
 			type: 'usual',
 			position: 'right',
 			wave1Points: '\n(125,000 TP)',
 			wave2Points: '\n(250,000 TP)',
-            recommendedSquads: [44,82,83,80],//generic
-			enemyWaves: [39,40],
-            reqs: [1],
-            notes: [3]
-			},
+            recommendedSquads: [2, 3],//generic
+			enemyWaves: [2],
+			reqs: [1],
+			modifiers: [0],
+
+			}, //NFel-3
+
 			{
 			id: 4,
+			missionId: [2],
 			name: 'M5',
 			type: 'usual',
 			position: 'right',
 			wave1Points: '\n(125,000 TP)',
 			wave2Points: '\n(250,000 TP)',
-            recommendedSquads: [75,76],//hondo
-			enemyWaves: [41,43],
-            reqs: [3],
-			}, 
+            recommendedSquads: [4, 5],//hondo
+			enemyWaves: [3],
+			reqs: [3],
+			modifiers: [0],
+			notes: [0],
+
+			}, //NFel-4
 			
 			{
 			id: 5,
+			missionId: [3],
 			name: 'M6',
 			type: 'fleet',
 			position: 'right',
 			wave1Points: '\n(500,000 TP)',
-			recommendedSquads: [77,84,31],
-			enemyWaves: [38],
+			recommendedSquads: [6, 7, 8],
+			enemyWaves: [4],
+			modifiers: [1],
             reqs: [0],
-			}, 
+			},
+			
             {
 			id: 6,
 			name: 'DP',
@@ -182,6 +223,7 @@ Vue.component('mission', {
                '⭐⭐⭐ 316,000,000'
             ]
 			}, 
+
 			{
 			id: 30,
 			name: 'OP',

@@ -2,9 +2,6 @@
 .map {
 	background: url('../media/planets/backdrops/dathomir_backdrop.png') no-repeat;
 }
-	#platoonsWrapper {
-	width: 100% !important;
-}
 
 /*Mission positions*/
 .M1 {/*P4 middle battle*/
@@ -19,17 +16,17 @@
 	top: 63%;
 	left: 35%;
 }
-.M6 {/*P3 top special*/
+.M4 { /*P3 top special*/
 	top: 55%;
 	left: 58%;
+}
+.M5 { /*P3 top special*/
+	top: 62%;
+	left: 21%;
 }
 .DP {/*P3 top special*/
 	top: 45%;
 	left: 28%;
-}
-.c8 {/*P3 top special*/
-	top: 62%;
-	left: 21%;
 }
 .OP {/*P3 middle platoons*/
 	top: 32%;

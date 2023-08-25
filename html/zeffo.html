@@ -127,18 +127,36 @@
                     </ul>
                 </div>
 
-
                 <div class="rewards mb-3" v-if="selectedMission.rewards">
                     <p class="h4">Rewards</p>
                     <span class="rewardsTxt" v-for="item in selectedMission.rewards">{{item}}<img src="../media/icons/get2.png" /></span>
                 </div>
+
+
+                <!--Deployment Node-->
                 <div class="deployNode" v-if="selectedMission.stars">
-                    <p class="h4">Star Requirements</p>
-                    <ul class="points">
+                    <p class="h8">Star Requirements</p>
+                    <ul class="planetPoints">
                         <li class="pointsTxt2" v-for="item in selectedMission.stars">{{item}} TP</li>
                     </ul>
                     <p class="subtext">Points required after preloading:</p><br><br>
                     <p class="pointsTxt2">143,589,584 TP</p>
+
+                    <div class="mb-3" v-if="selectedMission.planetNotes">
+                        <p class="h4">Notes</p>
+                        <ul class="planetNotes">
+                            <li class="planetNotesTxt" v-for="item in selectedMission.planetNotes">{{planetNotes[item]}}</li>
+                        </ul>
+                    </div>
+                    <div class="planetRewardsWrapper">
+                        <div class="planetRewards mb-3" v-if="selectedMission.planetRewards1">
+                            <p class="h4" id="rewardsTitle">Planetary Rewards</p>
+                            <span class="planetRewardsTxt" v-for="item in 1">Tier 1: {{selectedMission.planetRewards1[0]}}<img src="../media/icons/get3.png" /> +  {{selectedMission.planetRewards1[1]}} <img src="../media/icons/kyrotech.png" /></span>
+                        </div>
+                        <div class="planetRewards mb-3" v-if="selectedMission.planetRewards2">
+                            <span class="planetRewardsTxt" v-for="item in 1">Tier 2: {{selectedMission.planetRewards2[0]}}<img src="../media/icons/get3.png" /> +  {{selectedMission.planetRewards2[1]}} <img src="../media/icons/kyrotech.png" /></span>
+                        </div>
+                    </div>
                 </div>
             </div>
 

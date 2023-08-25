@@ -99,9 +99,14 @@ Vue.component('mission', {
 			],
 
 			platoons: [
-				"Summon a BX-series Commando Droid to the ally slot if it is available. Dispell all buffs on all enemies, which can't be evaded.\n\n",
+				"Summon a BX-series Commando Droid to the ally slot if it is available. Dispel all buffs on all enemies, which can't be evaded.\n\n",
 				"Add Empire allies gain 30% Turn Meter and the first time the BX-series Commando Droid is defeated, it revives with 50% Health and Protection.\n\n",
 				"BX-series Commando Droid revives with 100% Health, Protection, and Turn Meter; add Droid allies reset their cooldowns at the start of their turn for 2 turns."
+				],
+
+			modifiers: [
+				"Whenever a unit uses a Special ability, they gain a stack of Entertainment which can't be copied, dispelled, or prevented.\n\nEntertainment:\n\n +10% Max Health, Offense, and Potency per stack",
+				"Whenever a ship is inflicted with Target Lock, it also gains Foresight and Stealth for 2 turns, which can't be dispelled."
 				],
 
 			notes:[
@@ -115,8 +120,8 @@ Vue.component('mission', {
 
 			reqs:[
 				'Dark Side Ships (7⭐)',
-				'5x Dark Side or Neutral (Relic 6+)',//4
-				'5x Geonosian (Relic 7+)',//5
+				'5x Dark Side or Neutral (Relic 6+)',
+				'5x Geonosian (Relic 7+)',
 				],
 
 			missionId: [
@@ -139,6 +144,7 @@ Vue.component('mission', {
 				recommendedSquads: [5, 6],
 				enemyWaves: [3],//reek
 				reqs: [1],
+				modifiers: [0],
 				notes: [2],
 			},
 			{//DGeo-2
@@ -153,6 +159,7 @@ Vue.component('mission', {
 				recommendedSquads: [1],
 				enemyWaves: [1],//nexu
 				reqs: [1],
+				modifiers: [0],
 				notes:[3, 4],
 			},
 			{//DGeo-3
@@ -166,6 +173,7 @@ Vue.component('mission', {
 				recommendedSquads: [2, 3, 4],
 				enemyWaves: [2],//acklay
 				reqs: [1],
+				modifiers: [0],
 				notes: [1],
 			},
 			{//DGeo-1
@@ -180,6 +188,7 @@ Vue.component('mission', {
 				recommendedSquads: [0],
 				enemyWaves: [0],//geo
 				reqs: [2],
+				modifiers: [0],
 			},			
 			{//DGeo-5
 				id: 4,
@@ -192,6 +201,7 @@ Vue.component('mission', {
 				recommendedSquads: [7],
 				enemyWaves: [4],
 				reqs: [0],
+				modifiers: [1],
 				notes: [0]
 				}, 
 				{

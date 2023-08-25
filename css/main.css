@@ -154,7 +154,15 @@ text:hover {
 }
 
 
-
+.revaIndicator {
+	position: absolute;
+	width: 6%;
+	height: auto;
+	top: 40%;
+	left: 41%;
+	pointer-events: none;
+	z-index: 3;
+}
 
 
 
@@ -240,7 +248,7 @@ td {
 
 /**********Dark Side************/
 
-.M1 { /*Z6 DS Death Star*/
+.P1 { /*Z6 DS Death Star*/
 	top: 25%;
 	left: 18%;
 	--stroke-pos: 2px;
@@ -248,12 +256,12 @@ td {
 	--stroke-color: rgba(191, 15, 35, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.M1:hover ~ .description {
+	.P1:hover ~ .description {
 		color: darkred;
 		border: 5px solid darkred;
 	}
 
-.M2 { /*Z5 DS Malachor*/
+.P2 { /*Z5 DS Malachor*/
 	top: 37.5%;
 	left: 16.5%;
 	--stroke-pos: 2px;
@@ -261,12 +269,12 @@ td {
 	--stroke-color: rgba(191, 15, 35, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.M2:hover ~ .description {
+	.P2:hover ~ .description {
 	color: darkred;
 	border: 5px solid darkred;		
 	}
 
-.M3 { /*Z4 DS Haven*/
+.P3 { /*Z4 DS Haven*/
 	top: 53%;
 	left: 18%;
 	--stroke-pos: 2px;
@@ -274,12 +282,12 @@ td {
 	--stroke-color: rgba(191, 15, 35, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.M3:hover ~ .description {
+	.P3:hover ~ .description {
 	color: darkred;
 	border: 5px solid darkred;		
 	}
 
-.DP { /*Z3 DS Dathomir*/
+.P7 { /*Z3 DS Dathomir*/
 	top: 64%;
 	left: 23%;
 	--stroke-pos: 2px;
@@ -287,12 +295,12 @@ td {
 	--stroke-color: rgba(191, 15, 35, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.DP:hover ~ .description {
+	.P7:hover ~ .description {
 	color: darkred;
 	border: 5px solid darkred;		
 	}	
 
-.c8 { /*Z2 DS Geonosis*/
+.P8 { /*Z2 DS Geonosis*/
 	width: 10%;
 	transform: rotate(-30deg);
 	top: 62%;
@@ -302,16 +310,16 @@ td {
 	--stroke-color: rgba(191, 15, 35, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.c8:hover {
+	.P8:hover {
 		transform: rotate(-30deg) scale(1.5);
 		transition: all 0.5s ease;
 	}
-	.c8:hover ~ .description {
+	.P8:hover ~ .description {
 	color: darkred;
 	border: 5px solid darkred;
 	}
 
-.c10 { /*Z1 DS mustafar*/
+.P10 { /*Z1 DS mustafar*/
 	top: 73%;
 	left: 38%;
 	--stroke-pos: 2px;
@@ -319,7 +327,7 @@ td {
 	--stroke-color: rgba(191, 15, 35, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.c10:hover ~ .description {
+	.P10:hover ~ .description {
 	color: darkred;
 	border: 5px solid darkred;		
 	}
@@ -327,7 +335,7 @@ td {
 /**********Mixed***********/
 
 
-.M6 { /*Z4 Mixed kessel*/
+.P6 { /*Z4 Mixed kessel*/
 	top: 33%;
 	left: 55%;
 	--stroke-pos: 2px;
@@ -335,13 +343,14 @@ td {
 	--stroke-color: rgba(215, 185, 49, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.M6:hover ~ .description {
+	.P6:hover ~ .description {
 		color: darkgoldenrod;
 		border: 5px solid darkgoldenrod;
 	}
 
 
-.c9 { /*Z3 Mixed Tatooine*/
+.P9 { /*Z3 Mixed Tatooine*/
+	  z-index: 2;
 	width: 5.5%;
     top: 42%;
     left: 44%;
@@ -351,12 +360,12 @@ td {
     filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-	.c9:hover ~ .description {
+	.P9:hover ~ .description {
 		color: darkgoldenrod;
 		border: 5px solid darkgoldenrod;
 	}
 
-.c11 { /*Z1 Mixed Corellia*/
+.P11 { /*Z1 Mixed Corellia*/
 	width: 6.5%;
 	top: 65%;
 	left: 46%;
@@ -366,12 +375,12 @@ td {
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-	.c11:hover ~ .description {
+	.P11:hover ~ .description {
 		color: darkgoldenrod;
 		border: 5px solid darkgoldenrod;
 	}
 
-.c12 { /*Z5 Mixed Vandor*/
+.P12 { /*Z5 Mixed Vandor*/
 	top: 22%;
 	left: 50%;
 	--stroke-pos: 2px;
@@ -380,12 +389,12 @@ td {
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-	.c12:hover ~ .description {
+	.P12:hover ~ .description {
 		color: darkgoldenrod;
 		border: 5px solid darkgoldenrod;
 	}
 
-.c13 { /*Z6 Mixed Hoth*/
+.P13 { /*Z6 Mixed Hoth*/
 	top: 15%;
 	left: 59%;
 	--stroke-pos: 2px;
@@ -394,12 +403,12 @@ td {
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-	.c13:hover ~ .description {
+	.P13:hover ~ .description {
 		color: darkgoldenrod;
 		border: 5px solid darkgoldenrod;
 	}
 
-.c14 { /*Z2 Mixed Felucia*/
+.P14 { /*Z2 Mixed Felucia*/
 	top: 53%;
 	left: 50%;
 	--stroke-pos: 2px;
@@ -408,14 +417,14 @@ td {
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-	.c14:hover ~ .description {
+	.P14:hover ~ .description {
 		color: darkgoldenrod;
 		border: 5px solid darkgoldenrod;		
 	}
 
 /**********Light Side************/
 
-.M5 { /*Z4 LS lothal*/
+.P5 { /*Z4 LS lothal*/
 	top: 53%;
 	left: 77%;
 	--stroke-pos: 2px;
@@ -424,12 +433,12 @@ td {
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-	.M5:hover ~ .description {
+	.P5:hover ~ .description {
 		color: lightskyblue;
 		border: 5px solid lightskyblue;
 	}
 
-.c15 { /*Z3 LS Kashyyyk*/
+.P15 { /*Z3 LS Kashyyyk*/
 	top: 63%;
 	left: 72%;
 	--stroke-pos: 2px;
@@ -437,11 +446,11 @@ td {
 	--stroke-color: rgba(68, 185, 252, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.c15:hover ~ .description {
+	.P15:hover ~ .description {
 		color: lightskyblue;
 		border: 5px solid lightskyblue;
 	}
-.c16 { /*Z1 LS Coruscant*/
+.P16 { /*Z1 LS Coruscant*/
 	top: 73%;
 	left: 56%;
 	--stroke-pos: 2px;
@@ -450,12 +459,12 @@ td {
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-	.c16:hover ~ .description {
+	.P16:hover ~ .description {
 		color: lightskyblue;
 		border: 5px solid lightskyblue;
 	}
 
-.c17 { /*Z2 LS Bracca*/
+.P17 { /*Z2 LS Bracca*/
 	top: 63%;
 	left: 60%;
 	--stroke-pos: 2px;
@@ -464,12 +473,12 @@ td {
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-	.c17:hover ~ .description {
+	.P17:hover ~ .description {
 		color: lightskyblue;
 		border: 5px solid lightskyblue;
 	}
 
-.c18 { /*Z5 LS Ring of Kafrene*/
+.P18 { /*Z5 LS Ring of Kafrene*/
 	top: 37%;
 	left: 77%;
 	--stroke-pos: 2px;
@@ -478,12 +487,12 @@ td {
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-	.c18:hover ~ .description {
+	.P18:hover ~ .description {
 		color: lightskyblue;
 		border: 5px solid lightskyblue;
 	}
 
-.M4 { /*Z6 LS Scarif*/
+.P4 { /*Z6 LS Scarif*/
 	top: 24%;
 	left: 76%;
 	--stroke-pos: 2px;
@@ -492,12 +501,12 @@ td {
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
 
-	.M4:hover ~ .description {
+	.P4:hover ~ .description {
 		color: lightskyblue;
 		border: 5px solid lightskyblue;
 	}
 
-.c19 { /*Z3 LS Zeffo*/
+.P19 { /*Z3 LS Zeffo*/
 	top: 47%;
 	left: 60%;
 	--stroke-pos: 2px;
@@ -505,7 +514,7 @@ td {
 	--stroke-color: rgba(68, 185, 252, 0.7);
 	filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 }
-	.c19:hover ~ .description {
+	.P19:hover ~ .description {
 		color: lightskyblue;
 		border: 5px solid lightskyblue;
 	}
@@ -777,99 +786,99 @@ td {
 	}
 
 
-	/*Mission positions*/
+	/*Planet positions*/
 
-	.M1 { /*death star*/
+	.P1 { /*death star*/
 		top: 25%;
 		left: 18%;
 	}
 
-	.M2 { /*malachor*/
+	.P2 { /*malachor*/
 		top: 37.5%;
 		left: 16.5%;
 	}
 
-	.M3 { /*Haven*/
+	.P3 { /*Haven*/
 		top: 53%;
 		left: 18%;
 	}
 
-	.M5 { /*lothal*/
+	.P5 { /*lothal*/
 		top: 53%;
 		left: 77%;
 	}
 
-	.M6 { /*kessel*/
+	.P6 { /*kessel*/
 		top: 33%;
 		left: 55%;
 	}
 
-	.DP { /*P3 DS Dathomir*/
+	.P7 { /*P3 DS Dathomir*/
 		top: 64%;
 		left: 23%;
 	}
 
-	.c8 { /*P2 ds geonosis*/
+	.P8 { /*P2 ds geonosis*/
 		top: 63%;
 		left: 34%;
 	}
 
-	.c9 { /*P3 middle tatooine*/
+	.P9 { /*P3 middle tatooine*/
 		top: 43%;
 		left: 45%;
 	}
 
-	.c10 { /*P1 DS mustafar*/
+	.P10 { /*P1 DS mustafar*/
 		top: 73%;
 		left: 38%;
 	}
 
-	.c11 { /*p1m corellia*/
+	.P11 { /*p1m corellia*/
 		top: 66%;
 		left: 47%;
 	}
 
-	.c12 { /*vandor*/
+	.P12 { /*vandor*/
 		top: 22%;
 		left: 50%;
 	}
 
-	.c13 { /*hoth*/
+	.P13 { /*hoth*/
 		top: 15%;
 		left: 59%;
 	}
 
-	.c14 { /*P2 middle felucia*/
+	.P14 { /*P2 middle felucia*/
 		top: 53%;
 		left: 50%;
 	}
 
-	.c15 { /*p3 ls kashyyyk*/
+	.P15 { /*p3 ls kashyyyk*/
 		top: 63%;
 		left: 72%;
 	}
 
-	.c16 { /*P1 Coruscant*/
+	.P16 { /*P1 Coruscant*/
 		top: 73%;
 		left: 56%;
 	}
 
-	.c17 { /*P2 ls bracca*/
+	.P17 { /*P2 ls bracca*/
 		top: 63%;
 		left: 60%;
 	}
 
-	.c18 { /*kafrene*/
+	.P18 { /*kafrene*/
 		top: 37%;
 		left: 77%;
 	}
 
-	.M4 { /*scarif*/
+	.P4 { /*scarif*/
 		top: 24%;
 		left: 76%;
 	}
 
-	.c19 { /*zeffo*/
+	.P19 { /*zeffo*/
 		top: 47%;
 		left: 60%;
 	}

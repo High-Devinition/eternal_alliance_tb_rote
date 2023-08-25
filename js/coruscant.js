@@ -1,18 +1,4 @@
-/* Custom directive for detecting click outside of element */
-/*Vue.directive('click-outside', {
-	bind: function (el, binding, vnode) {
-		this.event = function (event) {
-		if (!(el == event.target || el.contains(event.target))) {
-			vnode.context[binding.expression](event);
-		}
-	};
-	document.body.addEventListener('click', this.event)
-	},
-	unbind: function (el) {
-		document.body.removeEventListener('click', this.event)
-	},
-});
-	*/
+
 Vue.component('mission', {
 	data: function () {
 		return {
@@ -122,7 +108,7 @@ Vue.component('mission', {
 				{
 					id: 18,
 					name: 'Negotiator fleet',
-					toons: ['negotiator', 'anakin\'s_eta-2_starfighter', 'BTL-B_Y-wing_Starfighter', 'umbaran_starfighter', 'ahsoka_tano\'s_jedi_starfighter', 'plo_koon\'s_jedi_starfighter', 'clone_sergeant\'s_arc-170', 'rex\'s_arc-170',]
+					toons: ['negotiator', 'anakin\'s_eta-2_starfighter', 'BTL-B_Y-wing_Starfighter', 'umbaran_starfighter', 'ahsoka_tano\'s_jedi_starfighter', 'plo_koon\'s_jedi_starfighter', 'clone_sergeant\'s_arc-170', 'rex\'s_arc-170']
 				},
 
 			],
@@ -168,20 +154,20 @@ Vue.component('mission', {
 			],
 
         modifiers:[
-        'If the allied Leader would be defeated, a random Clone Trooper ally is defeated instead.\n\n',
-		"All characters gain the Democracy granted ability.\n\n" + "Democracy:\n\n Whenever an ally gains a buff or inflicts a debuff on an enemy, increase all ally's energy by 5%. At 100%, inflict 1 stack of No Confidence on the enemy Leader and Stun them for 1 turn. When the enemy Leader reaches 3 stacks of No Confidence, they are instantly defeated.\n\n",
-        "At the start of battle, a random ship is inflicted with Marked until they receive damage. Whenever a ship is Marked, all other ships gain Taunt for the rest of the encounter. Whenever a ship inflicted with Marked is attacked (excluding the Capital Ship), the attacking ship is inflicted with Marked for the rest of the encounter.",//5
+			'If the allied Leader would be defeated, a random Clone Trooper ally is defeated instead.\n\n',
+			"All characters gain the Democracy granted ability.\n\n" + "Democracy:\n\n Whenever an ally gains a buff or inflicts a debuff on an enemy, increase all ally's energy by 5%. At 100%, inflict 1 stack of No Confidence on the enemy Leader and Stun them for 1 turn. When the enemy Leader reaches 3 stacks of No Confidence, they are instantly defeated.\n\n",
+			"At the start of battle, a random ship is inflicted with Marked until they receive damage. Whenever a ship is Marked, all other ships gain Taunt for the rest of the encounter. Whenever a ship inflicted with Marked is attacked (excluding the Capital Ship), the attacking ship is inflicted with Marked for the rest of the encounter.",//5
 			],
 
         notes:[
-        "Utilize the Democracy ability whenever possible to overwhelm the enemy team. Focus Clone Medic(s) to prevent revives!\n\n"
+			"Utilize the Democracy ability whenever possible to overwhelm the enemy team. Focus Clone Medic(s) to prevent revives!\n\n"
 			],
 
         reqs:[
-        '5x Light Side or Neutral (Relic 5+)',
-        '5x Jedi (Relic 5+) | Mace Windu, Kit Fisto',
-        '5x Jedi (Relic 5+)',
-        'Light Side Ships (7⭐) | Outrider'
+			'5x Light Side or Neutral (Relic 5+)',
+			'5x Jedi (Relic 5+) | Mace Windu, Kit Fisto',
+			'5x Jedi (Relic 5+)',
+			'Light Side Ships (7⭐) | Outrider'
         ],
 
         missionId: [

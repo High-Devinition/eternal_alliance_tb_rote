@@ -5,7 +5,7 @@
 
 
 /*Mission positions*/
-.M1 {/*P4 middle battle*/
+.M6 {/*P4 middle battle*/
 	top: 22%;
 	left: 60%;
 }
@@ -17,7 +17,7 @@
 	top: 60%;
 	left: 23%;
 }
-.M6 {/*P3 top special*/
+.M1 {/*P3 top special*/
 	top: 32%;
 	left: 28%;
 }
@@ -32,4 +32,8 @@
 .M4 {/*Reva*/
 	top: 64%;
 	left: 48%;
+}
+
+.notes {
+	list-style-type: none !important;
 }
