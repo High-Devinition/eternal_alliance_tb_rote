@@ -555,6 +555,8 @@ td {
 
 	body {
 		background-color: black;
+		height: 100vw;
+		transform: rotate(90deg);
 	}
 
 	.description {
