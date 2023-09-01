@@ -14,8 +14,7 @@ Vue.component('mission', {
 				{
 					id: 0,
 					name: 'Geonosians',
-					toons: ['geonosian_brood_alpha', 'geonosian_spy', 'geonosian_soldier', 'poggle_the_lesser', 'sun_fac'],
-					video: ''
+					toons: ['geonosian_brood_alpha', 'geonosian_spy', 'geonosian_soldier', 'poggle_the_lesser', 'sun_fac']
 				},
 
 				//DGeo-2 (M2)********************************************
@@ -29,7 +28,7 @@ Vue.component('mission', {
 				//DGeo-3 (M3)********************************************
 				{
 					id: 2,
-					name: 'SLKR & FO',
+					name: 'SLKR & First Order',
 					toons: ['gl_kylo', 'first_order_officer', 'kylo_ren_(unmasked)', 'general_hux', 'sith_trooper']
 				},
 				{

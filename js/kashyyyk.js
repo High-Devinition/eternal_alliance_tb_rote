@@ -24,7 +24,7 @@ Vue.component('mission', {
 				},
 				{
 					id: 3,
-					name: "MM+Cara (+oKyle helps) +2 Rebels",
+					name: "MM & 4 Rebel Fighters (+oKyle helps)",
 					toons: ['mon_mothma', 'cara_dune', 'kyle_katarn_o', 'unknown', 'unknown']
 				},
 				{
@@ -252,7 +252,7 @@ Vue.component('mission', {
 			name: 'OP',
 			type: 'kashyyyk',
 			position: 'right',
-			preqs: ["Characters: Relic 7", "Ships: 7⭐"],
+			preqs: ["Characters: Relic 7+", "Ships: 7⭐"],
 			platoonAbility: [0],
 			platzones: [0, 1, 2]
 			}

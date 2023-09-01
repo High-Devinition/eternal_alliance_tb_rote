@@ -6,7 +6,7 @@ Vue.component('mission', {
 
 			playerSquads: [
 				//*******************************************************PLAYER SQUADS*************************************************************************/
-				//DMus-1 (M2)********************************************
+				//DMus-1 (M1)********************************************
 				{
 					id: 0,
 					name: 'Lord Vader (Solo)',
@@ -14,43 +14,121 @@ Vue.component('mission', {
 					video: "https://youtu.be/S88QWy8_nMg?t=1899"
 				},
 
-				//DMus-2 (M1)********************************************
+				//DMus-2 (M2)********************************************
 				{
 					id: 1,
-					name: 'SEE+Wat+3 Sith',
+					name: 'SLKR & First Order',
+					toons: ['gl_kylo', 'first_order_officer', 'kylo_ren_(unmasked)', 'general_hux', 'sith_trooper']
+
+				},
+				{
+					id: 2,
+					name: 'SEE & Wat +3 Sith',
 					toons: ['gl_palp', 'wat_tambor', 'unknown', 'unknown', 'unknown'],
 
 				},
-
-				//DMus-3 (M3)********************************************
 				{
-					id: 2,
+					id: 3,
 					name: 'Reva led Inquisitors',
 					toons: ['thirdsister', 'grand_inquisitor', 'seventh_sister', 'fifth_brother', 'eighth_brother']
 
 				},
 				{
-					id: 3,
+					id: 4,
+					name: 'EP, Mara & SK +2 Empire/Sith',
+					toons: ['emperor_palpatine', 'mara_jade', 'starkiller', 'unknown', 'unknown']
+				},
+				{
+					id: 5,
+					name: 'EP & Empire',
+					toons: ['emperor_palpatine', 'admiral_piett', 'grand_admiral_thrawn', 'royal_guard', 'stormtrooper']
+				},
+				{
+					id: 6,
+					name: "Trench & Separatists",
+					toons: ['admiral_trench', 'nute_gunray', 'count_dooku', 'jango_fett', 'geonosian_brood_alpha']
+				},
+
+
+				//DMus-3 (M3)********************************************
+				{
+					id: 7,
+					name: 'SLKR & First Order',
+					toons: ['gl_kylo', 'first_order_officer', 'kylo_ren_(unmasked)', 'general_hux', 'sith_trooper']
+
+				},
+				{
+					id: 8,
+					name: 'SEE & Wat +3 Sith',
+					toons: ['gl_palp', 'wat_tambor', 'unknown', 'unknown', 'unknown'],
+
+				},
+				{
+					id: 9,
+					name: 'Reva led Inquisitors',
+					toons: ['thirdsister', 'grand_inquisitor', 'seventh_sister', 'fifth_brother', 'eighth_brother']
+
+				},
+				{
+					id: 10,
 					name: 'Inquisitors',
 					toons: ['grand_inquisitor', 'seventh_sister', 'ninth_sister', 'fifth_brother', 'eighth_brother'],
 					video: "https://www.youtube.com/watch?v=-OFAp5BwpaA"
 				},
 				{
-					id: 4,
-					name: 'EP+Mara+SK+2 Empire/Sith',
+					id: 11,
+					name: 'EP, Mara & SK +2 Empire/Sith',
 					toons: ['emperor_palpatine', 'mara_jade', 'starkiller', 'unknown', 'unknown']
 				},
-				//DMus-4 (M5)********************************************
+				{
+					id: 12,
+					name: 'EP & Empire',
+					toons: ['emperor_palpatine', 'admiral_piett', 'grand_admiral_thrawn', 'royal_guard', 'stormtrooper']
+				},
+				{
+					id: 13,
+					name: "Trench & Separatists",
+					toons: ['admiral_trench', 'nute_gunray', 'count_dooku', 'jango_fett', 'geonosian_brood_alpha']
+				},
+
+				//DMus-4 (M4)********************************************
 				{	
-					id: 5,
-					name: 'SLKR & FO',
+					id: 14,
+					name: 'SLKR & First Order',
 					toons: ['gl_kylo', 'first_order_officer', 'kylo_ren_(unmasked)', 'general_hux', 'sith_trooper']
 
+				},
+				{
+					id: 15,
+					name: 'SEE & Wat +3 Sith',
+					toons: ['gl_palp', 'wat_tambor', 'unknown', 'unknown', 'unknown'],
+
+				},
+				{
+					id: 16,
+					name: 'Reva led Inquisitors',
+					toons: ['thirdsister', 'grand_inquisitor', 'seventh_sister', 'fifth_brother', 'eighth_brother']
+
+				},
+				{
+					id: 17,
+					name: 'EP, Mara & SK +2 Empire/Sith',
+					toons: ['emperor_palpatine', 'mara_jade', 'starkiller', 'unknown', 'unknown']
+				},
+				{
+					id: 18,
+					name: 'EP & Empire',
+					toons: ['emperor_palpatine', 'admiral_piett', 'grand_admiral_thrawn', 'royal_guard', 'stormtrooper']
+				},
+				{
+					id: 19,
+					name: "Trench & Separatists",
+					toons: ['admiral_trench', 'nute_gunray', 'count_dooku', 'jango_fett', 'geonosian_brood_alpha']
 				},
 
 				//DMus-5 (M6)********************************************
 				{
-					id: 6,
+					id: 20,
 					name: 'Executrix fleet',
 					toons: ['executrix', 'scythe', 'tie_interceptor', 'palp_shuttle', 'tie_defender', 'imperial_tie_bomber', 'gauntlet_starfighter']
 				},
@@ -112,36 +190,22 @@ Vue.component('mission', {
 			reqs: [
 				'Lord Vader (Relic 5+)',
 				'5x Dark Side or Neutral (Relic 5+)',
-				'Dark Side Ships (7⭐), Scythe'
+				'Dark Side Ships (7⭐) | Scythe'
 			],
 
 			missionId: [
 				'DMus-1 (M1)',
 				'DMus-2 (M2)',
 				'DMus-3 (M3)',
-				'DMus-4 (M5)',
+				'DMus-4 (M4)',
 				'DMus-5 (M6)',
 			],
 	
 			missions: [{	
-			//DMus-1
-				id: 0,
-				missionId: [0],
-				name: 'M1',
-				type: 'usual',
-				position: 'right',
-				rewards: '',
-				wave1Points: '\n(100,000 TP)',
-				wave2Points: '\n(200,000 TP)',
-				recommendedSquads: [1],
-				enemyWaves: [0],
-				reqs: [1],
-				modifiers: [0]
-			},
-			{//DMus-2
+			//DMus-2
 				id: 1,
 				missionId: [1],
-				name: 'M2',
+				name: 'M1',
 				type: 'usual',
 				position: 'right',
 				rewards: '',
@@ -153,6 +217,20 @@ Vue.component('mission', {
 				notes: [0],
 				modifiers: [0]
 			},
+			{
+			//DMus-1
+				id: 0,
+				missionId: [0],
+				name: 'M2',
+				type: 'usual',
+				position: 'right',
+				wave1Points: '\n(100,000 TP)',
+				wave2Points: '\n(200,000 TP)',
+				recommendedSquads: [1, 2, 3, 4, 5, 6],
+				enemyWaves: [0],
+				reqs: [1],
+				modifiers: [0]
+			},
 			{//DMus-3
 				id: 2,
 				missionId: [2],
@@ -162,7 +240,7 @@ Vue.component('mission', {
 				rewards: '',
 				wave1Points: '\n(100,000 TP)',
 				wave2Points: '\n(200,000 TP)',
-				recommendedSquads: [2, 3, 4],
+				recommendedSquads: [7, 8, 9, 10, 11, 12, 13],
 				enemyWaves: [2],
 				reqs: [1],
 				modifiers: [0]
@@ -170,13 +248,13 @@ Vue.component('mission', {
 			{//DMus-4
 				id: 4,
 				missionId: [3],
-				name: 'M5',
+				name: 'M4',
 				type: 'usual',
 				position: 'right',
 				rewards: '',
 				wave1Points: '\n(100,000 TP)',
 				wave2Points: '\n(200,000 TP)',
-				recommendedSquads: [5],
+				recommendedSquads: [14, 15, 16, 17, 18, 19],
 				enemyWaves: [3],
 				reqs: [1],
 				modifiers: [0]
@@ -190,7 +268,7 @@ Vue.component('mission', {
 				position: 'right',
 				rewards: '',
 				wave1Points: '\n(400,000 TP)',
-				recommendedSquads: [6],
+				recommendedSquads: [20],
 				enemyWaves: [4],
 				reqs: [2],
 				modifiers: [0]
@@ -211,7 +289,7 @@ Vue.component('mission', {
 				name: 'OP',
 				type: 'mustafar',
 				position: 'right',
-				preqs: ["Characters: Relic 5", "Ships: 7⭐"],
+				preqs: ["Characters: Relic 5+", "Ships: 7⭐"],
 				platoonAbility: [0],
 				platzones: [0, 1, 2]
 			}

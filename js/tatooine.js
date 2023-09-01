@@ -27,8 +27,7 @@ Vue.component('mission', {
 				{
 					id: 3,
 					name: 'Jabba & Hutt Cartel',
-					toons: ['gl_jabba', 'krrsantan', 'skiff_lando', 'boba_fett', 'boushh'],
-					video: "https://www.youtube.com/embed/-OFAp5BwpaA?si=bm7AC6jiJlBQzvTW" 
+					toons: ['gl_jabba', 'krrsantan', 'skiff_lando', 'boba_fett', 'boushh']
 
 				},
 
@@ -221,7 +220,7 @@ Vue.component('mission', {
 			name: 'OP',
 			type: 'tatooine',
 			position: 'right',
-			preqs: ["Characters: Relic 7", "Ships: 7⭐"],
+			preqs: ["Characters: Relic 7+", "Ships: 7⭐"],
 			platoonAbility: [0],
 			platzones: [0, 1, 2]
 			}

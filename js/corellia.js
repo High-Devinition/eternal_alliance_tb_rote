@@ -103,24 +103,24 @@ Vue.component('mission', {
 			"All enemy ships have +15% Max Health and Speed. At the start of battle, the cooldown of Call Reinforcement on the enemy Capital Ship is reduced by 1.\n\n",
 			"-15% Max Health\n\n",
 			"-15% Speed."
-			],
+		],
 
         modifiers:[
-        'At the beginning of battle, each side summons a random Corellian Engineering Cargo Ship. At the start of their turn, Cargo Ships gain Protection Over Time (10%) for 1 turn.',
-        'Coaxium:\n\n +25% Critical Damage and Speed; -15% Accuracy; will be critically hit if able; enemies can ignore Taunt to target this character; if this character is defeated by a status effect, Coaxium will not be granted to anyone'
-			],
+			'At the beginning of battle, each side summons a random Corellian Engineering Cargo Ship. At the start of their turn, Cargo Ships gain Protection Over Time (10%) for 1 turn.',
+			'At the start of battle, a random enemy gains Coaxium, which can\'t be prevented or dispelled. Whenever a character with Coaxium is attacked, the attacking character gains Coaxium.\n\nCoaxium:\n\n +25% Critical Damage and Speed; -15% Accuracy; will be critically hit if able; enemies can ignore Taunt to target this character; if this character is defeated by a status effect, Coaxium will not be granted to anyone'
+		],
 
         notes:[
-		"Keep in mind that BT-1 and 0-0-0 are required as operation units!"
-			],
+			"Keep in mind that BT-1 and 0-0-0 are required as operation units!"
+		],
 
         reqs:[
-        '5x characters (Relic 5+)',
-        '5x characters (Relic 5+), Doctor Aphra',
-        '5x characters (Relic 5+), Jabba the Hutt',
-        '5x characters (Relic 5+), Qi\'ra, Young Han Solo',
-        'Lando\'s Millenium Falcon (7⭐)'//10
-			],
+			'5x characters (Relic 5+)',
+			'5x characters (Relic 5+) | Doctor Aphra',
+			'5x characters (Relic 5+) | Jabba the Hutt',
+			'5x characters (Relic 5+) | Qi\'ra, Young Han Solo',
+			'Lando\'s Millenium Falcon (7⭐)'
+		],
 
 		missionId: [
 			'NCor-1 (M3)',
@@ -212,7 +212,7 @@ Vue.component('mission', {
 			name: 'OP',
 			type: 'corellia',
 			position: 'right',
-			preqs: ["Characters: Relic 5", "Ships: 7⭐"],
+			preqs: ["Characters: Relic 5+", "Ships: 7⭐"],
 			platoonAbility: [0],
 			platzones: [0, 1, 2]
 			}

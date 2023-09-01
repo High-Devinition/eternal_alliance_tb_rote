@@ -247,7 +247,7 @@ Vue.component('mission', {
 				name: 'OP',
 				type: 'bracca',
 				position: 'right',
-				preqs: ["Characters: Relic 6", "Ships: 7⭐"],
+				preqs: ["Characters: Relic 6+", "Ships: 7⭐"],
 				platoonAbility: [0],
 				platzones: [0, 1, 2],
 			}

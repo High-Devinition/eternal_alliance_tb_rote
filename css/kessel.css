@@ -3,31 +3,31 @@
 	background: url('../media/planets/backdrops/kessel_backdrop.png') no-repeat ;
 }
 /*Mission positions*/
-.M1 {/*P4 middle battle*/
-	top: 65%;
-	left: 68%;
-}
-.M2 {/*P4 top battle*/
+.M1 {
 	top: 39%;
 	left: 55%;
 }
-.M3 {/*P4 lower battle*/
-	top: 60%;
-	left: 30%;
-}
-.M4 {/*P4 lower battle*/
-	top: 57%;
-	left: 50%;
-}
-.M6 {/*P3 top special*/
+.M2 {
 	top: 32%;
 	left: 29%;
 }
-.DP {/*P3 top special*/
+.M3 { 
+	top: 57%;
+	left: 50%;
+}
+.M5 { 
+	top: 60%;
+	left: 30%;
+}
+.M6 { 
+	top: 65%;
+	left: 68%;
+}
+.DP {
 	top: 44%;
 	left: 35%;
 }
-.OP {/*P3 middle platoons*/
+.OP {
 	top: 28%;
 	left: 48%;
 }

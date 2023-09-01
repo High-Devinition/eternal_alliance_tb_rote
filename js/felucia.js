@@ -225,11 +225,11 @@ Vue.component('mission', {
 			}, 
 
 			{
-			id: 30,
+			id: 6,
 			name: 'OP',
 			type: 'felucia',
 			position: 'right',
-			preqs: ["Characters: Relic 6", "Ships: 7⭐"],
+			preqs: ["Characters: Relic 6+", "Ships: 7⭐"],
 			platoonAbility: [0],
 			platzones: [0, 1, 2]
 			}

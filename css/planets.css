@@ -53,9 +53,12 @@ body {
 
 .videoWrapper {
     position: absolute;
-/*    border: 5px black solid;*/
-    right: 35%;
-    top: 20%;
+    /*    border: 5px black solid;*/
+    right: 32.7%;
+    top: 8%;
+    padding: 15px 15px 15px 15px;
+    background-color: rgb(14, 18, 27, 0.95);
+    border: 5px white solid;
 }
 
 .map {
@@ -363,6 +366,7 @@ img.selected {
 }
 
 .img_block {
+    padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
     margin: auto;
@@ -576,11 +580,625 @@ img.selected {
     white-space: pre-wrap;
 }
 
-   
-
-
 /*Necessary*/
 .text-justify {
     text-align: inherit !important;
 }
 
+
+
+/*Formatting/Styling for map when mobile screen is being viewed vertically*/
+@media screen and (orientation:portrait) {
+
+    body {
+        height: 100vw;
+        transform: rotate(90deg);
+    }
+    
+}
+/*Formatting/Styling for map when mobile screen is being viewed horizontally*/
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+
+    /*Custom Star Wars font*/
+    @font-face {
+        font-family: Starjedi;
+        font-weight: bold;
+        src: url('../media/fonts/StarWars/Starjedi.ttf');
+    }
+
+    @font-face {
+        font-family: Autobus;
+        src: url('../media/fonts/Autobus/Autobus.ttf');
+    }
+
+    /**********************General Formatting**************************/
+
+    /*Home button styling/position for each planet.html*/
+    .top-left {
+        font-family: Starjedi, sans-serif;
+        top: 1.5%;
+        font-size: 1.6vw;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        width: 20%;
+        height: auto;
+        margin: auto;
+        position: fixed;
+        top: 3%;
+        left: 0;
+    }
+
+    .icon {
+        background: url('../media/icons/spiral-galaxy-icon.png') no-repeat;
+        background-size: 50px;
+        width: 50px;
+        height: 40px;
+        position: absolute;
+        color: white;
+        left: 5%;
+        bottom: 0.5%;
+    }
+
+    body {
+        height: 100vw;
+        transform: rotate(90deg);
+    }
+
+    body {
+        background: url(../media/backgrounds/body_bg.png) no-repeat center center fixed;
+        background-size: cover;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .videoWrapper {
+        position: absolute;
+        /*    border: 5px black solid;*/
+        right: 32.7%;
+        top: 8%;
+        padding: 15px 15px 15px 15px;
+        background-color: rgb(14, 18, 27, 0.95);
+        border: 5px white solid;
+    }
+
+    .map {
+        position: relative;
+        width: 68vw;
+        height: auto;
+        background-size: contain;
+    }
+
+    .container-fluid {
+        display: block;
+        align-items: center;
+        max-width: 100%;
+        max-height: 100%;
+        right: 50%;
+        margin: auto;
+        top: 15%;
+        padding: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    svg {
+        border: 10px solid black;
+    }
+
+    /***************************Styling for ALL mission nodes****************************/
+
+    .mission {
+        position: absolute;
+        cursor: pointer;
+        background-size: cover;
+        transform: scale(0.8);
+    }
+
+        .mission:hover, .squad_fill:hover {
+            transform: scale(1.1);
+            transition: step-start 0.5s all;
+            background: url('../media/map_ui/mission_focused.png') no-repeat bottom padding-box;
+            background-size: cover;
+            position: absolute;
+        }
+    /*Determines styling when node is selected (See bottom of .js files)*/
+    img.selected {
+        pointer-events: none;
+        background: url(../media/map_ui/mission_selected.png) no-repeat bottom padding-box;
+        transform: scale(1.1);
+        transition: all 0.2s ease;
+        padding: 0 5px 16px 4px;
+    }
+
+
+    /*************************Styling for individual mission nodes*****************************/
+
+    .M1 {
+        padding: 0 10px 0 10px;
+        width: 8%;
+    }
+
+        .M1:hover {
+            padding: 0 10px 4px 8px;
+        }
+
+    .M2 {
+        padding: 0 10px 0 10px;
+        width: 8%;
+    }
+
+        .M2:hover {
+            padding: 0 10px 4px 8px;
+        }
+
+    .M3 {
+        padding: 0 10px 0 10px;
+        width: 8%;
+    }
+
+        .M3:hover {
+            padding: 0 10px 4px 8px;
+        }
+
+    .M4 {
+        padding: 0 10px 0 10px;
+        width: 8%;
+    }
+
+        .M4:hover {
+            padding: 0 10px 4px 8px;
+        }
+
+    .M5 {
+        padding: 0 10px 0 10px;
+        width: 8%;
+    }
+
+        .M5:hover {
+            padding: 0 10px 4px 8px;
+        }
+
+    .M6 {
+        padding: 0 10px 0 10px;
+        width: 8%;
+    }
+
+        .M6:hover {
+            padding: 0 10px 4px 8px;
+        }
+
+    /*DP is the deployment node for every planet*/
+    .DP {
+        padding: 0 10px 10px 10px;
+        width: 8%;
+    }
+
+        .DP:hover {
+            padding: 0 10px 10px 10px;
+        }
+
+    img.mission.DP.selected {
+        padding: 0 5px 25px 5px !important;
+    }
+
+    .c8 {
+        padding: 0 10px 0 10px;
+        width: 8%;
+    }
+
+        .c8:hover {
+            padding: 0 10px 4px 8px;
+        }
+
+    .c9 {
+        padding: 0 10px 0 10px;
+        width: 8%;
+    }
+
+        .c9:hover {
+            padding: 0 10px 4px 8px;
+        }
+
+    .c10 {
+        padding: 0 10px 0 10px;
+        width: 8%;
+    }
+
+        .c10:hover {
+            padding: 0 10px 4px 8px;
+        }
+
+    /*M2 is the platoon/operations node for every planet*/
+    .OP {
+        width: 9%;
+        padding: 0 15px 12px 14px;
+    }
+
+        .OP:hover {
+            background: url('../media/map_ui/mission_focused.png') no-repeat bottom padding-box;
+            background-size: cover;
+        }
+
+    img.mission.OP.selected {
+        padding: 0 5px 25px 5px !important;
+    }
+
+
+    /**************Pulse Glow Animation for Mission nodes****************/
+
+    /*#animation {
+    background: url('../media/map_ui/pulse_animate.png') no-repeat bottom padding-box;
+    width: 8%;*/
+    /*transform: scale(1.1);*/
+    /*animation: pulsate 1.5s ease-out;
+    animation-iteration-count: infinite;
+    padding: 0 5px 25px 5px;
+
+}*/
+
+    /*@keyframes pulsate {
+    0% {
+        transform: scale(0.1, 0.1);
+        opacity: 0.0;
+    }
+
+    50% {
+        opacity: 1.0;
+    }
+
+    100% {
+        transform: scale(1.2, 1.2);
+        opacity: 0.0;
+    }
+}*/
+
+
+    /**************************************Description PopUp************************************/
+    /*Headers*/
+    .h3 {
+        font-family: Starjedi;
+        text-transform: lowercase;
+    }
+
+    .h4 {
+        font-family: Starjedi;
+        text-transform: lowercase;
+        border-top: 1px solid white;
+    }
+
+    .h5 {
+        font-family: Starjedi;
+        text-transform: lowercase;
+        padding-top: 20px;
+        font-size: 1.5em;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+    }
+
+    .h6 {
+        font-family: Starjedi;
+        text-transform: lowercase;
+        border-top: 1px solid white;
+        font-size: 1.5em;
+        padding-bottom: 15px;
+    }
+
+    .h7 {
+        font-family: Starjedi;
+        text-transform: lowercase;
+        padding-top: 10px;
+        font-size: 1.5em;
+    }
+
+    .h8 {
+        font-family: Starjedi;
+        text-transform: lowercase;
+        font-size: 1.5em;
+    }
+
+    .missionTitle {
+        font-weight: bold;
+        font-size: 22px;
+        padding-top: 20px;
+        font-family: Autobus;
+    }
+
+    .subtext {
+        font-style: italic;
+        text-align: center;
+        margin: auto;
+        /*padding-bottom: 20px;*/
+    }
+
+    .missionId {
+        position: absolute;
+        top: 0;
+        left: 5px;
+        font-size: 12px;
+    }
+
+    /*General Formatting*/
+    .description {
+        position: absolute;
+        background-color: rgb(14, 18, 27, 0.95);
+        transform: translate(0, -45%);
+        margin: 0;
+        max-width: 48%;
+        height: 97%;
+        padding: 0.5rem;
+        color: #ffffff;
+        z-index: 1;
+        border-radius: 1%;
+        overflow: auto;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        display: block;
+        line-height: 1em;
+        overflow-x: hidden;
+        border: 5px solid white;
+        display: none;
+    }
+
+    /*Positions*/
+    .desc_left {
+        left: -22%;
+        top: 40%;
+        overflow-y: auto;
+    }
+
+    .desc_right {
+        right: -23%;
+        top: 45.5%;
+        bottom: -25%;
+        overflow-y: auto;
+    }
+
+    .mb-3 {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    /*Close button*/
+    .topcorner {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #descClose {
+        position: absolute;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .img_block {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        margin: auto;
+    }
+
+        .img_block img {
+            max-width: 10%;
+            max-height: 10%;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            margin-right: 0.5%;
+        }
+
+            .img_block img:hover {
+                transform: scale(1.5);
+            }
+
+    .waves {
+        padding-bottom: 10px;
+        height: auto;
+    }
+
+        .waves img {
+            max-width: 10%;
+            max-height: 10%;
+            border-radius: 50%;
+            border: 2px solid red;
+            margin-right: 0.5%;
+            text-align: center;
+        }
+
+    /*Text*/
+    .wavesTxt {
+        position: relative;
+        text-align: left !important;
+        color: white;
+        font-family: Starjedi;
+        font-size: 20px;
+        font-weight: bold;
+        padding-right: 5px;
+        width: 80%;
+        height: auto;
+        left: -10%;
+        margin-left: 10%;
+        white-space: pre-wrap;
+    }
+
+    .pointsTxt {
+        position: relative;
+        text-align: left !important;
+        color: white;
+        font-family: sans-serif !important;
+        font-size: 16px !important;
+        font-style: italic;
+        padding-right: 5px;
+        width: 80%;
+        height: auto;
+        left: 2% !important;
+        white-space: pre-wrap;
+    }
+
+    .pointsTxt2 {
+        font-family: sans-serif !important;
+        font-size: 18px !important;
+    }
+
+
+    .modifiers {
+        text-align: left !important;
+        display: block;
+        font-family: sans-serif;
+        height: auto;
+        line-height: 1rem;
+        font-size: 1rem;
+        white-space: pre-wrap;
+    }
+
+    .notes {
+        text-align: left !important;
+        display: block;
+        font-family: sans-serif;
+        height: auto;
+        line-height: 1rem;
+        font-size: 1rem;
+        white-space: pre-wrap;
+    }
+
+    .points {
+        text-align: left !important;
+        list-style-type: none !important;
+        display: block;
+        font-family: sans-serif;
+        height: auto;
+        font-size: 1rem;
+        line-height: 2rem;
+        white-space: pre-wrap;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+    }
+
+    .deployNode {
+        position: relative;
+        top: 25%;
+        max-width: 98%;
+        text-align: center !important;
+        list-style-type: none !important;
+        display: block;
+        line-height: 1rem;
+        margin-right: 0px !important;
+    }
+
+    /***********Operations/Platoons Node*************/
+    #platoonsWrapper {
+        width: 85%;
+        margin: auto;
+    }
+
+    #opAbilityWrapper {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        border-bottom: 1px solid white;
+        padding-bottom: 15px;
+    }
+
+    .opAbilityTxt {
+        display: block;
+        justify-content: center;
+        text-align: left;
+        font-family: sans-serif;
+        width: 80%;
+        height: auto;
+        font-size: 1rem;
+        white-space: pre-wrap;
+    }
+
+    #opLvl {
+        text-align: left;
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+        font-family: Starjedi;
+        padding-right: 5px;
+        width: 80%;
+    }
+
+    .ops_affected_img {
+        padding-top: 20px;
+    }
+
+        .ops_affected_img img {
+            border: 2px solid white;
+            width: 75%;
+            height: auto;
+        }
+
+    #rewardsTitle {
+        padding-bottom: 40px;
+    }
+
+    .rewardsTxt {
+        text-align: center;
+        position: relative;
+        font-size: 42px;
+        font-family: Autobus;
+    }
+
+    .rewards img {
+        text-align: center;
+        width: 12%;
+        padding-bottom: 8px;
+    }
+
+    .planetPoints {
+        text-align: center !important;
+        list-style-type: none !important;
+        display: block;
+        font-family: sans-serif;
+        height: auto;
+        font-size: 1rem;
+        line-height: 2rem;
+        white-space: pre-wrap;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        padding-right: 35px;
+    }
+
+    .planetRewardsTxt {
+        text-align: center;
+        position: relative;
+        font-size: 24px;
+        list-style-type: none !important;
+    }
+
+    .planetRewards img {
+        text-align: center;
+        width: 8%;
+        padding-bottom: 8px;
+    }
+
+    .planetNotes {
+        list-style-type: none !important;
+    }
+
+    .planetNotesTxt {
+        text-align: left !important;
+        display: block;
+        font-family: sans-serif;
+        height: auto;
+        line-height: 1rem;
+        font-size: 1rem;
+        white-space: pre-wrap;
+    }
+
+    /*Necessary*/
+    .text-justify {
+        text-align: inherit !important;
+    }
+
+}

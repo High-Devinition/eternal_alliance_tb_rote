@@ -220,7 +220,7 @@ Vue.component('mission', {
 			name: 'OP',
 			type: 'zeffo',
 			position: 'right',
-			preqs: ["Characters: Relic 7", "Ships: 7⭐"],
+			preqs: ["Characters: Relic 7+", "Ships: 7⭐"],
 			platoonAbility: [0],
 			platzones: [0]
 			}

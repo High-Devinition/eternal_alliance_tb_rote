@@ -1,18 +1,4 @@
-/* Custom directive for detecting click outside of element */
-/*Vue.directive('click-outside', {
-	bind: function (el, binding, vnode) {
-		this.event = function (event) {
-		if (!(el == event.target || el.contains(event.target))) {
-			vnode.context[binding.expression](event);
-		}
-	};
-	document.body.addEventListener('click', this.event)
-	},
-	unbind: function (el) {
-		document.body.removeEventListener('click', this.event)
-	},
-});
-	*/
+
 Vue.component('mission', {
 	data: function () {
 		return {
@@ -232,7 +218,7 @@ Vue.component('mission', {
 			name: 'OP',
 			type: 'dathomir',
 			position: 'right',
-			preqs: ["Characters: Relic 7", "Ships: 7⭐"],
+			preqs: ["Characters: Relic 7+", "Ships: 7⭐"],
 			platoonAbility: [0],
 			platzones: [0, 1, 2]
 			}

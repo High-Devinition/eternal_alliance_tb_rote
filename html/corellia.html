@@ -1,168 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>ROTE | Corellia</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Interactive Rise of the Empire Territory Battle Map SWGoH">
-	<meta name="keywords" content="swgoh, star wars, rote, territory, battle, map, tactics, interactive, tb_geo, genskaar">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../css/corellia.css">
-	<link rel="stylesheet" href="../css/planets.css">
-	<link rel="icon" type="image" href="../media/favicon/get3.png">
-	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <meta charset="UTF-8">
+    <title>ROTE | Corellia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Rise of the Empire Territory Battle Map SWGoH">
+    <meta name="keywords" content="swgoh, star wars, rote, territory, battle, map, tactics, interactive, tb_geo, genskaar">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/corellia.css">
+    <link rel="stylesheet" href="../css/planets.css">
+    <link rel="icon" type="image" href="../media/favicon/get3.png">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-	<div class="wrapper">
-		<div class="container-fluid ">
-			<div class="row justify-content-center h-100 text-center">
-				<div id="app" class="map">
-					<svg viewBox="0 0 1000 667">
-					</svg>
-					<mission></mission>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="wrapper">
+        <div class="container-fluid">
+    <div class="videoWrapper">
+        <iframe class="videoPlayer" name="iframe_youtube" width="560" height="315" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+    </div>        
+    <div class="row justify-content-center h-100 text-center">
+            <div id="app" class="map">
+                <svg viewBox="0 0 1000 667">
+                </svg>
+                <mission></mission>
+            </div>
+        </div>
+    </div>
+    </div>
 
-	<!--Templates for Vue-->
+    <!--Templates for Vue-->
 
-	<template id="mission">
+    <template id="mission">
 
-		<div>
-			<div id="animation">
-				<img class="mission" id="planetMission"
-					 v-for="mission in missions"
-					 v-bind:key="mission.name"
-					 v-bind:class="mission.name"
-					 v-bind:src="defaultPath + mission.type + '.png'"
-					 @click="selectedMission = mission; seen = true" />
-			</div>
-
-
-			<div v-if="seen" class="description" id="descPopup" v-bind:class="'desc_' + selectedMission.position">
-
-				<div class="mb-3">
-					<p>
-						<i id="descClose" class="fa fa-window-close fa-fw topcorner" @click="hide" onclick="$('.selected').removeClass('selected')"></i>
-					</p>
-				</div>
-				<div class="missionId" v-for="item in selectedMission.missionId">
-					<p class="missionIdTxt">{{missionId[item]}}</p>
-				</div>
+        <div>
+            <div id="animation">
+                <img class="mission" id="planetMission"
+                     v-for="mission in missions"
+                     v-bind:key="mission.name"
+                     v-bind:class="mission.name"
+                     v-bind:src="defaultPath + mission.type + '.png'"
+                     @click="selectedMission = mission; seen = true" />
+            </div>
 
 
+            <div v-if="seen" class="description" id="descPopup" v-bind:class="'desc_' + selectedMission.position">
 
-				<div class="mb-3" v-if="selectedMission.reqs">
-					<p class="h3">Requirements</p>
-					<div v-for="item in selectedMission.reqs">
-						<p class="subtext">{{reqs[item]}}</p>
-					</div>
-				</div>
-
-
-				<div class="mb-3" v-if="selectedMission.recommendedSquads">
-					
-					<p class="h4">Recommended Lineups</p>
-					<p class="subtext">(The best recommendations are listed from top to bottom).</p>
-
-					<div v-for="item in selectedMission.recommendedSquads">
-						<p class="missionTitle"><a :href="playerSquads[item].video">{{playerSquads[item].name}}</a></p>
-						<div class="img_block">
-							<img class="toonImage" v-for="pic in playerSquads[item].toons"
-								 v-bind:src="'../media/toons/' + pic + '.png'" v-bind:title="pic">
-						</div>
-					</div>
-				</div>
-
-				<div class="mb-3" v-if="selectedMission.enemyWaves">
-					<p class="h6">Wave Breakdown</p>
-					<div class="waves" v-for="item in selectedMission.enemyWaves">
-						<p class="wavesTxt">Wave 1:<span class="pointsTxt" v-for="val in selectedMission.wave1Points">{{val}}</span></p>
-
-						<img v-for="pic in enemySquads[item].wave1"
-							 v-bind:src="'../media/toons/' + pic + '.png'" v-bind:title="pic"><br><br>
-
-						<p v-if="enemySquads[item].wave2" class="wavesTxt">Wave 2:<span class="pointsTxt" v-for="val in selectedMission.wave2Points">{{val}}</span></p>
-
-						<img v-for="pic in enemySquads[item].wave2"
-							 v-bind:src="'../media/toons/' + pic + '.png'" v-bind:title="pic"><br><br>
-					</div>
-				</div>
-
-				<div id="platoonsWrapper" class="mb-3 " v-if="selectedMission.platoonAbility">
-					<p class="h3">Shipyards</p>
-					<p class="subtext">(Disable Abilities)</p>
-					<span style="padding-bottom: 10px; border-bottom: 1px solid white" v-for="item in selectedMission.preqs">&nbsp;{{item}}&nbsp;</span>
-					<p class="h5">Ability Tiers</p><br>
-
-					<div class="justify-content-center" id="opAbilityWrapper">
-						<ul v-for="item in selectedMission.platoonAbility">
-							<li class="opAbilityTxt" v-for="(item, index) in platoons" :key="mission.platoons"><span id="opLvl">Level {{index+1}}:</span>&nbsp;{{item}}&nbsp;</li>
-						</ul>
-					</div>
-
-					<p class="h7">Affected Territories</p>
-					<div class="ops_affected_img">
-						<img src="../media/map_ui/corellia_ops_ability.png" />
-					</div>
+                <div class="mb-3">
+                    <p>
+                        <i id="descClose" class="fa fa-window-close fa-fw topcorner" @click="hide" onclick="$('.selected').removeClass('selected'), $('.videoWrapper').css('z-index', '-1')"></i>
+                    </p>
+                </div>
+                <div class="missionId" v-for="item in selectedMission.missionId">
+                    <p class="missionIdTxt">{{missionId[item]}}</p>
+                </div>
 
 
 
-				</div>
-
-				<div class="mb-3" v-if="selectedMission.modifiers">
-					<p class="h4">Important Modifiers</p>
-					<ul class="modifiers">
-						<li class="modsTxt" v-for="item in selectedMission.modifiers">{{modifiers[item]}}</li>
-					</ul>
-				</div>
-				<div class="mb-3" v-if="selectedMission.notes">
-					<p class="h4">Notes</p>
-					<ul class="notes">
-						<li class="notesTxt" v-for="item in selectedMission.notes">{{notes[item]}}</li>
-					</ul>
-				</div>
+                <div class="mb-3" v-if="selectedMission.reqs">
+                    <p class="h3">Requirements</p>
+                    <div v-for="item in selectedMission.reqs">
+                        <p class="subtext">{{reqs[item]}}</p>
+                    </div>
+                </div>
 
 
-				<div class="rewards mb-3" v-if="selectedMission.rewards">
-					<p id="rewardsTitle" class="h4">Rewards</p>
-					<span class="rewardsTxt" v-for="item in selectedMission.rewards">{{item}}<img src="../media/icons/get3.png" /></span>
-				</div>
-				<div class="deployNode" v-if="selectedMission.stars">
-					<p class="h4">Star Requirements</p>
-					<ul class="points">
-						<li class="pointsTxt2" v-for="item in selectedMission.stars">{{item}} TP</li>
-					</ul>
-					<p class="subtext">Points required after preloading:</p><br><br>
-					<p class="pointsTxt2">126,614,583 TP</p>
-				</div>
-			</div>
+                <div class="mb-3" v-if="selectedMission.recommendedSquads">
+
+                    <p class="h4">Recommended Lineups</p>
+                    <p class="subtext">(The best recommendations are listed from top to bottom, but should be used as a baseline; there are many suitable variations).</p>
+
+                    <div v-for="item in selectedMission.recommendedSquads">
+    <p class="missionTitle"><a :href="playerSquads[item].video" target="iframe_youtube" onclick="$('.videoWrapper').css('z-index', '100')">{{playerSquads[item].name}}</a></p>
+    <p class="subtext" v-if="playerSquads[item].video">(Click the link above for a video guide)</p>
+    <div class="img_block">
+        <img class="toonImage" v-for="pic in playerSquads[item].toons"
+             v-bind:src="'../media/toons/' + pic + '.png'" v-bind:title="pic">
+    </div>
+                    </div>
+                </div>
+
+                <div class="mb-3" v-if="selectedMission.enemyWaves">
+                    <p class="h6">Wave Breakdown</p>
+                    <div class="waves" v-for="item in selectedMission.enemyWaves">
+                        <p class="wavesTxt">Wave 1:<span class="pointsTxt" v-for="val in selectedMission.wave1Points">{{val}}</span></p>
+
+                        <img v-for="pic in enemySquads[item].wave1"
+                             v-bind:src="'../media/toons/' + pic + '.png'" v-bind:title="pic"><br><br>
+
+                        <p v-if="enemySquads[item].wave2" class="wavesTxt">Wave 2:<span class="pointsTxt" v-for="val in selectedMission.wave2Points">{{val}}</span></p>
+
+                        <img v-for="pic in enemySquads[item].wave2"
+                             v-bind:src="'../media/toons/' + pic + '.png'" v-bind:title="pic"><br><br>
+                    </div>
+                </div>
+
+                <div id="platoonsWrapper" class="mb-3 " v-if="selectedMission.platoonAbility">
+                    <p class="h3">Shipyards</p>
+                    <p class="subtext">(Disable Abilities)</p>
+                    <span style="padding-bottom: 10px; border-bottom: 1px solid white" v-for="item in selectedMission.preqs">&nbsp;{{item}}&nbsp;</span>
+                    <p class="h5">Ability Tiers</p><br>
+
+                    <div class="justify-content-center" id="opAbilityWrapper">
+                        <ul v-for="item in selectedMission.platoonAbility">
+                            <li class="opAbilityTxt" v-for="(item, index) in platoons" :key="mission.platoons"><span id="opLvl">Level {{index+1}}:</span>&nbsp;{{item}}&nbsp;</li>
+                        </ul>
+                    </div>
+
+                    <p class="h7">Affected Territories</p>
+                    <div class="ops_affected_img">
+                        <img src="../media/map_ui/corellia_ops_ability.png" />
+                    </div>
+
+
+
+                </div>
+
+                <div class="mb-3" v-if="selectedMission.modifiers">
+                    <p class="h4">Important Modifiers</p>
+                    <ul class="modifiers">
+                        <li class="modsTxt" v-for="item in selectedMission.modifiers">{{modifiers[item]}}</li>
+                    </ul>
+                </div>
+                <div class="mb-3" v-if="selectedMission.notes">
+                    <p class="h4">Notes</p>
+                    <ul class="notes">
+                        <li class="notesTxt" v-for="item in selectedMission.notes">{{notes[item]}}</li>
+                    </ul>
+                </div>
+
+
+                <div class="rewards mb-3" v-if="selectedMission.rewards">
+                    <p id="rewardsTitle" class="h4">Rewards</p>
+                    <span class="rewardsTxt" v-for="item in selectedMission.rewards">{{item}}<img src="../media/icons/get3.png" /></span>
+                </div>
+                <div class="deployNode" v-if="selectedMission.stars">
+                    <p class="h4">Star Requirements</p>
+                    <ul class="points">
+                        <li class="pointsTxt2" v-for="item in selectedMission.stars">{{item}} TP</li>
+                    </ul>
+                    <p class="subtext">Points required after preloading:</p><br><br>
+                    <p class="pointsTxt2">126,614,583 TP</p>
+                </div>
+            </div>
 
 
 
 
-		</div>
+        </div>
 
 
-	</template>
-	<div class="top-left">
-		<a href="main.html" style="color:#FFFFFF"><i class="icon"></i>Galaxy Map</a>
-	</div><br>
-	<script src="../js/vue.min.js"></script>
+    </template>
+    <div class="top-left">
+        <a href="main.html" style="color:#FFFFFF"><i class="icon"></i>Galaxy Map</a>
+    </div><br>
+    <script src="../js/vue.min.js"></script>
 
-	<script src="../js/corellia.js"></script>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7G9QJXCBX4"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+    <script src="../js/corellia.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7G9QJXCBX4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-		gtag('config', 'G-7G9QJXCBX4');
-	</script>
+        gtag('config', 'G-7G9QJXCBX4');
+    </script>
 </body>
 </html>
 

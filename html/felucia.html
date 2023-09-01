@@ -16,8 +16,13 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="container-fluid ">
-            <div class="row justify-content-center h-100 text-center">
+        <div class="container-fluid">
+    <div class="videoWrapper">
+        <iframe class="videoPlayer" name="iframe_youtube" width="560" height="315" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+    </div>        
+    <div class="row justify-content-center h-100 text-center">
                 <div id="app" class="map">
                     <svg viewBox="0 0 1000 667">
                     </svg>
@@ -46,7 +51,7 @@
 
                 <div class="mb-3">
                     <p>
-                        <i id="descClose" class="fa fa-window-close fa-fw topcorner" @click="hide" onclick="$('.selected').removeClass('selected')"></i>
+                        <i id="descClose" class="fa fa-window-close fa-fw topcorner" @click="hide" onclick="$('.selected').removeClass('selected'), $('.videoWrapper').css('z-index', '-1')"></i>
                     </p>
                 </div>
                 <div class="missionId" v-for="item in selectedMission.missionId">
@@ -66,14 +71,15 @@
                 <div class="mb-3" v-if="selectedMission.recommendedSquads">
 
                     <p class="h4">Recommended Lineups</p>
-                    <p class="subtext">(The best recommendations are listed from top to bottom).</p>
+                    <p class="subtext">(The best recommendations are listed from top to bottom, but should be used as a baseline; there are many suitable variations).</p>
 
                     <div v-for="item in selectedMission.recommendedSquads">
-                        <p class="missionTitle"><a :href="playerSquads[item].video">{{playerSquads[item].name}}</a></p>
-                        <div class="img_block">
-                            <img class="toonImage" v-for="pic in playerSquads[item].toons"
-                                 v-bind:src="'../media/toons/' + pic + '.png'" v-bind:title="pic">
-                        </div>
+    <p class="missionTitle"><a :href="playerSquads[item].video" target="iframe_youtube" onclick="$('.videoWrapper').css('z-index', '100')">{{playerSquads[item].name}}</a></p>
+    <p class="subtext" v-if="playerSquads[item].video">(Click the link above for a video guide)</p>
+    <div class="img_block">
+        <img class="toonImage" v-for="pic in playerSquads[item].toons"
+             v-bind:src="'../media/toons/' + pic + '.png'" v-bind:title="pic">
+    </div>
                     </div>
                 </div>
 

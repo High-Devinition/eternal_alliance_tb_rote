@@ -9,12 +9,12 @@ Vue.component('mission', {
 				//LCor-1 (M2)********************************************
 				{
 					id: 0,
-					name: 'JML+JKL+Hoda+JKR+1 Jedi',
-					toons: ['gl_luke', 'jedi_knight_luke_skywalker', 'hermit_yoda', 'jedi_knight_revan', 'unknown'],
+					name: 'JML & JKL +3 Jedi',
+					toons: ['gl_luke', 'jedi_knight_luke_skywalker', 'hermit_yoda', 'jedi_knight_revan', 'jolee_bindo'],
 				},
 				{
 					id: 1,
-					name: "Jedi Cal+JML+3 Jedi",
+					name: "Jedi Cal & JML +3 Jedi",
 					toons: ['jedi_cal', 'gl_luke', 'unknown', 'unknown', 'unknown']
 				},
 
@@ -34,7 +34,7 @@ Vue.component('mission', {
 				},
 				{
 					id: 4,
-					name: "Rey+Ben+3 Scoundrels",
+					name: "Rey & Ben +3 Scoundrels",
 					toons: ['gl_rey', 'ben_solo', 'beskar_mando', 'dash_rendar', 'l3-37']
 				},
 				{
@@ -44,7 +44,7 @@ Vue.component('mission', {
 				},
 				{
 					id: 6,
-					name: "MM+Cara (+oKyle helps) +2 Rebels",
+					name: "Mon Mothma & 4 Rebel Fighters (+oKyle helps)",
 					toons: ['mon_mothma', 'cara_dune', 'kyle_katarn_o', 'unknown', 'unknown']
 				},
 				{
@@ -59,7 +59,7 @@ Vue.component('mission', {
 				},
 				{
 					id: 9,
-					name: 'oRolo+4 Rebels',
+					name: 'oRolo +4 Rebels',
 					toons: ['rolo', 'unknown', 'unknown', 'unknown', 'unknown']
 				},
 				//LCor-4 (M5)********************************************
@@ -70,7 +70,7 @@ Vue.component('mission', {
 				},
 				{
 					id: 11,
-					name: "Rey+Ben+3 Scoundrels",
+					name: "Rey & Ben +3 Scoundrels",
 					toons: ['gl_rey', 'ben_solo', 'beskar_mando', 'dash_rendar', 'l3-37']
 				},
 				{
@@ -80,7 +80,7 @@ Vue.component('mission', {
 				},
 				{
 					id: 13,
-					name: "MM+Cara (+oKyle helps) +2 Rebels",
+					name: "Mon Mothma & 4 Rebel Fighters (+oKyle helps)",
 					toons: ['mon_mothma', 'cara_dune', 'kyle_katarn_o', 'unknown', 'unknown']
 				},
 				{
@@ -95,7 +95,7 @@ Vue.component('mission', {
 				},
 				{
 					id: 16,
-					name: 'oRolo+4 Rebels',
+					name: 'oRolo +4 Rebels',
 					toons: ['rolo', 'unknown', 'unknown', 'unknown', 'unknown']
 				},
 				//LCor-5 (M6)********************************************
@@ -259,11 +259,11 @@ Vue.component('mission', {
             ]
 			}, 
 			{
-			id: 30,
+			id: 6,
 			name: 'OP',
 			type: 'coruscant',
 			position: 'right',
-			preqs: ["Characters: Relic 5", "Ships: 7⭐"],
+			preqs: ["Characters: Relic 5+", "Ships: 7⭐"],
 			platoonAbility: [0],
 			platzones: [0, 1, 2]
 			}
