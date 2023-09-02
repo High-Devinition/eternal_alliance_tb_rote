@@ -8,7 +8,7 @@ function screenLock() {
     else if (de.msRequestFullscreen) { de.msRequestFullscreen(); }
 
     // (A2) THEN LOCK ORIENTATION
-    screen.orientation.screenLock('landscape-primary');
+    screen.orientation.screenLock("landscape-primary");
 }
 
 // (B) UNLOCK SCREEN ORIENTATION

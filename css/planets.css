@@ -597,7 +597,7 @@ img.selected {
 @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
     /*Custom Star Wars font*/
-    @font-face {
+    /*@font-face {
         font-family: Starjedi;
         font-weight: bold;
         src: url('../media/fonts/StarWars/Starjedi.ttf');
@@ -606,12 +606,12 @@ img.selected {
     @font-face {
         font-family: Autobus;
         src: url('../media/fonts/Autobus/Autobus.ttf');
-    }
+    }*/
 
     /**********************General Formatting**************************/
 
     /*Home button styling/position for each planet.html*/
-    .top-left {
+    /*.top-left {
         font-family: Starjedi, sans-serif;
         top: 1.5%;
         font-size: 1.6vw;
@@ -654,9 +654,9 @@ img.selected {
     }
 
     .videoWrapper {
-        position: absolute;
+        position: absolute;*/
         /*    border: 5px black solid;*/
-        right: 32.7%;
+        /*right: 32.7%;
         top: 8%;
         padding: 15px 15px 15px 15px;
         background-color: rgb(14, 18, 27, 0.95);
@@ -685,11 +685,11 @@ img.selected {
 
     svg {
         border: 10px solid black;
-    }
+    }*/
 
     /***************************Styling for ALL mission nodes****************************/
 
-    .mission {
+    /*.mission {
         position: absolute;
         cursor: pointer;
         background-size: cover;
@@ -702,20 +702,20 @@ img.selected {
             background: url('../media/map_ui/mission_focused.png') no-repeat bottom padding-box;
             background-size: cover;
             position: absolute;
-        }
+        }*/
     /*Determines styling when node is selected (See bottom of .js files)*/
-    img.selected {
+    /*img.selected {
         pointer-events: none;
         background: url(../media/map_ui/mission_selected.png) no-repeat bottom padding-box;
         transform: scale(1.1);
         transition: all 0.2s ease;
         padding: 0 5px 16px 4px;
-    }
+    }*/
 
 
     /*************************Styling for individual mission nodes*****************************/
 
-    .M1 {
+    /*.M1 {
         padding: 0 10px 0 10px;
         width: 8%;
     }
@@ -767,10 +767,10 @@ img.selected {
 
         .M6:hover {
             padding: 0 10px 4px 8px;
-        }
+        }*/
 
     /*DP is the deployment node for every planet*/
-    .DP {
+    /*.DP {
         padding: 0 10px 10px 10px;
         width: 8%;
     }
@@ -808,10 +808,10 @@ img.selected {
 
         .c10:hover {
             padding: 0 10px 4px 8px;
-        }
+        }*/
 
     /*M2 is the platoon/operations node for every planet*/
-    .OP {
+    /*.OP {
         width: 9%;
         padding: 0 15px 12px 14px;
     }
@@ -823,7 +823,7 @@ img.selected {
 
     img.mission.OP.selected {
         padding: 0 5px 25px 5px !important;
-    }
+    }*/
 
 
     /**************Pulse Glow Animation for Mission nodes****************/
@@ -857,7 +857,7 @@ img.selected {
 
     /**************************************Description PopUp************************************/
     /*Headers*/
-    .h3 {
+    /*.h3 {
         font-family: Starjedi;
         text-transform: lowercase;
     }
@@ -908,19 +908,19 @@ img.selected {
     .subtext {
         font-style: italic;
         text-align: center;
-        margin: auto;
+        margin: auto;*/
         /*padding-bottom: 20px;*/
-    }
+    /*}
 
     .missionId {
         position: absolute;
         top: 0;
         left: 5px;
         font-size: 12px;
-    }
+    }*/
 
     /*General Formatting*/
-    .description {
+    /*.description {
         position: absolute;
         background-color: rgb(14, 18, 27, 0.95);
         transform: translate(0, -45%);
@@ -939,10 +939,10 @@ img.selected {
         overflow-x: hidden;
         border: 5px solid white;
         display: none;
-    }
+    }*/
 
     /*Positions*/
-    .desc_left {
+    /*.desc_left {
         left: -22%;
         top: 40%;
         overflow-y: auto;
@@ -960,10 +960,10 @@ img.selected {
         width: 100%;
         height: auto;
         margin: 0;
-    }
+    }*/
 
     /*Close button*/
-    .topcorner {
+    /*.topcorner {
         position: absolute;
         top: 0;
         right: 0;
@@ -1006,10 +1006,10 @@ img.selected {
             border: 2px solid red;
             margin-right: 0.5%;
             text-align: center;
-        }
+        }*/
 
     /*Text*/
-    .wavesTxt {
+    /*.wavesTxt {
         position: relative;
         text-align: left !important;
         color: white;
@@ -1086,10 +1086,10 @@ img.selected {
         display: block;
         line-height: 1rem;
         margin-right: 0px !important;
-    }
+    }*/
 
     /***********Operations/Platoons Node*************/
-    #platoonsWrapper {
+    /*#platoonsWrapper {
         width: 85%;
         margin: auto;
     }
@@ -1191,11 +1191,11 @@ img.selected {
         line-height: 1rem;
         font-size: 1rem;
         white-space: pre-wrap;
-    }
+    }*/
 
     /*Necessary*/
-    .text-justify {
+    /*.text-justify {
         text-align: inherit !important;
     }
-
+*/
 }
