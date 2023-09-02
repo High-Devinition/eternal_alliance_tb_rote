@@ -588,14 +588,11 @@ img.selected {
 
 
 /*Formatting/Styling for map when mobile screen is being viewed vertically*/
-@media screen and (orientation:portrait) {
+/*@media screen and (orientation:portrait) {
 
-    body {
-        height: 100vw;
-        transform: rotate(90deg);
-    }
+
     
-}
+}*/
 /*Formatting/Styling for map when mobile screen is being viewed horizontally*/
 @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
