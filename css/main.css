@@ -535,7 +535,7 @@ td {
 }*/
 
 
-@media (min-width: 1700px) {
+/*@media (min-width: 1700px) {
 	.map {
 		width: 80vw;
 	}
@@ -545,7 +545,7 @@ td {
 		font-size: 0.5rem;
 		line-height: 0.6rem;
 	}
-}
+}*/
 
 
 
@@ -568,10 +568,8 @@ td {
 /*Formatting/Styling for map when mobile screen is being viewed vertically*/
 @media screen and (orientation:portrait) {
 
-	body {
+	/*body {
 		background-color: black;
-		height: 100vw;
-		transform: rotate(90deg);
 	}
 
 	.description {
@@ -591,10 +589,10 @@ td {
 	.desc_right {
 		right: 0;
 	}
-	.img_block img {
+	.img_block img {*/
 	/*	max-width: 5%;
 		max-height: 5%;*/
-		border-radius: 50%;
+		/*border-radius: 50%;
 		border: 2px solid #ffffff;
 		margin-right: 0.5%;
 	}
@@ -612,13 +610,13 @@ td {
 		left: 0px;
 		font-size: 18px;
 		color: white;
-	}
+	}*/
 }
 /*Formatting/Styling for map when mobile screen is being viewed horizontally*/
 @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
 
-	body {
+	/*body {
 		margin: 0;
 		padding: 0;
 		display: flex;
@@ -639,9 +637,9 @@ td {
 		justify-content: flex-start;
 		padding: 0;
 		width: 100vw;
-		height: 100vh;
+		height: 100vh;*/
 		/*max-width: 1400px;*/
-	}
+	/*}
 
 	.map {
 		position: relative;
@@ -684,8 +682,8 @@ td {
 	.description {
 		position: absolute;
 		opacity: 0.85;
-		background-color: black; /*rgb(35, 48, 67, 0.9);*/
-		transform: translate(0, -45%);
+		background-color: black;*/ /*rgb(35, 48, 67, 0.9);*/
+		/*transform: translate(0, -45%);
 		top: 50%;
 		max-width: 48%;
 		padding: 1rem;
@@ -740,12 +738,12 @@ td {
 			transition: all 0.5s ease;
 		}
 
-		.mission:hover {
+		.mission:hover {*/
 			/*background: url('../media/focus.svg') no-repeat;*/
-			background-size: contain;
-		}
+			/*background-size: contain;
+		}*/
 	/* Home button text */
-	@font-face {
+	/*@font-face {
 		font-family: Impactful;
 		font-weight: bold;
 		src: url('../media/fonts/impact/impact.ttf');
@@ -766,7 +764,7 @@ td {
 		border-radius: 50%;
 		border: 2px solid #ffffff;
 		margin-right: 0.5%;
-	}
+	}*/
 	/*
 .info {
 	position: fixed;
@@ -780,7 +778,7 @@ td {
 	opacity: 0.9;
 }
 */
-	table {
+	/*table {
 		border: 3px solid #ffffff;
 	}
 
@@ -800,103 +798,103 @@ td {
 
 	.rewards img {
 		width: 4%;
-	}
+	}*/
 
 
 	/*Planet positions*/
 
-	.P1 { /*death star*/
-		top: 25%;
+	/*.P1 {*/ /*death star*/
+		/*top: 25%;
 		left: 18%;
 	}
 
-	.P2 { /*malachor*/
-		top: 37.5%;
+	.P2 {*/ /*malachor*/
+		/*top: 37.5%;
 		left: 16.5%;
 	}
 
-	.P3 { /*Haven*/
-		top: 53%;
+	.P3 {*/ /*Haven*/
+		/*top: 53%;
 		left: 18%;
 	}
 
-	.P5 { /*lothal*/
-		top: 53%;
+	.P5 {*/ /*lothal*/
+		/*top: 53%;
 		left: 77%;
 	}
 
-	.P6 { /*kessel*/
-		top: 33%;
+	.P6 {*/ /*kessel*/
+		/*top: 33%;
 		left: 55%;
 	}
 
-	.P7 { /*P3 DS Dathomir*/
-		top: 64%;
+	.P7 {*/ /*P3 DS Dathomir*/
+		/*top: 64%;
 		left: 23%;
 	}
 
-	.P8 { /*P2 ds geonosis*/
-		top: 63%;
+	.P8 {*/ /*P2 ds geonosis*/
+		/*top: 63%;
 		left: 34%;
 	}
 
-	.P9 { /*P3 middle tatooine*/
-		top: 43%;
+	.P9 {*/ /*P3 middle tatooine*/
+		/*top: 43%;
 		left: 45%;
 	}
 
-	.P10 { /*P1 DS mustafar*/
-		top: 73%;
+	.P10 {*/ /*P1 DS mustafar*/
+		/*top: 73%;
 		left: 38%;
 	}
 
-	.P11 { /*p1m corellia*/
-		top: 66%;
+	.P11 {*/ /*p1m corellia*/
+		/*top: 66%;
 		left: 47%;
 	}
 
-	.P12 { /*vandor*/
-		top: 22%;
+	.P12 {*/ /*vandor*/
+		/*top: 22%;
 		left: 50%;
 	}
 
-	.P13 { /*hoth*/
-		top: 15%;
+	.P13 {*/ /*hoth*/
+		/*top: 15%;
 		left: 59%;
 	}
 
-	.P14 { /*P2 middle felucia*/
-		top: 53%;
+	.P14 {*/ /*P2 middle felucia*/
+		/*top: 53%;
 		left: 50%;
 	}
 
-	.P15 { /*p3 ls kashyyyk*/
-		top: 63%;
+	.P15 {*/ /*p3 ls kashyyyk*/
+		/*top: 63%;
 		left: 72%;
 	}
 
-	.P16 { /*P1 Coruscant*/
-		top: 73%;
+	.P16 {*/ /*P1 Coruscant*/
+		/*top: 73%;
 		left: 56%;
 	}
 
-	.P17 { /*P2 ls bracca*/
-		top: 63%;
+	.P17 {*/ /*P2 ls bracca*/
+		/*top: 63%;
 		left: 60%;
 	}
 
-	.P18 { /*kafrene*/
-		top: 37%;
+	.P18 {*/ /*kafrene*/
+		/*top: 37%;
 		left: 77%;
 	}
 
-	.P4 { /*scarif*/
-		top: 24%;
+	.P4 {*/ /*scarif*/
+		/*top: 24%;
 		left: 76%;
 	}
 
-	.P19 { /*zeffo*/
-		top: 47%;
+	.P19 {*/ /*zeffo*/
+		/*top: 47%;
 		left: 60%;
 	}
 
@@ -913,5 +911,5 @@ td {
 		left: 0px;
 		font-size: 18px;
 		color: white;
-	}
+	}*/
 }
