@@ -519,6 +519,21 @@ td {
 		border: 5px solid lightskyblue;
 	}
 
+/* Safari */
+/*:-webkit-full-screen {
+	background-color: yellow;
+}*/
+
+/* IE11 */
+/*:-ms-fullscreen {
+	background-color: yellow;
+}*/
+
+/* Standard syntax */
+/*:fullscreen {
+	top: 0;
+}*/
+
 
 @media (min-width: 1700px) {
 	.map {

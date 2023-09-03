@@ -9,6 +9,7 @@ function screenLock() {
 
     // (A2) THEN LOCK ORIENTATION
     screen.orientation.screenLock("landscape");
+    alert('screen locked');
 }
 
 // (B) UNLOCK SCREEN ORIENTATION
