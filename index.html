@@ -39,12 +39,14 @@
     }
 
     body, html {
-        height: 100vh
+        height: 100vh;
+        width: 100vw;
     }
 
     .bgimg {
         background-image: url('media/backgrounds/ea_bg.png');
         min-height: 100vh;
+        min-width: 100vw;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -95,9 +97,9 @@
         }
 
     /*Page when user views mobile screen vertically (portrait orientation)*/
-    /*@media (orientation: portrait) and (hover: none) and (pointer: coarse) {
+    @media (orientation: portrait) and (hover: none) and (pointer: coarse) {
 
-        body {
+        /*body {
             display: grid;
             height: 100%;
             width: 100%;
@@ -108,16 +110,16 @@
 
         .eaTitleContainer {
             padding-bottom: 25px;
-        }
+        }*/
 
         .eaTitle {
-            font-size: 42px;
-            width: 100%;
-            height: 75%;
+            font-size: 2.625em;
+            width: 100vw;
+            height: 75vh;
             margin: auto;
         }
 
-        hr {
+        /*hr {
             text-align: center;
         }
 
@@ -146,12 +148,10 @@
             display: grid;
             place-items: center;
             height: 50vh;
-        }
+        }*/
 
         .mapbutton {
-            font-size: 24px;
             color: white;
-            background: black 30px;
             border: 5px solid white;
             padding: 3px;
             text-decoration: none;
@@ -163,15 +163,15 @@
 
 
         .authorship {
-            font-size: 22px;
+            font-size: 1.375em;
             width: 100%;
             height: 75%;
             margin: auto;
             position: absolute;
-            bottom: 5px;
+            bottom: 31.25%;
         }
         
-    }*/
+    }
         /*Page when user views mobile screen horizontally (landscape orientation)*/
         /*@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
