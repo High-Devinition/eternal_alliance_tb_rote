@@ -103,12 +103,13 @@ Vue.component('mission', {
 
         notes:[
 			"1). Dispel Nebit's taunt with 7th Sister's Special 1, or use it to ability block him so that he can’t taunt.\n\n",
-			"2). Remove stealth from Scavenger with 5th Brother's Special 1.\n\n",
-			"3). Use GI's Special 2 to apply torture to Scavenger; focus him down til' death.\n\n",
-			"4). Continue to use basics along with 9th Sister/8th Brother specials; spread debuffs and heal with 7th Sister if necessary!\n\n",
-			"5). Cleanse with GI's Special 1 around this point (6+ DOTs).\n\n",
-			"6). Focus down Engineer, kill the other 2 Jawas, and leave Nebit for last.\n\n",
-			"7). On the last wave, debuff Kenobi as much as you possibly can. Remember to dispel DOTs from yourself with GI's Special 1 to survive, and you shall be victorious!\n\n Good luck!"
+			"2). The moment you see a Jawa with 6 stacks of Purge, hit them with GI Special 2 to gain Tenacity Up. This stops thermal detonators from stacking on your units.\n\n",
+			"3). Remove stealth from Scavenger with 5th Brother's Special 1; (if it still has stealth at this point), and then focus him down first!\n\n",
+			"4). Next focus the Jawa with the most health, because at this point the DOTs will start doing the heavy lifting.\n\n",
+			"5). Continue to use basics along with 9th Sister/8th Brother specials; spread AOEs for debuffs and heal with 7th Sister if necessary!\n\n",
+			"6). Cleanse with GI's Special 1 around this point (6+ DOTs).\n\n",
+			"7). Focus down Engineer, kill the other 2 Jawas, and leave Nebit for last.\n\n",
+			"8). On the last wave, debuff Kenobi as much as you possibly can. Remember to dispel DOTs from yourself with GI's Special 1 to survive, and you shall be victorious!\n\n Good luck!"
 			],
 
         reqs:[
@@ -171,7 +172,7 @@ Vue.component('mission', {
 			enemyWaves: [3],
             reqs: [2],
             modifiers: [0],
-            notes: [0, 1, 2, 3, 4, 5, 6],
+            notes: [0, 1, 2, 3, 4, 5, 6, 7],
 			},
 
 			{
